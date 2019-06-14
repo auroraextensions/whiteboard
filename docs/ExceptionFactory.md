@@ -1,9 +1,40 @@
 # ExceptionFactory
 
+## Table of Contents
+
+- [Description](#description)
+- [Usage](#usage)
+- [Source](#source)
+
+## Description
+
 There are many benefits to using factories in Magento 2, such as flexible object
 creation. As such, factories have become widely adopted and utilized in Magento 2,
 and can be seen as one of the most significant improvements over Magento 1. However,
 it's noticeable that exception creation practices have yet to embrace factories.
+
+## Usage
+
+The factory is only for creating, not throwing, exceptions. For example:
+
+```php
+...
+$entity = $this->entityFactory->create();
+$this->entityResource->load(
+    $entity,
+    $id
+);
+
+if (!$entity->getId()) {
+    throw $this->exceptionFactory->create(
+        NoSuchEntityException::class,
+        __('No such entity found.')
+    );
+}
+...
+```
+
+## Source
 
 Below is an example `ExceptionFactory` that could be used in modules:
 
@@ -73,7 +104,7 @@ class ExceptionFactory
         if ($type !== self::BASE_TYPE && !is_subclass_of($type, self::BASE_TYPE)) {
             throw new \Exception(
                 __(
-                    self::ERROR_INVALID_EXCEPTION_TYPE,
+                    'Invalid exception class type %s was given.',
                     $type
                 )
             );
