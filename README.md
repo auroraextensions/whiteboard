@@ -10,4 +10,4 @@ Example code, illustrations, UML diagrams, etc.
 
 __Magento__:
 
-[ExceptionFactory](/auroraextensions/examples/blob/master/docs/ExceptionFactory.md)
+[ExceptionFactory](docs/ExceptionFactory.md)
