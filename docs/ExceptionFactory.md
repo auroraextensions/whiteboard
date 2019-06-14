@@ -43,6 +43,7 @@ class ExceptionFactory
 
     /**
      * @param ObjectManagerInterface $objectManager
+     * @param PhraseFactory $phraseFactory
      * @return void
      */
     public function __construct(
