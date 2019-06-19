@@ -8,6 +8,4 @@ Example code, illustrations, UML diagrams, etc.
 
 ## Topics
 
-__Magento__:
-
 [ExceptionFactory](docs/ExceptionFactory.md)
