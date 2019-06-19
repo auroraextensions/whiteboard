@@ -15,7 +15,7 @@ it's noticeable that exception creation practices have yet to embrace factories.
 
 ## Usage
 
-The factory is only for creating, not throwing, exceptions. For example:
+An `ExceptionFactory` is only for creating, not throwing, exception. For example:
 
 ```php
 ...
@@ -83,8 +83,7 @@ class ExceptionFactory
     public function __construct(
         ObjectManagerInterface $objectManager,
         PhraseFactory $phraseFactory
-    )
-    {
+    ) {
         $this->objectManager = $objectManager;
         $this->phraseFactory = $phraseFactory;
     }
@@ -107,7 +106,7 @@ class ExceptionFactory
         if ($type !== self::BASE_TYPE && !is_subclass_of($type, self::BASE_TYPE)) {
             throw new \Exception(
                 __(
-                    'Invalid exception class type %s was given.',
+                    'Invalid exception class type %1 was given.',
                     $type
                 )
             );
