@@ -26,10 +26,13 @@ $this->entityResource->load(
 );
 
 if (!$entity->getId()) {
-    throw $this->exceptionFactory->create(
-        NoSuchEntityException::class,
-        __('No such entity found.')
+    /** @var mixed $exception */
+    $exception = $this->exceptionFactory->create(
+      NoSuchEntityException::class,
+      __('No such entity found.')
     );
+
+    throw $exception;
 }
 ...
 ```
