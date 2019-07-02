@@ -15,7 +15,7 @@ it's noticeable that exception creation practices have yet to embrace factories.
 
 ## Usage
 
-An `ExceptionFactory` is only for creating, not throwing, exception. For example:
+The `ExceptionFactory` is only for creating, not throwing, an exception. For example:
 
 ```php
 ...
