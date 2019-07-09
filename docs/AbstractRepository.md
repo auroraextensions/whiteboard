@@ -15,9 +15,10 @@
 
 Just as `AbstractRepositoryInterface` can be extended by entity-specific repository
 interfaces, `AbstractRepository` can be extended by entity-specific repository models.
-While this introduces tighter coupling through inheritance, the impact can be minimized
-by keeping `AbstractRepository` small and lightweight, providing only the methods and
-property needed for _all_ repository models.
+While this introduces tighter coupling through inheritance, the tradeoff is to reduce
+duplication common to repository models, and the impact can be minimized by keeping
+`AbstractRepository` small and lightweight, providing only the methods and properties
+needed for _all_ repository models.
 
 ## Usage
 
