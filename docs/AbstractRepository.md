@@ -124,6 +124,10 @@ abstract class AbstractRepository implements AbstractRepositoryInterface
             : SortOrder::SORT_DESC;
     }
 
+    /**
+     * @param SearchCriteriaInterface $criteria
+     * @return SearchResultsInterface
+     */
     public function getList(SearchCriteriaInterface $criteria): SearchResultsInterface
     {
         /** @var AbstractCollectionInterface $collection */
