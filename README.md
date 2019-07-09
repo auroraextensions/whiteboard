@@ -9,4 +9,5 @@ Example code, illustrations, UML diagrams, etc.
 ## Topics
 
 + [AbstractRepositoryInterface](docs/AbstractRepositoryInterface.md)
++ [AbstractRepository](docs/AbstractRepository.md)
 + [ExceptionFactory](docs/ExceptionFactory.md)
