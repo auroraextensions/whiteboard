@@ -1,4 +1,4 @@
-# AbstractRepository
+# AbstractRepositoryCompositor
 
 ## Table of Contents
 
@@ -10,16 +10,14 @@
 ## Related
 
 - [AbstractRepositoryInterface](AbstractRepositoryInterface.md)
-- [AbstractRepositoryCompositor](AbstractRepositoryCompositor.md)
+- [AbstractRepository](AbstractRepository.md)
 
 ## Description
 
-Just as `AbstractRepositoryInterface` can be extended by entity-specific repository
-interfaces, `AbstractRepository` can be extended by entity-specific repository models.
-While this introduces tighter coupling through inheritance, the tradeoff is to reduce
-duplication common to repository models, and the impact can be minimized by keeping
-`AbstractRepository` small and lightweight, providing only the methods and properties
-needed for _all_ repository models.
+In constract to `AbstractRepository`, which is an `abstract` class that implements
+`AbstractRepositoryInterface`, you could make use of PHP traits to achieve a similar
+result. This approach provides looser coupling by eliminating inheritance and utilizing
+a `trait` as the vehicle for satisfying the service contract imposed by `AbstractRepositoryInterface`.
 
 ## Usage
 
@@ -34,33 +32,10 @@ namespace Vendor\Package\Model\RepositoryModel;
 
 use Vendor\Package\Api\EntityRepositoryInterface;
 
-class EntityRepository extends AbstractRepository implements EntityRepositoryInterface
+class EntityRepository implements EntityRepositoryInterface
 {
-}
-```
+    use AbstractRepositoryCompositor;
 
-## Source
-
-```php
-<?php
-/**
- * AbstractRepository.php
- */
-declare(strict_types=1);
-
-namespace Vendor\Package\Model\RepositoryModel;
-
-use Magento\Framework\{
-    Api\SearchCriteriaInterface,
-    Api\SearchResultsInterface,
-    Api\Search\FilterGroup,
-    Api\SortOrder,
-    Exception\NoSuchEntityException
-};
-use Vendor\Package\Api\AbstractRepositoryInterface;
-
-abstract class AbstractRepository implements AbstractRepositoryInterface
-{
     /** @property mixed $collectionFactory */
     protected $collectionFactory;
 
@@ -80,6 +55,31 @@ abstract class AbstractRepository implements AbstractRepositoryInterface
         $this->searchResultsFactory = $searchResultsFactory;
     }
 
+    ...
+}
+```
+
+## Source
+
+```php
+<?php
+/**
+ * AbstractRepositoryCompositor.php
+ */
+declare(strict_types=1);
+
+namespace Vendor\Package\Model\RepositoryModel;
+
+use Magento\Framework\{
+    Api\SearchCriteriaInterface,
+    Api\SearchResultsInterface,
+    Api\Search\FilterGroup,
+    Api\SortOrder,
+    Exception\NoSuchEntityException
+};
+
+trait AbstractRepositoryCompositor
+{
     /**
      * @param FilterGroup $filterGroup
      * @param mixed $collection
