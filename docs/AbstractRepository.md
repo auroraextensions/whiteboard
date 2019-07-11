@@ -10,6 +10,7 @@
 ## Related
 
 - [AbstractRepositoryInterface](AbstractRepositoryInterface.md)
+- [AbstractRepositoryCompositor](AbstractRepositoryCompositor.md)
 
 ## Description
 
@@ -31,7 +32,9 @@ declare(strict_types=1);
 
 namespace Vendor\Package\Model\RepositoryModel;
 
-class EntityRepository extends AbstractRepository
+use Vendor\Package\Api\EntityRepositoryInterface;
+
+class EntityRepository extends AbstractRepository implements EntityRepositoryInterface
 {
 }
 ```
