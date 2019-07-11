@@ -10,4 +10,5 @@ Example code, illustrations, UML diagrams, etc.
 
 + [AbstractRepositoryInterface](docs/AbstractRepositoryInterface.md)
 + [AbstractRepository](docs/AbstractRepository.md)
++ [AbstractRepositoryCompositor](docs/AbstractRepositoryCompositor.md)
 + [ExceptionFactory](docs/ExceptionFactory.md)
