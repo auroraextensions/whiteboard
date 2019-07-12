@@ -8,7 +8,7 @@ Example code, illustrations, UML diagrams, etc.
 
 ## Topics
 
-+ [AbstractRepositoryInterface](docs/AbstractRepositoryInterface.md)
 + [AbstractRepository](docs/AbstractRepository.md)
 + [AbstractRepositoryCompositor](docs/AbstractRepositoryCompositor.md)
++ [AbstractRepositoryInterface](docs/AbstractRepositoryInterface.md)
 + [ExceptionFactory](docs/ExceptionFactory.md)
