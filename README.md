@@ -2,10 +2,6 @@
 
 Example code, illustrations, UML diagrams, etc.
 
-## Table of Contents
-
-- [Topics](#topics)
-
 ## Topics
 
 + [AbstractRepository](docs/AbstractRepository.md)
