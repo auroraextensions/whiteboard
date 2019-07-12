@@ -16,8 +16,9 @@
 
 In constract to `AbstractRepository`, which is an `abstract` class that implements
 `AbstractRepositoryInterface`, you could make use of PHP traits to achieve a similar
-result. This approach provides looser coupling by eliminating inheritance and utilizing
-a `trait` as the vehicle for satisfying the service contract imposed by `AbstractRepositoryInterface`.
+result. With regards to `AbstractRepository`, this approach provides looser coupling
+by eliminating inheritance and utilizing a trait as the vehicle for satisfying the
+service contract enforced by `AbstractRepositoryInterface`.
 
 ## Usage
 
