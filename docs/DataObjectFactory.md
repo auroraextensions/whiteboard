@@ -81,7 +81,7 @@ class Cities
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Vendor\Package\Model\Entity">
+    <type name="Vendor\Package\Model\Cities">
         <arguments>
             <argument name="data" xsi:type="array">
                 <item name="cities" xsi:type="array">
