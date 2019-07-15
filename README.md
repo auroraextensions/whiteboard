@@ -1,4 +1,4 @@
-# Examples
+# Whiteboard
 
 Example code, illustrations, UML diagrams, etc.
 
