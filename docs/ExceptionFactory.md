@@ -113,7 +113,7 @@ class ExceptionFactory
                 __(
                     'Invalid exception class type %1 was given.',
                     $type
-                )
+                )->__toString()
             );
         }
 
