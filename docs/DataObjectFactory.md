@@ -28,7 +28,7 @@ settings for `$container` and `getContainer`.
 ```php
 <?php
 /**
- * Cities.php
+ * Geography.php
  */
 declare(strict_types=1);
 
@@ -39,11 +39,8 @@ use Magento\Framework\{
     DataObjectFactory
 };
 
-class Cities
+class Geography
 {
-    /** @property DataObjectFactory $dataObjectFactory */
-    protected $dataObjectFactory;
-
     /** @property DataObject $container */
     protected $container;
 
@@ -56,8 +53,7 @@ class Cities
         DataObjectFactory $dataObjectFactory,
         array $data = []
     ) {
-        $this->dataObjectFactory = $dataObjectFactory;
-        $this->container = $this->dataObjectFactory->create($data);
+        $this->container = $dataObjectFactory->create($data);
     }
 
     /**
@@ -66,6 +62,14 @@ class Cities
     protected function getContainer(): ?DataObject
     {
         return $this->container;
+    }
+
+    /**
+     * @return array
+     */
+    public function getCountries(): array
+    {
+        return $this->getContainer()->getData('countries') ?? [];
     }
 
     /**
@@ -85,10 +89,17 @@ class Cities
  * di.xml
  */
 -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="Vendor\Package\Model\Cities">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Vendor\Package\Model\Geography">
         <arguments>
             <argument name="data" xsi:type="array">
+                <item name="countries" xsi:type="array">
+                    <item name="us" xsi:type="string">US</item>
+                    <item name="england" xsi:type="string">England</item>
+                    <item name="france" xsi:type="string">France</item>
+                    <item name="italy" xsi:type="string">Italy</item>
+                </item>
                 <item name="cities" xsi:type="array">
                     <item name="new_york" xsi:type="string">New York</item>
                     <item name="london" xsi:type="string">London</item>
