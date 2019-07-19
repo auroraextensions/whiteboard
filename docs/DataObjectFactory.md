@@ -36,7 +36,7 @@ namespace Vendor\Package\Model;
 
 use Magento\Framework\{
     DataObject,
-    DataObjectFactory
+    DataObject\Factory as DataObjectFactory
 };
 
 class Geography
