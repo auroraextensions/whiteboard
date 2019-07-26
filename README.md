@@ -9,7 +9,7 @@ Example code, illustrations, UML diagrams, etc.
 
 ## Topics
 
-+ Create select source models with data from `di.xml` [&#128279;](docs/VirtualSelect.md)
++ Create `select` source models with data from `di.xml` [&#128279;](docs/VirtualSelect.md)
 
 ## Examples
 
