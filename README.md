@@ -18,3 +18,4 @@ Example code, illustrations, UML diagrams, etc.
 + [AbstractRepositoryInterface](docs/AbstractRepositoryInterface.md)
 + [DataObjectFactory](docs/DataObjectFactory.md)
 + [ExceptionFactory](docs/ExceptionFactory.md)
++ [VirtualSelect](docs/VirtualSelect.md)
