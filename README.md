@@ -9,7 +9,8 @@ Example code, illustrations, UML diagrams, etc.
 
 ## Topics
 
-+ Create `select` source models with data from `di.xml` [&#128279;](docs/VirtualSelect.md)
++ Create `select` source model with data from `di.xml` [&#128279;](docs/VirtualSelect.md)
++ Create categorized `select` source model with data from `di.xml` [&#128279;](docs/VirtualGroupedSelect.md)
 
 ## Examples
 
@@ -18,4 +19,5 @@ Example code, illustrations, UML diagrams, etc.
 + [AbstractRepositoryInterface](docs/AbstractRepositoryInterface.md)
 + [DataObjectFactory](docs/DataObjectFactory.md)
 + [ExceptionFactory](docs/ExceptionFactory.md)
++ [VirtualGroupedSelect](docs/VirtualGroupedSelect.md)
 + [VirtualSelect](docs/VirtualSelect.md)
