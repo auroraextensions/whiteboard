@@ -8,6 +8,7 @@
 
 ## Related
 
+- [DateTimeFactory](DateTimeFactory.md)
 - [ExceptionFactory](ExceptionFactory.md)
 
 ## Description
