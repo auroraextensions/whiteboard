@@ -21,8 +21,8 @@ objects, as well as formatting subsequent date/time values. Such classes include
 - `Magento\Framework\Stdlib\DateTime\DateTime`
 - `Magento\Framework\Stdlib\DateTime\DateTimeFormatter`
 
-In the example below, our `DateTimeFactory` will allow us to create `DateTime`
-instances, which we'll use to change the entity `updated_at` timestamp.
+In the example below, we use `DateTimeFactory` to create `DateTime` objects, which
+we'll use to modify the `updated_at` timestamp of an entry when a user makes an edit.
 
 ## Usage
 
