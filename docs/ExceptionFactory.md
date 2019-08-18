@@ -10,6 +10,7 @@
 ## Related
 
 - [DataObjectFactory](DataObjectFactory.md)
+- [DateTimeFactory](DateTimeFactory.md)
 
 ## Description
 
