@@ -11,7 +11,7 @@ Example code, illustrations, UML diagrams, etc.
 
 + Create `select` source model with data from `di.xml` [&#128279;](docs/VirtualSelect.md)
 + Create categorized `select` source model with data from `di.xml` [&#128279;](docs/VirtualGroupedSelect.md)
-+ Set entity `updated_at` timestamp via `DateTime` factory. [&#128279;](docs/DateTimeFactory.md)
++ Update an entry timestamp via `DateTime` factory. [&#128279;](docs/DateTimeFactory.md)
 
 ## Examples
 
