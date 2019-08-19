@@ -3,10 +3,6 @@
 
 @import "{{ site.theme }}";
 
-.wrapper {
-  width: 960px;
-}
-
 header {
   width: 200px;
 }
@@ -19,5 +15,9 @@ footer {
 @media print, screen and (min-width: 961px) {
   section {
     width: 75%;
+  }
+
+  .wrapper {
+    width: 80%;
   }
 }
