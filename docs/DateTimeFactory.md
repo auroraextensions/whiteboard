@@ -125,3 +125,4 @@ class EditPost extends Action implements HttpPostActionInterface
         return $resultRedirect;
     }
 }
+```
