@@ -10,6 +10,7 @@
 ## Related
 
 - [AbstractRepository](AbstractRepository.md)
+- [AbstractRepositoryCompositor](AbstractRepositoryCompositor.md)
 
 ## Description
 
