@@ -15,7 +15,7 @@ Example code, illustrations, UML diagrams, etc.
 
 ## Examples
 
-+ [AbstractRepository](docs/AbstractRepository.md)
++ [AbstractRepository](entries/AbstractRepository.md)
 + [AbstractRepositoryCompositor](docs/AbstractRepositoryCompositor.md)
 + [AbstractRepositoryInterface](docs/AbstractRepositoryInterface.md)
 + [DataObjectFactory](docs/DataObjectFactory.md)
