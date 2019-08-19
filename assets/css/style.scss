@@ -12,10 +12,12 @@ header {
 }
 
 footer {
-  bottom: 35px;
-  left: 70px;
+  bottom: 25px;
+  left: 25px;
 }
 
-section {
-  width: 720px;
+@media print, screen and (min-width: 961px) {
+  section {
+    width: 75%;
+  }
 }
