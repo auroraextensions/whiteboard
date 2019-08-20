@@ -12,6 +12,14 @@ footer {
   left: 25px;
 }
 
+a {
+  color: #6d41bf;
+}
+
+a:focus, a:hover {
+  color: #3123ae;
+}
+
 @media print, screen and (max-width: 720px) {
   pre, code {
     word-wrap: break-word;
