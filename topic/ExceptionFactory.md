@@ -23,8 +23,8 @@ it's noticeable that exception creation practices have yet to embrace factories.
 In the example below, we introduce the `ExceptionFactory` class, which can be used to create
 `Throwable` exception types. The reasons for defining this class statically include:
 
-1) Enforce `$type` argument to implement [`Throwable`](https://www.php.net/manual/en/class.throwable.php)<sup><a href="#footnotes">1</a></sup> interface
-2) Allow any `Throwable` exception type, instead of single exception type
+1. Enforce `$type` argument to implement [`Throwable`](https://www.php.net/manual/en/class.throwable.php)<sup><a href="#footnotes">1</a></sup> interface
+2. Allow any `Throwable` exception type, instead of single exception type
 
 Please note: The `ExceptionFactory` class is only creating an exception type. It is the
 responsibility of the invoking method to throw the created exception instance.
