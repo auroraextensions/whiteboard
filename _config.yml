@@ -1,4 +1,5 @@
 favicon: /assets/img/favicon.png
+google_analytics: 'UA-132548294-3'
 logo: /assets/img/logo.png
 plugins:
   - jekyll-sitemap
