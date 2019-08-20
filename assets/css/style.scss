@@ -12,6 +12,12 @@ footer {
   left: 25px;
 }
 
+@media print, screen and (max-width: 720px) {
+  pre, code {
+    word-wrap: break-word;
+  }
+}
+
 @media print, screen and (min-width: 961px) {
   section {
     width: 70%;
