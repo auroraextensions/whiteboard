@@ -69,42 +69,35 @@ declare(strict_types=1);
 
 namespace Vendor\Package\Exception;
 
+use Exception;
 use Magento\Framework\{
     ObjectManagerInterface,
-    Phrase,
-    PhraseFactory
+    Phrase
 };
+use Throwable;
 
 class ExceptionFactory
 {
     /** @constant string BASE_TYPE */
-    const BASE_TYPE = \Exception::class;
+    public const BASE_TYPE = Exception::class;
 
     /** @constant string DEFAULT_ERROR */
-    const DEFAULT_ERROR = 'An error was encountered.';
+    public const DEFAULT_ERROR = 'An error was encountered.';
 
     /** @property ObjectManagerInterface $objectManager */
     protected $objectManager;
 
-    /** @property PhraseFactory $phraseFactory */
-    protected $phraseFactory;
-
     /**
      * @param ObjectManagerInterface $objectManager
-     * @param PhraseFactory $phraseFactory
      * @return void
      */
     public function __construct(
-        ObjectManagerInterface $objectManager,
-        PhraseFactory $phraseFactory
+        ObjectManagerInterface $objectManager
     ) {
         $this->objectManager = $objectManager;
-        $this->phraseFactory = $phraseFactory;
     }
 
     /**
-     * Create exception from type given.
-     *
      * @param string|null $type
      * @param Phrase|null $message
      * @return mixed
@@ -117,23 +110,19 @@ class ExceptionFactory
         /** @var array $arguments */
         $arguments = [];
 
-        if ($type !== self::BASE_TYPE && !is_subclass_of($type, self::BASE_TYPE)) {
-            throw new \Exception(
+        /* If no message was given, set default message. */
+        $message = $message ?? __(self::ERROR_DEFAULT);
+
+        if (!is_subclass_of($type, Throwable::class)) {
+            throw new Exception(
                 __(
-                    'Invalid exception class type %1 was given.',
+                    'Invalid exception type %1 was given.',
                     $type
                 )->__toString()
             );
         }
 
-        /* If no message was given, set default message. */
-        $message = $message ?? $this->phraseFactory->create(
-            [
-                'text' => self::DEFAULT_ERROR,
-            ]
-        );
-
-        if (!is_subclass_of($type, self::BASE_TYPE)) {
+        if ($type !== self::BASE_TYPE) {
             $arguments['message'] = $message->__toString();
         } else {
             $arguments['phrase'] = $message;
