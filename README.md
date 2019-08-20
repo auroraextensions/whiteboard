@@ -11,17 +11,17 @@ Example code, illustrations, UML diagrams, etc.
 
 #### Magento
 
-+ Create `select` source model with data from `di.xml` [&#128279;](docs/VirtualSelect.md)
-+ Create categorized `select` source model with data from `di.xml` [&#128279;](docs/VirtualGroupedSelect.md)
-+ Update an entry timestamp via `DateTime` factory. [&#128279;](docs/DateTimeFactory.md)
++ Create `select` source model with data from `di.xml` [&#128279;](topic/VirtualSelect.md)
++ Create categorized `select` source model with data from `di.xml` [&#128279;](topic/VirtualGroupedSelect.md)
++ Update an entry timestamp via `DateTime` factory. [&#128279;](topic/DateTimeFactory.md)
 
 ## Examples
 
-+ [AbstractRepository](docs/AbstractRepository.md)
-+ [AbstractRepositoryCompositor](docs/AbstractRepositoryCompositor.md)
-+ [AbstractRepositoryInterface](docs/AbstractRepositoryInterface.md)
-+ [DataObjectFactory](docs/DataObjectFactory.md)
-+ [DateTimeFactory](docs/DateTimeFactory.md)
-+ [ExceptionFactory](docs/ExceptionFactory.md)
-+ [VirtualGroupedSelect](docs/VirtualGroupedSelect.md)
-+ [VirtualSelect](docs/VirtualSelect.md)
++ [AbstractRepository](topic/AbstractRepository.md)
++ [AbstractRepositoryCompositor](topic/AbstractRepositoryCompositor.md)
++ [AbstractRepositoryInterface](topic/AbstractRepositoryInterface.md)
++ [DataObjectFactory](topic/DataObjectFactory.md)
++ [DateTimeFactory](topic/DateTimeFactory.md)
++ [ExceptionFactory](topic/ExceptionFactory.md)
++ [VirtualGroupedSelect](topic/VirtualGroupedSelect.md)
++ [VirtualSelect](topic/VirtualSelect.md)
