@@ -1,6 +1,8 @@
 # Whiteboard
 
-Example code, illustrations, UML diagrams, etc.
+Archive of whiteboard topics about Magento, PHP, OOP, design patterns,
+and beyond. Each topic is distilled for readability, and includes the
+relevant source code, usage examples for clarity, and related topics.
 
 ## Table of Contents
 
@@ -9,11 +11,10 @@ Example code, illustrations, UML diagrams, etc.
 
 ## Topics
 
-#### Magento
-
-+ Create `select` source model with data from `di.xml` [&#128279;](topic/VirtualSelect.md)
-+ Create categorized `select` source model with data from `di.xml` [&#128279;](topic/VirtualGroupedSelect.md)
-+ Update an entry timestamp via `DateTime` factory. [&#128279;](topic/DateTimeFactory.md)
++ __Magento__
+  - Create `select` source model with data from `di.xml` [&#128279;](topic/VirtualSelect.md)
+  - Create categorized `select` source model with data from `di.xml` [&#128279;](topic/VirtualGroupedSelect.md)
+  - Update an entry timestamp via `DateTime` factory. [&#128279;](topic/DateTimeFactory.md)
 
 ## Examples
 
