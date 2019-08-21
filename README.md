@@ -17,6 +17,8 @@ Archive of whiteboard topics about Magento, PHP, OOP, design patterns, and more.
 ## Topics
 
 + __Magento__
+  - Cryptography
+    + [Token](topic/Token.md)
   - Dependency Injection
     + [DataObjectFactory](topic/DataObjectFactory.md)
     + [DateTimeFactory](topic/DateTimeFactory.md)
