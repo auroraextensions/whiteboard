@@ -1,8 +1,6 @@
 # Whiteboard
 
-Archive of whiteboard topics about Magento, PHP, OOP, design patterns,
-and beyond. Each topic is distilled for readability, and includes the
-relevant source code, usage examples for clarity, and related topics.
+Archive of whiteboard topics about Magento, PHP, OOP, design patterns, and more.
 
 ## Table of Contents
 
