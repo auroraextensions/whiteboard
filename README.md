@@ -6,7 +6,6 @@ Archive of whiteboard topics about Magento, PHP, OOP, design patterns, and more.
 
 + [Use Cases](#use-cases)
 + [Topics](#topics)
-+ [Compendium](#compendium)
 
 ## Use Cases
 
@@ -18,27 +17,16 @@ Archive of whiteboard topics about Magento, PHP, OOP, design patterns, and more.
 ## Topics
 
 + __Magento__
-  - _Dependency Injection_
+  - Dependency Injection
     + [DataObjectFactory](topic/DataObjectFactory.md)
     + [DateTimeFactory](topic/DateTimeFactory.md)
     + [VirtualGroupedSelect](topic/VirtualGroupedSelect.md)
     + [VirtualSelect](topic/VirtualSelect.md)
-  - _Factories_
+  - Factories
     + [DataObjectFactory](topic/DataObjectFactory.md)
     + [DateTimeFactory](topic/DateTimeFactory.md)
     + [ExceptionFactory](topic/ExceptionFactory.md)
-  - _Repositories_
+  - Repositories
     + [AbstractRepository](topic/AbstractRepository.md)
     + [AbstractRepositoryCompositor](topic/AbstractRepositoryCompositor.md)
     + [AbstractRepositoryInterface](topic/AbstractRepositoryInterface.md)
-
-## Compendium
-
-+ [AbstractRepository](topic/AbstractRepository.md)
-+ [AbstractRepositoryCompositor](topic/AbstractRepositoryCompositor.md)
-+ [AbstractRepositoryInterface](topic/AbstractRepositoryInterface.md)
-+ [DataObjectFactory](topic/DataObjectFactory.md)
-+ [DateTimeFactory](topic/DateTimeFactory.md)
-+ [ExceptionFactory](topic/ExceptionFactory.md)
-+ [VirtualGroupedSelect](topic/VirtualGroupedSelect.md)
-+ [VirtualSelect](topic/VirtualSelect.md)
