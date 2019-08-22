@@ -8,10 +8,11 @@
 
 ## Description
 
-In Magento, controllers inherit from `Magento\Framework\App\Action\Action`. This provides
-access to several methods (i.e. `getRequest`, `getResponse`) which are essential for tasks
-like processing request parameters and setting response status. As such, all controllers
-will inherit the `$resultRedirectFactory` property, which is needed to create redirects.
+In Magento, controllers inherit from [`Magento\Framework\App\Action\Action`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/App/Action/Action.php).
+This provides access to several methods (i.e. `getRequest`, `getResponse`) which are essential for
+tasks like processing request parameters and setting response status. As such, all controllers will
+inherit the [`$resultRedirectFactory`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/App/Action/AbstractAction.php#L28)
+property, which is needed to create redirects.
 
 In the example below, we've created a trait called `RedirectTrait`, which we can import
 in our controllers. There are several advantages to this approach, such as:
