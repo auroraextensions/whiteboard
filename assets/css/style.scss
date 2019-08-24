@@ -18,6 +18,7 @@ a {
 
 a:focus, a:hover {
   color: #3123ae;
+  text-decoration: underline;
 }
 
 @media print, screen and (max-width: 720px) {
