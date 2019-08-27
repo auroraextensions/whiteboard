@@ -15,11 +15,14 @@ Archive of whiteboard topics about Magento, PHP, OOP, design patterns, and more.
   - Generate cryptographically secure token [&#128279;](topic/Token.md)
   - Update an entry timestamp via `DateTime` factory. [&#128279;](topic/DateTimeFactory.md)
   - Use `trait` to deduplicate redirect logic between inheritance-based controllers [&#128279;](topic/RedirectTrait.md)
+  - Use `trait` to implement CSRF-aware request validation in controllers [&#128279;](topic/CsrfAwareActionTrait.md)
 
 ## Topics
 
 + __Magento__
   - Controllers
+    + [AuthTrait](topic/AuthTrait.md)
+    + [CsrfAwareActionTrait](topic/CsrfAwareActionTrait.md)
     + [RedirectTrait](topic/RedirectTrait.md)
   - Cryptography
     + [Token](topic/Token.md)
@@ -38,3 +41,7 @@ Archive of whiteboard topics about Magento, PHP, OOP, design patterns, and more.
     + [AbstractRepository](topic/AbstractRepository.md)
     + [AbstractRepositoryCompositor](topic/AbstractRepositoryCompositor.md)
     + [AbstractRepositoryInterface](topic/AbstractRepositoryInterface.md)
+  - Security
+    + [AuthTrait](topic/AuthTrait.md)
+    + [CsrfAwareActionTrait](topic/CsrfAwareActionTrait.md)
+    + [Token](topic/Token.md)
