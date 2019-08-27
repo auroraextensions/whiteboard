@@ -9,7 +9,8 @@
 
 ## Related
 
-- [AuthTrait](AuthTrait.md)
++ [AuthTrait](AuthTrait.md)
++ [CsrfAwareActionTrait](CsrfAwareActionTrait.md)
 
 ## Description
 
