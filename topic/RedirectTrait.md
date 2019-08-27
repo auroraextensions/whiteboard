@@ -2,9 +2,14 @@
 
 ## Table of Contents
 
+- [Related](#related)
 - [Description](#description)
 - [Usage](#usage)
 - [Source](#source)
+
+## Related
+
+- [AuthTrait](AuthTrait.md)
 
 ## Description
 
