@@ -9,6 +9,7 @@
 
 ## Related
 
++ [CsrfAwareActionTrait](CsrfAwareActionTrait.md)
 + [RedirectTrait](RedirectTrait.md)
 
 ## Description
@@ -47,7 +48,6 @@ use Magento\Framework\{
     App\Action\Action,
     App\Action\Context,
     App\Action\HttpPostActionInterface,
-    App\CsrfAwareActionInterface,
     Data\Form\FormKey\Validator as FormKeyValidator,
     Stdlib\Cookie\PhpCookieManager,
     Stdlib\Cookie\CookieMetadataFactory
