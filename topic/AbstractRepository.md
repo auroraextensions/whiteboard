@@ -10,7 +10,7 @@
 ## Related
 
 - [AbstractRepositoryInterface](AbstractRepositoryInterface.md)
-- [AbstractRepositoryCompositor](AbstractRepositoryCompositor.md)
+- [AbstractRepositoryTrait](AbstractRepositoryTrait.md)
 
 ## Description
 
