@@ -39,7 +39,7 @@ Archive of whiteboard topics about Magento, PHP, OOP, design patterns, and more.
     + [RedirectTrait](topic/RedirectTrait.md)
   - Repositories
     + [AbstractRepository](topic/AbstractRepository.md)
-    + [AbstractRepositoryCompositor](topic/AbstractRepositoryCompositor.md)
+    + [AbstractRepositoryTrait](topic/AbstractRepositoryTrait.md)
     + [AbstractRepositoryInterface](topic/AbstractRepositoryInterface.md)
   - Security
     + [AuthTrait](topic/AuthTrait.md)
