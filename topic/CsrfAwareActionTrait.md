@@ -6,6 +6,7 @@
 + [Description](#description)
 + [Usage](#usage)
 + [Source](#source)
++ [Notes](#notes)
 
 ## Related
 
@@ -14,9 +15,13 @@
 
 ## Description
 
-Magento offers the `CsrfAwareActionInterface` interface, which is used to
-validate requests against CSRF attacks. In the example below, we've created
-a trait called `CsrfAwareActionTrait`, which implements this interface.
+Starting in v2.3.0, Magento provides the `CsrfAwareActionInterface`<sup>1</sup>
+interface, which is used to validate requests against CSRF attacks. In most cases,
+default validation is adequate, so the implementation is identical across the vast
+majority of controllers.
+
+In the example below, we've created a trait called `CsrfAwareActionTrait`, which
+effectively implements `CsrfAwareActionInterface` with default validation.
 
 ## Usage
 
@@ -111,3 +116,7 @@ trait CsrfAwareActionTrait
     }
 }
 ```
+
+## Notes
+
++ [`CsrfAwareActionInterface`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/App/CsrfAwareActionInterface.php)
