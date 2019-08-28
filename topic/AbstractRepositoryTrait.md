@@ -1,4 +1,4 @@
-# AbstractRepositoryCompositor
+# AbstractRepositoryTrait
 
 ## Table of Contents
 
@@ -35,7 +35,7 @@ use Vendor\Package\Api\EntityRepositoryInterface;
 
 class EntityRepository implements EntityRepositoryInterface
 {
-    use AbstractRepositoryCompositor;
+    use AbstractRepositoryTrait;
 
     /** @property mixed $collectionFactory */
     protected $collectionFactory;
@@ -65,7 +65,7 @@ class EntityRepository implements EntityRepositoryInterface
 ```php
 <?php
 /**
- * AbstractRepositoryCompositor.php
+ * AbstractRepositoryTrait.php
  */
 declare(strict_types=1);
 
@@ -79,7 +79,7 @@ use Magento\Framework\{
     Exception\NoSuchEntityException
 };
 
-trait AbstractRepositoryCompositor
+trait AbstractRepositoryTrait
 {
     /**
      * @param FilterGroup $filterGroup
