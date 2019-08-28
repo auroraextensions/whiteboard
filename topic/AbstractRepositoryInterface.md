@@ -1,5 +1,7 @@
 # AbstractRepositoryInterface
 
+---
+
 ## Table of Contents
 
 - [Related](#related)
