@@ -69,4 +69,4 @@ class Token
 
 ## Notes
 
-+ [`Magento\Framework\Math\Random`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/Math/Random.php) (GitHub)
+1. [`Magento\Framework\Math\Random`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/Math/Random.php) (GitHub)
