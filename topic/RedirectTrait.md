@@ -144,5 +144,5 @@ trait RedirectTrait
 
 ## Notes
 
-1. [`Magento\Framework\App\Action\Action`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/App/Action/Action.php)
-2. [`$resultRedirectFactory`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/App/Action/AbstractAction.php#L28)
+1. [`Magento\Framework\App\Action\Action`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/App/Action/Action.php) (GitHub)
+2. [`$resultRedirectFactory`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/App/Action/AbstractAction.php#L28) (GitHub)
