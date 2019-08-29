@@ -84,5 +84,5 @@ interface AbstractRepositoryInterface
 
 ## Notes
 
-+ [`SearchCriteriaInterface`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/Api/SearchCriteriaInterface.php) (GitHub)
-+ [`SearchResultsInterface`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/Api/SearchResultsInterface.php) (GitHub)
+1. [`SearchCriteriaInterface`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/Api/SearchCriteriaInterface.php) (GitHub)
+2. [`SearchResultsInterface`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/Api/SearchResultsInterface.php) (GitHub)
