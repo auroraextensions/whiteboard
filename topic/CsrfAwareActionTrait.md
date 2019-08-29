@@ -119,4 +119,4 @@ trait CsrfAwareActionTrait
 
 ## Notes
 
-+ [`CsrfAwareActionInterface`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/App/CsrfAwareActionInterface.php) (GitHub)
+1. [`CsrfAwareActionInterface`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/App/CsrfAwareActionInterface.php) (GitHub)
