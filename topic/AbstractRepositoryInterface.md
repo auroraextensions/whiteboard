@@ -4,23 +4,24 @@
 
 ## Table of Contents
 
-- [Related](#related)
-- [Description](#description)
-- [Usage](#usage)
-- [Source](#source)
++ [Related](#related)
++ [Description](#description)
++ [Usage](#usage)
++ [Source](#source)
++ [Notes](#notes)
 
 ## Related
 
-- [AbstractRepository](AbstractRepository.md)
-- [AbstractRepositoryTrait](AbstractRepositoryTrait.md)
++ [AbstractRepository](AbstractRepository.md)
++ [AbstractRepositoryTrait](AbstractRepositoryTrait.md)
 
 ## Description
 
 All repository interfaces share common method signatures. For example, any repository interface
-will have a `getList` method that accepts an instance of `SearchCriteriaInterface` and returns
-an instance of `SearchResultsInterface`, per the Magento repository design pattern. As such, it
-makes sense to reduce duplication by creating an abstract repository interface that isn't
-implemented directly, but is extended through entity-specific repository interfaces.
+will have a `getList` method that accepts an instance of `SearchCriteriaInterface`<sup>1</sup>
+and returns an instance of `SearchResultsInterface`<sup>2</sup>, per the Magento repository design
+pattern. As such, it makes sense to reduce duplication by creating an abstract repository interface
+that isn't implemented directly, but is extended through entity-specific repository interfaces.
 
 ## Usage
 
@@ -50,9 +51,9 @@ declare(strict_types=1);
 namespace Vendor\Package\Api;
 
 use Magento\Framework\{
-    SearchCriteriaInterface,
-    SearchResultsInterface,
-    Search\FilterGroup
+    Api\SearchCriteriaInterface,
+    Api\SearchResultsInterface,
+    Api\Search\FilterGroup
 };
 
 interface AbstractRepositoryInterface
@@ -80,3 +81,8 @@ interface AbstractRepositoryInterface
     public function getList(SearchCriteriaInterface $criteria): SearchResultsInterface;
 }
 ```
+
+## Notes
+
++ [`SearchCriteriaInterface`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/Api/SearchCriteriaInterface.php) (GitHub)
++ [`SearchResultsInterface`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/Api/SearchResultsInterface.php) (GitHub)
