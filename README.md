@@ -12,7 +12,8 @@ Archive of whiteboard topics about Magento, PHP, OOP, design patterns, and more.
 + __Magento__
   - Create `select` source model with data from `di.xml` [&#128279;](topic/VirtualSelect.md)
   - Create categorized `select` source model with data from `di.xml` [&#128279;](topic/VirtualGroupedSelect.md)
-  - Generate cryptographically secure token [&#128279;](topic/Token.md)
+  - Generate token for user authentication [&#128279;](topic/Token.md)
+  - Generate nonce for reset link [&#128279;](topic/Token.md)
   - Update an entry timestamp via `DateTime` factory. [&#128279;](topic/DateTimeFactory.md)
   - Use `trait` to deduplicate redirect logic between inheritance-based controllers [&#128279;](topic/RedirectTrait.md)
   - Use `trait` to implement CSRF-aware request validation in controllers [&#128279;](topic/CsrfAwareActionTrait.md)
