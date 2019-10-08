@@ -1,10 +1,15 @@
 # Test Credit Card Numbers
 
+## Table of Contents
+
++ [Major Providers](#major-providers)
++ [Processor-specific Cards](#processor-specific-cards)
+
 Below is a list of known test credit card numbers.
 
 __Expiration Date__ must be a valid date in the future (use _mm/yy_ format).
 
-### Major Providers
+## Major Providers
 
 |    __Credit Card Type__    |   __Credit Card Number__   |
 :---------------------------:|:--------------------------:|
@@ -24,7 +29,7 @@ __Expiration Date__ must be a valid date in the future (use _mm/yy_ format).
 | Visa                       | 4012888888881881           |
 | Visa                       | 4222222222222              |
 
-### Processor-specific Cards
+## Processor-specific Cards
 
 |    __Credit Card Type__    |   __Credit Card Number__   |
 :---------------------------:|:--------------------------:|
