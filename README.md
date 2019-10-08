@@ -4,8 +4,13 @@ Archive of whiteboard topics about Magento, PHP, OOP, design patterns, and more.
 
 ## Table of Contents
 
++ [Guides](#guides)
 + [Use Cases](#use-cases)
 + [Topics](#topics)
+
+## Guides
+
++ [Test Credit Card Numbers](guide/TestCreditCardNumbers.html)
 
 ## Use Cases
 
