@@ -10,17 +10,19 @@
 ## Description
 
 Magento provides the `Magento\Framework\Math\Random`<sup>1</sup> class for
-generating random data. This is particularly useful when you need things
-like tokens, nonces, and salts.
+generating random data. This class is particularly useful when you need things
+like tokens, nonces, and salts, and is used in several areas of the framework.
+However, we'd prefer to have an entirely static class that provides the same
+functionality, which we can do with PHP builtins.
 
 In the example below, the `Token` class provides two `static` methods:
 
 + `generate`
 + `isHex`
 
-The `generate` method utilizes `random_bytes` for random sequence generation,
-and the `isHex` method verifies the given sequence contains only hexidecimal
-characters.
+The `generate` method utilizes `random_bytes`<sup>2</sup> for random sequence
+generation, and the `isHex` method verifies the given sequence contains only
+hexidecimal characters.
 
 ## Usage
 
@@ -70,3 +72,4 @@ class Token
 ## Notes
 
 1. [`Magento\Framework\Math\Random`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/Math/Random.php) (GitHub)
+2. [`random\_bytes`](https://www.php.net/manual/en/function.random-bytes.php)
