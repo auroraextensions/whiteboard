@@ -4,13 +4,9 @@ Archive of whiteboard topics about Magento, PHP, OOP, design patterns, and more.
 
 ## Table of Contents
 
-+ [Guides](#guides)
 + [Use Cases](#use-cases)
 + [Topics](#topics)
-
-## Guides
-
-+ [Test Credit Card Numbers](guide/TestCreditCardNumbers.html)
++ [Guides](#guides)
 
 ## Use Cases
 
@@ -51,3 +47,7 @@ Archive of whiteboard topics about Magento, PHP, OOP, design patterns, and more.
     + [AuthTrait](topic/AuthTrait.md)
     + [CsrfAwareActionTrait](topic/CsrfAwareActionTrait.md)
     + [Token](topic/Token.md)
+
+## Guides
+
++ [Test Credit Card Numbers](guide/TestCreditCardNumbers.html)
