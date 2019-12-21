@@ -1,7 +1,5 @@
 # Token
 
----
-
 _Published_: 2019-08-21
 
 ## Table of Contents
