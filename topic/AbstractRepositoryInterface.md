@@ -2,6 +2,8 @@
 
 ---
 
+_Published_: 2019-07-02
+
 ## Table of Contents
 
 + [Related](#related)
