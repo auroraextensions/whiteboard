@@ -1,5 +1,7 @@
 # VirtualSelect
 
+_Published_: 2019-07-25
+
 ## Table of Contents
 
 - [Related](#related)

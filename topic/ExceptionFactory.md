@@ -1,5 +1,7 @@
 # ExceptionFactory
 
+_Published_: 2019-06-14
+
 ## Table of Contents
 
 - [Related](#related)
