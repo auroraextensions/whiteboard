@@ -1,5 +1,9 @@
 # Token
 
+---
+
+_Published_: 2019-08-21
+
 ## Table of Contents
 
 + [Description](#description)
@@ -71,5 +75,5 @@ class Token
 
 ## Notes
 
-1. [`Magento\Framework\Math\Random`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/Math/Random.php) (GitHub)
+1. [`Magento\Framework\Math\Random`](https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Math/Random.php) (GitHub)
 2. [`random_bytes`](https://www.php.net/manual/en/function.random-bytes.php)
