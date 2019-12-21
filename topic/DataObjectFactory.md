@@ -1,5 +1,7 @@
 # DataObjectFactory
 
+_Published_: 2019-07-12
+
 ## Table of Contents
 
 - [Related](#related)

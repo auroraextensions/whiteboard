@@ -1,5 +1,7 @@
 # AbstractRepository
 
+_Published_: 2019-07-09
+
 ## Table of Contents
 
 - [Related](#related)

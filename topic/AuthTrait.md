@@ -1,5 +1,7 @@
 # AuthTrait
 
+_Published_: 2019-08-27
+
 ## Table of Contents
 
 + [Related](#related)

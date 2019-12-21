@@ -1,5 +1,7 @@
 # DateTimeFactory
 
+_Published_: 2019-08-18
+
 ## Table of Contents
 
 - [Related](#related)
