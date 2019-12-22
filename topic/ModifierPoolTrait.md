@@ -130,6 +130,70 @@ class DataProvider extends AbstractDataProvider implements
 }
 ```
 
+```php
+/**
+ * DataModifier.php
+ */
+declare(strict_types=1);
+
+namespace Vendor\Package\Ui\DataModifier\Entity;
+
+use Magento\Ui\DataProvider\Modifier\ModifierInterface;
+
+class DataModifier implements ModifierInterface
+{
+    /**
+     * @param array $meta
+     * @return array
+     */
+    public function modifyMeta(array $meta)
+    {
+        /* Perform whatever modifications you need to make to the metadata. */
+
+        return $meta;
+    }
+
+    /**
+     * @param array $data
+     * @return array
+     */
+    public function modifyData(array $data)
+    {
+        /* Perform whatever modifications you need to make to the data. */
+
+        return $data;
+    }
+}
+```
+
+```xml
+<?xml version="1.0"?>
+<!--
+/**
+ * di.xml
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Vendor\Package\Ui\DataModifier\Entity\Pool" type="Magento\Ui\DataProvider\Modifier\Pool">
+         <arguments>
+             <argument name="modifiers" xsi:type="array">
+                 <item name="vendor_package_entity_data_modifier" xsi:type="array">
+                     <item name="class" xsi:type="string">Vendor\Package\Ui\DataModifier\Entity\DataModifier</item>
+                     <item name="sortOrder" xsi:type="number">10</item>
+                 </item>
+             </argument>
+         </arguments>
+    </virtualType>
+
+    <type name="Vendor\Package\Ui\DataProvider\Listing\Entity\DataProvider">
+        <arguments>
+            <argument name="modifierPool" xsi:type="object">Vendor\Package\Ui\DataModifier\Entity\Pool</argument>
+        </arguments>
+    </type>
+</config>
+```
+
 ## Source
 
 ```php
