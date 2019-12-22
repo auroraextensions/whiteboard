@@ -19,6 +19,7 @@ Archive of whiteboard topics about Magento, PHP, OOP, design patterns, and more.
   - Deduplicate redirect logic between inheritance-based controllers [&#128279;](topic/RedirectTrait.md)
   - Implement CSRF-aware request validation in controllers [&#128279;](topic/CsrfAwareActionTrait.md)
   - Dispatch `before`, `after` events while saving an entity [&#128279;](topic/EventManagerTrait.md)
+  - Modify metadata/data via data modifiers in an entity data provider [&#128279;](topic/ModifierPoolTrait.md)
 
 ## Topics
 
@@ -50,6 +51,8 @@ Archive of whiteboard topics about Magento, PHP, OOP, design patterns, and more.
     + [AuthTrait](topic/AuthTrait.md)
     + [CsrfAwareActionTrait](topic/CsrfAwareActionTrait.md)
     + [Token](topic/Token.md)
+  - UI Components
+    + [ModifierPoolTrait](topic/ModifierPoolTrait.md)
 
 ## Guides
 
