@@ -1,88 +1,87 @@
-# AbstractRepositoryInterface
+.. contents:: :local:
 
-_Published_: 2019-07-02
+AbstractRepositoryInterface
+===========================
 
-## Table of Contents
+*Published*: 2019-07-02
 
-+ [Related](#related)
-+ [Description](#description)
-+ [Usage](#usage)
-+ [Source](#source)
-+ [Notes](#notes)
+Related
+=======
 
-## Related
+* `AbstractRepository <AbstractRepository>`_
+* `AbstractRepositoryTrait <AbstractRepositoryTrait>`_
 
-+ [AbstractRepository](AbstractRepository.md)
-+ [AbstractRepositoryTrait](AbstractRepositoryTrait.md)
-
-## Description
+Description
+===========
 
 All repository interfaces share common method signatures. For example, any repository interface
-will have a `getList` method that accepts an instance of `SearchCriteriaInterface`<sup>1</sup>
-and returns an instance of `SearchResultsInterface`<sup>2</sup>, per the Magento repository design
+will have a ``getList`` method that accepts an instance of ``SearchCriteriaInterface`` [#ref1]_
+and returns an instance of ``SearchResultsInterface`` [#ref2]_, per the Magento repository design
 pattern. As such, it makes sense to reduce duplication by creating an abstract repository interface
 that isn't implemented directly, but is extended through entity-specific repository interfaces.
 
-## Usage
+Usage
+=====
 
-```php
-<?php
-/**
- * EntityRepositoryInterface.php
- */
-declare(strict_types=1);
-
-namespace Vendor\Package\Api;
-
-interface EntityRepositoryInterface extends AbstractRepositoryInterface
-{
-}
-```
-
-## Source
-
-```php
-<?php
-/**
- * AbstractRepositoryInterface.php
- */
-declare(strict_types=1);
-
-namespace Vendor\Package\Api;
-
-use Magento\Framework\{
-    Api\SearchCriteriaInterface,
-    Api\SearchResultsInterface,
-    Api\Search\FilterGroup
-};
-
-interface AbstractRepositoryInterface
-{
+.. code-block:: php
+    <?php
     /**
-     * @param FilterGroup $group
-     * @param mixed $collection
-     * @return void
+     * EntityRepositoryInterface.php
      */
-    public function addFilterGroupToCollection(
-        FilterGroup $group,
-        $collection
-    ): void;
+    declare(strict_types=1);
 
+    namespace Vendor\Package\Api;
+
+    interface EntityRepositoryInterface extends AbstractRepositoryInterface
+    {
+    }
+
+Source
+======
+
+.. code-block:: php
+
+    <?php
     /**
-     * @param string $direction
-     * @return string
+     * AbstractRepositoryInterface.php
      */
-    public function getDirection(string $direction): string;
+    declare(strict_types=1);
 
-    /**
-     * @param SearchCriteriaInterface $criteria
-     * @return SearchResultsInterface
-     */
-    public function getList(SearchCriteriaInterface $criteria): SearchResultsInterface;
-}
-```
+    namespace Vendor\Package\Api;
 
-## Notes
+    use Magento\Framework\{
+        Api\SearchCriteriaInterface,
+        Api\SearchResultsInterface,
+        Api\Search\FilterGroup
+    };
 
-1. [`SearchCriteriaInterface`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/Api/SearchCriteriaInterface.php) (GitHub)
-2. [`SearchResultsInterface`](https://github.com/magento/magento2/blob/2.3-develop/lib/internal/Magento/Framework/Api/SearchResultsInterface.php) (GitHub)
+    interface AbstractRepositoryInterface
+    {
+        /**
+         * @param FilterGroup $group
+         * @param mixed $collection
+         * @return void
+         */
+        public function addFilterGroupToCollection(
+            FilterGroup $group,
+            $collection
+        ): void;
+
+        /**
+         * @param string $direction
+         * @return string
+         */
+        public function getDirection(string $direction): string;
+
+        /**
+         * @param SearchCriteriaInterface $criteria
+         * @return SearchResultsInterface
+         */
+        public function getList(SearchCriteriaInterface $criteria): SearchResultsInterface;
+    }
+
+Notes
+=====
+
+.. [#ref1] `Magento\\Framework\\Api\\SearchCriteriaInterface <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Api/SearchCriteriaInterface.php>`_
+.. [#ref2] `Magento\\Framework\\Api\\SearchResultsInterface <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Api/SearchResultsInterface.php>`_
