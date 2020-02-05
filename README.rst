@@ -64,7 +64,7 @@ Redirects
 Repositories
 ^^^^^^^^^^^^
 
-* :ref:`abstract_repository`
+* :doc:`source/topic/AbstractRepository`
 * :doc:`topic/AbstractRepositoryTrait`
 * :doc:`topic/AbstractRepositoryInterface`
 
