@@ -1,5 +1,5 @@
 .. contents:: Table of Contents
-    :maxdepth: 2
+    :depth: 2
 
 AbstractRepository
 ==================
