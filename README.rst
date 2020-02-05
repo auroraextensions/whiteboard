@@ -27,55 +27,55 @@ Magento
 Controllers
 ^^^^^^^^^^^
 
-* :doc:`AuthTrait <topic/AuthTrait>`_
-* :doc:`CsrfAwareActionTrait <topic/CsrfAwareActionTrait>`_
-* :doc:`RedirectTrait <topic/RedirectTrait>`_
+* :doc:`topic/AuthTrait`
+* :doc:`topic/CsrfAwareActionTrait`
+* :doc:`topic/RedirectTrait`
 
 Cryptography
 ^^^^^^^^^^^^
 
-* :doc:`Token <topic/Token>`_
+* :doc:`topic/Token`
 
 Dependency Injection
 ^^^^^^^^^^^^^^^^^^^^
 
-* :doc:`DataObjectFactory <topic/DataObjectFactory>`_
-* :doc:`DateTimeFactory <topic/DateTimeFactory>`_
-* :doc:`VirtualGroupedSelect <topic/VirtualGroupedSelect>`_
-* :doc:`VirtualSelect <topic/VirtualSelect>`_
+* :doc:`topic/DataObjectFactory`
+* :doc:`topic/DateTimeFactory`
+* :doc:`topic/VirtualGroupedSelect`
+* :doc:`topic/VirtualSelect`
 
 Events
 ^^^^^^
 
-* :doc:`EventManagerTrait <topic/EventManagerTrait>`_
+* :doc:`topic/EventManagerTrait`
 
 Factories
 ^^^^^^^^^
 
-* :doc:`DataObjectFactory <topic/DataObjectFactory>`_
-* :doc:`DateTimeFactory <topic/DateTimeFactory>`_
-* :doc:`ExceptionFactory <topic/ExceptionFactory>`_
+* :doc:`topic/DataObjectFactory`
+* :doc:`topic/DateTimeFactory`
+* :doc:`topic/ExceptionFactory`
 
 Redirects
 ^^^^^^^^^
 
-* :doc:`RedirectTrait <topic/RedirectTrait>`_
+* :doc:`topic/RedirectTrait`
 
 Repositories
 ^^^^^^^^^^^^
 
-* :doc:`AbstractRepository <topic/AbstractRepository>`_
-* :doc:`AbstractRepositoryTrait <topic/AbstractRepositoryTrait>`_
-* :doc:`AbstractRepositoryInterface <topic/AbstractRepositoryInterface>`_
+* :doc:`topic/AbstractRepository`
+* :doc:`topic/AbstractRepositoryTrait`
+* :doc:`topic/AbstractRepositoryInterface`
 
 Security
 ^^^^^^^^
 
-* :doc:`AuthTrait <topic/AuthTrait>`_
-* :doc:`CsrfAwareActionTrait <topic/CsrfAwareActionTrait>`_
-* :doc:`Token <topic/Token>`_
+* :doc:`topic/AuthTrait`
+* :doc:`topic/CsrfAwareActionTrait`
+* :doc:`topic/Token`
 
 UI Components
 ^^^^^^^^^^^^^
 
-* :doc:`ModifierPoolTrait <topic/ModifierPoolTrait>`_
+* :doc:`topic/ModifierPoolTrait`
