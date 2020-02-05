@@ -10,7 +10,7 @@ AbstractRepository
 Related
 =======
 
-* `AbstractRepositoryInterface <AbstractRepositoryInterface.md>`_
+* `AbstractRepositoryInterface <AbstractRepositoryInterface>`_
 * `AbstractRepositoryTrait <AbstractRepositoryTrait>`_
 
 Description
