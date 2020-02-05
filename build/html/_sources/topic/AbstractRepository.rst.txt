@@ -4,8 +4,8 @@
 AbstractRepository
 ==================
 
-*Published*: 2019-07-09
-*Author*: Nickolas Burr
+* *Published*: 2019-07-09
+* *Author*: Nickolas Burr
 
 Related
 =======
