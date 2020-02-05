@@ -1,8 +1,6 @@
 Archive of whiteboard topics, mostly about Magento, PHP, OOP, design patterns, etc.
 
-.. toctree::
-    :maxdepth: 2
-    :titlesonly:
+.. contents:: :local:
 
 Use Cases
 =========
