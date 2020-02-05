@@ -1,59 +1,81 @@
-# Whiteboard
+.. contents:: :local:
 
-Archive of whiteboard topics about Magento, PHP, OOP, design patterns, and more.
+Archive of whiteboard topics, mostly about Magento, PHP, OOP, design patterns, etc.
 
-## Table of Contents
+Use Cases
+=========
 
-+ [Use Cases](#use-cases)
-+ [Topics](#topics)
-+ [Guides](#guides)
+Magento
+-------
 
-## Use Cases
+* Create ``select`` source model with data from ``di.xml``
+* Create categorized ``select`` source model with data from ``di.xml``
+* Generate token for user authentication
+* Generate nonce for reset link
+* Update an entry timestamp via ``DateTime`` factory
+* Deduplicate redirect logic between inheritance-based controllers
+* Implement CSRF-aware request validation in controllers
+* Dispatch ``before``, ``after`` events while saving an entity
+* Modify metadata/data via data modifiers in an entity data provider
 
-+ __Magento__
-  - Create `select` source model with data from `di.xml` [&#128279;](topic/VirtualSelect.md)
-  - Create categorized `select` source model with data from `di.xml` [&#128279;](topic/VirtualGroupedSelect.md)
-  - Generate token for user authentication [&#128279;](topic/Token.md)
-  - Generate nonce for reset link [&#128279;](topic/Token.md)
-  - Update an entry timestamp via `DateTime` factory. [&#128279;](topic/DateTimeFactory.md)
-  - Deduplicate redirect logic between inheritance-based controllers [&#128279;](topic/RedirectTrait.md)
-  - Implement CSRF-aware request validation in controllers [&#128279;](topic/CsrfAwareActionTrait.md)
-  - Dispatch `before`, `after` events while saving an entity [&#128279;](topic/EventManagerTrait.md)
-  - Modify metadata/data via data modifiers in an entity data provider [&#128279;](topic/ModifierPoolTrait.md)
+Topics
+======
 
-## Topics
+Magento
+-------
 
-+ __Magento__
-  - Controllers
-    + [AuthTrait](topic/AuthTrait.md)
-    + [CsrfAwareActionTrait](topic/CsrfAwareActionTrait.md)
-    + [RedirectTrait](topic/RedirectTrait.md)
-  - Cryptography
-    + [Token](topic/Token.md)
-  - Dependency Injection
-    + [DataObjectFactory](topic/DataObjectFactory.md)
-    + [DateTimeFactory](topic/DateTimeFactory.md)
-    + [VirtualGroupedSelect](topic/VirtualGroupedSelect.md)
-    + [VirtualSelect](topic/VirtualSelect.md)
-  - Events
-    + [EventManagerTrait](topic/EventManagerTrait.md)
-  - Factories
-    + [DataObjectFactory](topic/DataObjectFactory.md)
-    + [DateTimeFactory](topic/DateTimeFactory.md)
-    + [ExceptionFactory](topic/ExceptionFactory.md)
-  - Redirects
-    + [RedirectTrait](topic/RedirectTrait.md)
-  - Repositories
-    + [AbstractRepository](topic/AbstractRepository.md)
-    + [AbstractRepositoryTrait](topic/AbstractRepositoryTrait.md)
-    + [AbstractRepositoryInterface](topic/AbstractRepositoryInterface.md)
-  - Security
-    + [AuthTrait](topic/AuthTrait.md)
-    + [CsrfAwareActionTrait](topic/CsrfAwareActionTrait.md)
-    + [Token](topic/Token.md)
-  - UI Components
-    + [ModifierPoolTrait](topic/ModifierPoolTrait.md)
+Controllers
+^^^^^^^^^^^
 
-## Guides
+* :doc:`AuthTrait <topic/AuthTrait>`_
+* :doc:`CsrfAwareActionTrait <topic/CsrfAwareActionTrait>`_
+* :doc:`RedirectTrait <topic/RedirectTrait>`_
 
-+ [Test Credit Card Numbers](guide/TestCreditCardNumbers.html)
+Cryptography
+^^^^^^^^^^^^
+
+* :doc:`Token <topic/Token>`_
+
+Dependency Injection
+^^^^^^^^^^^^^^^^^^^^
+
+* :doc:`DataObjectFactory <topic/DataObjectFactory>`_
+* :doc:`DateTimeFactory <topic/DateTimeFactory>`_
+* :doc:`VirtualGroupedSelect <topic/VirtualGroupedSelect>`_
+* :doc:`VirtualSelect <topic/VirtualSelect>`_
+
+Events
+^^^^^^
+
+* :doc:`EventManagerTrait <topic/EventManagerTrait>`_
+
+Factories
+^^^^^^^^^
+
+* :doc:`DataObjectFactory <topic/DataObjectFactory>`_
+* :doc:`DateTimeFactory <topic/DateTimeFactory>`_
+* :doc:`ExceptionFactory <topic/ExceptionFactory>`_
+
+Redirects
+^^^^^^^^^
+
+* :doc:`RedirectTrait <topic/RedirectTrait>`_
+
+Repositories
+^^^^^^^^^^^^
+
+* :doc:`AbstractRepository <topic/AbstractRepository>`_
+* :doc:`AbstractRepositoryTrait <topic/AbstractRepositoryTrait>`_
+* :doc:`AbstractRepositoryInterface <topic/AbstractRepositoryInterface>`_
+
+Security
+^^^^^^^^
+
+* :doc:`AuthTrait <topic/AuthTrait>`_
+* :doc:`CsrfAwareActionTrait <topic/CsrfAwareActionTrait>`_
+* :doc:`Token <topic/Token>`_
+
+UI Components
+^^^^^^^^^^^^^
+
+* :doc:`ModifierPoolTrait <topic/ModifierPoolTrait>`_
