@@ -24,6 +24,7 @@ Usage
 =====
 
 .. code-block:: php
+
     <?php
     /**
      * EntityRepositoryInterface.php

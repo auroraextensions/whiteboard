@@ -147,4 +147,4 @@ Notes
 =====
 
 .. [#ref1] `Magento\\\Framework\\\App\\\Action\\\Action <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/Action/Action.php>`_
-.. [#ref2] `$resultRedirectFactory <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/Action/AbstractAction.php#L28`_
+.. [#ref2] `$resultRedirectFactory <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/Action/AbstractAction.php#L28>`_
