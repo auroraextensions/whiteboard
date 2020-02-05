@@ -1,77 +1,77 @@
-# Token
+.. contents:: :local:
 
-_Published_: 2019-08-21
+Token
+=====
 
-## Table of Contents
+*Published*: 2019-08-21
 
-+ [Description](#description)
-+ [Usage](#usage)
-+ [Source](#source)
-+ [Notes](#notes)
+Description
+===========
 
-## Description
-
-Magento provides the `Magento\Framework\Math\Random`<sup>1</sup> class for
+Magento provides the ``Magento\Framework\Math\Random`` [#ref1]_ class for
 generating random data. This class is particularly useful when you need things
 like tokens, nonces, and salts, and is used in several areas of the framework.
 However, we'd prefer to have an entirely static class that provides the same
 functionality, which we can do with PHP builtins.
 
-In the example below, the `Token` class provides two `static` methods:
+In the example below, the ``Token`` class provides two ``static`` methods:
 
-+ `generate`
-+ `isHex`
++ ``generate``
++ ``isHex``
 
-The `generate` method utilizes `random_bytes`<sup>2</sup> for random sequence
-generation, and the `isHex` method verifies the given sequence contains only
+The ``generate`` method utilizes `random_bytes` [#ref2]_ for random sequence
+generation, and the ``isHex`` method verifies the given sequence contains only
 hexidecimal characters.
 
-## Usage
+Usage
+=====
 
-```php
-...
-/** @var string $token */
-$token = Token::generate();
-...
-```
+.. code-block:: php
 
-## Source
+    ...
+    /** @var string $token */
+    $token = Token::generate();
+    ...
 
-```php
-<?php
-/**
- * Token.php
- */
-declare(strict_types=1);
+Source
+======
 
-namespace Vendor\Package\Model\Security;
+.. code-block:: php
 
-class Token
-{
-    /** @constant string REGEX */
-    public const REGEX = '/[^a-f0-9]/';
-
+    <?php
     /**
-     * @param int $length
-     * @return string
+     * Token.php
      */
-    public static function generate(int $length = 32): string
+    declare(strict_types=1);
+
+    namespace Vendor\Package\Model\Security;
+
+    class Token
     {
-        return bin2hex(random_bytes($length));
+        /** @constant string REGEX */
+        public const REGEX = '/[^a-f0-9]/';
+
+        /**
+         * @param int $length
+         * @return string
+         */
+        public static function generate(int $length = 32): string
+        {
+            return bin2hex(random_bytes($length));
+        }
+
+        /**
+         * @param string $token
+         * @return bool
+         */
+        public static function isHex(string $token): bool
+        {
+          return !preg_match(self::REGEX, $token);
+        }
     }
 
-    /**
-     * @param string $token
-     * @return bool
-     */
-    public static function isHex(string $token): bool
-    {
-      return !preg_match(self::REGEX, $token);
-    }
-}
-```
+Notes
+=====
 
-## Notes
-
-1. [`Magento\Framework\Math\Random`](https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Math/Random.php) (GitHub)
-2. [`random_bytes`](https://www.php.net/manual/en/function.random-bytes.php)
+.. [#ref1] `Magento\Framework\Math\Random <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Math/Random.php>`_
+.. [#ref2] `random_bytes <https://www.php.net/manual/en/function.random-bytes.php>`_
