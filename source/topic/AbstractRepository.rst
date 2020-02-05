@@ -1,6 +1,11 @@
-.. contents:: AbstractRepository
+.. contents:: Table of Contents
+    :maxdepth: 2
+
+AbstractRepository
+==================
 
 *Published*: 2019-07-09
+*Author*: Nickolas Burr
 
 Related
 =======
