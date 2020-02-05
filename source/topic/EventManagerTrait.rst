@@ -1,109 +1,109 @@
-# EventManagerTrait
+.. contents:: :local:
 
-_Published_: 2019-12-21
+EventManagerTrait
+=================
 
-## Table of Contents
+*Published*: 2019-12-21
 
-+ [Description](#description)
-+ [Usage](#usage)
-+ [Source](#source)
-
-## Description
+Description
+===========
 
 Magento provides an event-driven subsystem that allows modules to dispatch and observe
 arbitrary types of events. This is useful for a variety of reasons, such as:
 
-+ Performing actions upon occurrence of specific events
-+ Receiving important data sent by an event dispatcher
-+ Logging state during time of event dispatch
+* Performing actions upon occurrence of specific events
+* Receiving important data sent by an event dispatcher
+* Logging state during time of event dispatch
 
-In the example below, we've created a trait called `EventManagerTrait`. By mixing in the
-`EventManagerTrait` trait, a class can easily dispatch events with data by invoking the
-`dispatchEvent` method.
+In the example below, we've created a trait called ``EventManagerTrait``. By mixing in the
+``EventManagerTrait`` trait, a class can easily dispatch events with data by invoking the
+``dispatchEvent`` method.
 
-## Usage
+Usage
+=====
 
-```php
-<?php
-/**
- * Entity.php
- */
-declare(strict_types=1);
+.. code-block:: php
 
-namespace Vendor\Package\Model;
-
-use Magento\Framework\Event\ManagerInterface as EventManagerInterface;
-use Vendor\Package\Component\Event\EventManagerTrait;
-
-class Entity
-{
+    <?php
     /**
-     * @property EventManagerInterface $eventManager
-     * @method void dispatchEvent(string $event, array $data)
+     * Entity.php
      */
-    use EventManagerTrait;
+    declare(strict_types=1);
 
-    /**
-     * @param EventManagerInterface $eventManager
-     * @return void
-     */
-    public function __construct(
-        EventManagerInterface $eventManager
-    ) {
-        $this->eventManager = $eventManager;
-    }
+    namespace Vendor\Package\Model;
 
-    /**
-     * @return void
-     */
-    public function save()
+    use Magento\Framework\Event\ManagerInterface as EventManagerInterface;
+    use Vendor\Package\Component\Event\EventManagerTrait;
+
+    class Entity
     {
-        $this->dispatchEvent(
-            'package_entity_save_before',
-            [
-                'entity' => $entity,
-                'status' => $status,
-            ]
-        );
+        /**
+         * @property EventManagerInterface $eventManager
+         * @method void dispatchEvent(string $event, array $data)
+         */
+        use EventManagerTrait;
 
-        ...
+        /**
+         * @param EventManagerInterface $eventManager
+         * @return void
+         */
+        public function __construct(
+            EventManagerInterface $eventManager
+        ) {
+            $this->eventManager = $eventManager;
+        }
 
-        $this->dispatchEvent(
-            'package_entity_save_after',
-            [
-                'entity' => $entity,
-                'status' => $status,
-            ]
-        );
+        /**
+         * @return void
+         */
+        public function save()
+        {
+            $this->dispatchEvent(
+                'package_entity_save_before',
+                [
+                    'entity' => $entity,
+                    'status' => $status,
+                ]
+            );
+
+            ...
+
+            $this->dispatchEvent(
+                'package_entity_save_after',
+                [
+                    'entity' => $entity,
+                    'status' => $status,
+                ]
+            );
+        }
     }
-}
-```
 
-## Source
+Source
+======
 
-```php
-<?php
-/**
- * EventManagerTrait.php
- */
-declare(strict_types=1);
+.. code-block:: php
 
-namespace Vendor\Package\Component\Event;
-
-trait EventManagerTrait
-{
-    /** @property Magento\Framework\Event\ManagerInterface $eventManager */
-    private $eventManager;
-
+    <?php
     /**
-     * @param string $event
-     * @param array $data
-     * @return void
+     * EventManagerTrait.php
      */
-    private function dispatchEvent(string $event, array $data = []): void
+    declare(strict_types=1);
+
+    namespace Vendor\Package\Component\Event;
+
+    trait EventManagerTrait
     {
-        $this->eventManager
-            ->dispatch($event, $data);
+        /** @property Magento\Framework\Event\ManagerInterface $eventManager */
+        private $eventManager;
+
+        /**
+         * @param string $event
+         * @param array $data
+         * @return void
+         */
+        private function dispatchEvent(string $event, array $data = []): void
+        {
+            $this->eventManager
+                ->dispatch($event, $data);
+        }
     }
-}
-```
