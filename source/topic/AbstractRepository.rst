@@ -1,9 +1,6 @@
-AbstractRepository
-==================
+.. contents:: AbstractRepository
 
 *Published*: 2019-07-09
-
-.. contents:: :local:
 
 Related
 =======
