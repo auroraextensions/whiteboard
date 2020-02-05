@@ -1,6 +1,6 @@
-.. contents:: :local:
-
 Archive of whiteboard topics, mostly about Magento, PHP, OOP, design patterns, etc.
+
+.. contents:: :local:
 
 Use Cases
 =========
