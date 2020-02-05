@@ -1,150 +1,150 @@
-# RedirectTrait
+.. contents:: :local:
 
-_Published_: 2019-08-21
+RedirectTrait
+=============
 
-## Table of Contents
+*Published*: 2019-08-21
 
-- [Related](#related)
-- [Description](#description)
-- [Usage](#usage)
-- [Source](#source)
-- [Notes](#notes)
+Related
+=======
 
-## Related
+* `AuthTrait <AuthTrait>`_
+* `CsrfAwareActionTrait <CsrfAwareActionTrait>`_
 
-+ [AuthTrait](AuthTrait.md)
-+ [CsrfAwareActionTrait](CsrfAwareActionTrait.md)
+Description
+===========
 
-## Description
-
-In Magento, controllers inherit from `Magento\Framework\App\Action\Action`<sup>1</sup>.
-This provides access to several methods (i.e. `getRequest`, `getResponse`) which are
+In Magento, controllers inherit from ``Magento\\\Framework\\\App\\\Action\\\Action`` [#ref1]_.
+This provides access to several methods (i.e. ``getRequest``, ``getResponse``) which are
 essential for tasks like processing request parameters and setting response status. As
-such, all controllers will inherit the `$resultRedirectFactory`<sup>2</sup> property,
+such, all controllers will inherit the ``$resultRedirectFactory`` [#ref2]_ property,
 which, unsurprisingly, is needed to create redirects.
 
-In the example below, we've created a trait called `RedirectTrait`, which we can import
+In the example below, we've created a trait called ``RedirectTrait``, which we can import
 in our controllers. There are several advantages to this approach, such as:
 
 1. Reduced duplication
 2. Improved durability
-3. Smaller `execute` methods
+3. Smaller ``execute`` methods
 4. Single source of truth
 
-## Usage
+Usage
+=====
 
-```php
-<?php
-/**
- * CreatePost.php
- */
-declare(strict_types=1);
+.. code-block:: php
 
-namespace Vendor\Package\Controller\Entity;
-
-use Magento\Framework\{
-    App\Action\Action,
-    App\Action\Context,
-    App\Action\HttpPostActionInterface,
-    App\CsrfAwareActionInterface,
-    Data\Form\FormKey\Validator as FormKeyValidator
-};
-use Vendor\Package\Component\RedirectTrait;
-
-class CreatePost extends Action implements
-    CsrfAwareActionInterface,
-    HttpPostActionInterface
-{
-    use RedirectTrait;
-
-    /** @property FormKeyValidator $formKeyValidator */
-    protected $formKeyValidator;
-
+    <?php
     /**
-     * @param Context $context
-     * @param FormKeyValidator $formKeyValidator
-     * @return void
+     * CreatePost.php
      */
-    public function __construct(
-        Context $context,
-        FormKeyValidator $formKeyValidator
-    ) {
-        parent::__construct($context);
-        $this->formKeyValidator = $formKeyValidator;
-    }
+    declare(strict_types=1);
 
-    /**
-     * @return Redirect
-     */
-    public function execute()
+    namespace Vendor\Package\Controller\Entity;
+
+    use Magento\Framework\{
+        App\Action\Action,
+        App\Action\Context,
+        App\Action\HttpPostActionInterface,
+        App\CsrfAwareActionInterface,
+        Data\Form\FormKey\Validator as FormKeyValidator
+    };
+    use Vendor\Package\Component\RedirectTrait;
+
+    class CreatePost extends Action implements
+        CsrfAwareActionInterface,
+        HttpPostActionInterface
     {
-        /** @var Magento\Framework\App\RequestInterface $request */
-        $request = $this->getRequest();
+        use RedirectTrait;
 
-        if (!$request->isPost() || !$this->formKeyValidator->validate($request)) {
-            return $this->getRedirectToPath('*/*/create');
+        /** @property FormKeyValidator $formKeyValidator */
+        protected $formKeyValidator;
+
+        /**
+         * @param Context $context
+         * @param FormKeyValidator $formKeyValidator
+         * @return void
+         */
+        public function __construct(
+            Context $context,
+            FormKeyValidator $formKeyValidator
+        ) {
+            parent::__construct($context);
+            $this->formKeyValidator = $formKeyValidator;
         }
 
-        ...
+        /**
+         * @return Redirect
+         */
+        public function execute()
+        {
+            /** @var Magento\Framework\App\RequestInterface $request */
+            $request = $this->getRequest();
+
+            if (!$request->isPost() || !$this->formKeyValidator->validate($request)) {
+                return $this->getRedirectToPath('*/*/create');
+            }
+
+            ...
+        }
     }
-}
-```
 
-## Source
+Source
+======
 
-```php
-<?php
-/**
- * RedirectTrait.php
- */
-declare(strict_types=1);
+.. code-block:: php
 
-namespace Vendor\Package\Component;
-
-use Magento\Framework\{
-    App\Action\AbstractAction,
-    Controller\Result\Redirect
-};
-
-trait RedirectTrait
-{
+    <?php
     /**
-     * @return Redirect
+     * RedirectTrait.php
      */
-    public function getRedirect(): Redirect
+    declare(strict_types=1);
+
+    namespace Vendor\Package\Component;
+
+    use Magento\Framework\{
+        App\Action\AbstractAction,
+        Controller\Result\Redirect
+    };
+
+    trait RedirectTrait
     {
-        return $this->resultRedirectFactory->create();
+        /**
+         * @return Redirect
+         */
+        public function getRedirect(): Redirect
+        {
+            return $this->resultRedirectFactory->create();
+        }
+
+        /**
+         * @param string $path
+         * @return Redirect
+         */
+        public function getRedirectToPath(string $path = '*'): Redirect
+        {
+            /** @var Redirect $redirect */
+            $redirect = $this->getRedirect();
+            $redirect->setPath($path);
+
+            return $redirect;
+        }
+
+        /**
+         * @param string $url
+         * @return Redirect
+         */
+        public function getRedirectToUrl(string $url = '*'): Redirect
+        {
+            /** @var Redirect $redirect */
+            $redirect = $this->getRedirect();
+            $redirect->setUrl($url);
+
+            return $redirect;
+        }
     }
 
-    /**
-     * @param string $path
-     * @return Redirect
-     */
-    public function getRedirectToPath(string $path = '*'): Redirect
-    {
-        /** @var Redirect $redirect */
-        $redirect = $this->getRedirect();
-        $redirect->setPath($path);
+Notes
+=====
 
-        return $redirect;
-    }
-
-    /**
-     * @param string $url
-     * @return Redirect
-     */
-    public function getRedirectToUrl(string $url = '*'): Redirect
-    {
-        /** @var Redirect $redirect */
-        $redirect = $this->getRedirect();
-        $redirect->setUrl($url);
-
-        return $redirect;
-    }
-}
-```
-
-## Notes
-
-1. [`Magento\Framework\App\Action\Action`](https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/Action/Action.php) (GitHub)
-2. [`$resultRedirectFactory`](https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/Action/AbstractAction.php#L28) (GitHub)
+.. [#ref1] `Magento\\\Framework\\\App\\\Action\\\Action <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/Action/Action.php>`_
+.. [#ref2] `$resultRedirectFactory <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/Action/AbstractAction.php#L28`_
