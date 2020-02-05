@@ -1,3 +1,5 @@
+.. _abstract_repository:
+
 .. contents:: :local:
 
 AbstractRepository
