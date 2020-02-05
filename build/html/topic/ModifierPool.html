@@ -1,0 +1,335 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>ModifierPoolTrait &#8212; Whiteboard 1.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/styles.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#modifierpooltrait" id="id1">ModifierPoolTrait</a></p></li>
+<li><p><a class="reference internal" href="#description" id="id2">Description</a></p></li>
+<li><p><a class="reference internal" href="#usage" id="id3">Usage</a></p></li>
+<li><p><a class="reference internal" href="#source" id="id4">Source</a></p></li>
+</ul>
+</div>
+<div class="section" id="modifierpooltrait">
+<h1><a class="toc-backref" href="#id1">ModifierPoolTrait</a><a class="headerlink" href="#modifierpooltrait" title="Permalink to this headline">¶</a></h1>
+<p><em>Published</em>: 2019-12-22</p>
+</div>
+<div class="section" id="description">
+<h1><a class="toc-backref" href="#id2">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h1>
+<p>Several Magento UI components depend on data from data providers. Often times, we need to
+conditionally modify data provided by a data provider, so data modifiers were introduced
+to solve this problem. Traditionally, we would need to override a class in order to make
+those modifications, but Magento provides an improved approach with data modifiers, which
+accepts the respective metadata/data as an argument, and returns the modified version to
+the data provider.</p>
+<p>In the example below, we’ve created a trait called <code class="docutils literal notranslate"><span class="pre">ModifierPoolTrait</span></code>, which can be used
+by a data provider class to access the respective data modifier pool.</p>
+</div>
+<div class="section" id="usage">
+<h1><a class="toc-backref" href="#id3">Usage</a><a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="sd">/**</span>
+<span class="sd"> * DataProvider.php</span>
+<span class="sd"> */</span>
+<span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="k">namespace</span> <span class="nx">Vendor\Package\Ui\DataProvider\Listing\Entity</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Countable</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Magento\Framework\View\Element\UiComponent\DataProvider\DataProviderInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Magento\Ui\</span><span class="p">{</span>
+    <span class="nx">DataProvider\AbstractDataProvider</span><span class="p">,</span>
+    <span class="nx">DataProvider\Modifier\ModifierInterface</span><span class="p">,</span>
+    <span class="nx">DataProvider\Modifier\PoolInterface</span>
+<span class="p">};</span>
+<span class="k">use</span> <span class="nx">Vendor\Package\Component\Ui\DataModifier\ModifierPoolTrait</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">DataProvider</span> <span class="k">extends</span> <span class="nx">AbstractDataProvider</span> <span class="k">implements</span>
+    <span class="nx">Countable</span><span class="p">,</span>
+    <span class="nx">DataProviderInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * @property PoolInterface $modifierPool</span>
+<span class="sd">     * @method PoolInterface getModifierPool()</span>
+<span class="sd">     * @method ModifierInterface[] getModifiers()</span>
+<span class="sd">     */</span>
+    <span class="k">use</span> <span class="nx">ModifierPoolTrait</span><span class="p">;</span>
+
+    <span class="sd">/** @var array $loadedData */</span>
+    <span class="k">protected</span> <span class="nv">$loadedData</span> <span class="o">=</span> <span class="p">[];</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * @param string $name</span>
+<span class="sd">     * @param string $primaryFieldName</span>
+<span class="sd">     * @param string $requestFieldName</span>
+<span class="sd">     * @param array $meta</span>
+<span class="sd">     * @param array $data</span>
+<span class="sd">     * @param PoolInterface $modifierPool</span>
+<span class="sd">     * @return void</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span>
+        <span class="nv">$name</span><span class="p">,</span>
+        <span class="nv">$primaryFieldName</span><span class="p">,</span>
+        <span class="nv">$requestFieldName</span><span class="p">,</span>
+        <span class="k">array</span> <span class="nv">$meta</span> <span class="o">=</span> <span class="p">[],</span>
+        <span class="k">array</span> <span class="nv">$data</span> <span class="o">=</span> <span class="p">[],</span>
+        <span class="nx">PoolInterface</span> <span class="nv">$modifierPool</span>
+    <span class="p">)</span> <span class="p">{</span>
+        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">(</span>
+            <span class="nv">$name</span><span class="p">,</span>
+            <span class="nv">$primaryFieldName</span><span class="p">,</span>
+            <span class="nv">$requestFieldName</span><span class="p">,</span>
+            <span class="nv">$meta</span><span class="p">,</span>
+            <span class="nv">$data</span>
+        <span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modifierPool</span> <span class="o">=</span> <span class="nv">$modifierPool</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * @return array</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getMeta</span><span class="p">()</span><span class="o">:</span> <span class="k">array</span>
+    <span class="p">{</span>
+        <span class="sd">/** @var array $meta */</span>
+        <span class="nv">$meta</span> <span class="o">=</span> <span class="k">parent</span><span class="o">::</span><span class="na">getMeta</span><span class="p">();</span>
+
+        <span class="sd">/** @var ModifierInterface[] $modifiers */</span>
+        <span class="nv">$modifiers</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getModifiers</span><span class="p">();</span>
+
+        <span class="sd">/** @var ModifierInterface $modifier */</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$modifiers</span> <span class="k">as</span> <span class="nv">$modifier</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$meta</span> <span class="o">=</span> <span class="nv">$modifier</span><span class="o">-&gt;</span><span class="na">modifyMeta</span><span class="p">(</span><span class="nv">$meta</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="nv">$meta</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * @return array</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getData</span><span class="p">()</span><span class="o">:</span> <span class="k">array</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="k">empty</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">loadedData</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">loadedData</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="sd">/** @var EntityInterface[] $items */</span>
+        <span class="nv">$items</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getCollection</span><span class="p">()</span><span class="o">-&gt;</span><span class="na">getItems</span><span class="p">();</span>
+
+        <span class="sd">/** @var EntityInterface $entity */</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$items</span> <span class="k">as</span> <span class="nv">$entity</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">loadedData</span><span class="p">[</span><span class="nv">$entity</span><span class="o">-&gt;</span><span class="na">getId</span><span class="p">()]</span> <span class="o">=</span> <span class="nv">$entity</span><span class="o">-&gt;</span><span class="na">getData</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="sd">/** @var ModifierInterface[] $modifiers */</span>
+        <span class="nv">$modifiers</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getModifiers</span><span class="p">();</span>
+
+        <span class="sd">/** @var ModifierInterface $modifier */</span>
+        <span class="k">foreach</span> <span class="p">(</span><span class="nv">$modifiers</span> <span class="k">as</span> <span class="nv">$modifier</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">loadedData</span> <span class="o">=</span> <span class="nv">$modifier</span><span class="o">-&gt;</span><span class="na">modifyData</span><span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">loadedData</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">loadedData</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="sd">/**</span>
+<span class="sd"> * DataModifier.php</span>
+<span class="sd"> */</span>
+<span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="k">namespace</span> <span class="nx">Vendor\Package\Ui\DataModifier\Entity</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Magento\Ui\DataProvider\Modifier\ModifierInterface</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">DataModifier</span> <span class="k">implements</span> <span class="nx">ModifierInterface</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * @param array $meta</span>
+<span class="sd">     * @return array</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">modifyMeta</span><span class="p">(</span><span class="k">array</span> <span class="nv">$meta</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="cm">/* Perform whatever modifications you need to make to the metadata. */</span>
+
+        <span class="k">return</span> <span class="nv">$meta</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * @param array $data</span>
+<span class="sd">     * @return array</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">modifyData</span><span class="p">(</span><span class="k">array</span> <span class="nv">$data</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="cm">/* Perform whatever modifications you need to make to the data. */</span>
+
+        <span class="k">return</span> <span class="nv">$data</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
+<span class="c">&lt;!--</span>
+<span class="c">/**</span>
+<span class="c"> * di.xml</span>
+<span class="c"> */</span>
+<span class="c">--&gt;</span>
+<span class="nt">&lt;config</span> <span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+        <span class="na">xsi:noNamespaceSchemaLocation=</span><span class="s">&quot;urn:magento:framework:ObjectManager/etc/config.xsd&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;virtualType</span> <span class="na">name=</span><span class="s">&quot;Vendor\Package\Ui\DataModifier\Entity\Pool&quot;</span> <span class="na">type=</span><span class="s">&quot;Magento\Ui\DataProvider\Modifier\Pool&quot;</span><span class="nt">&gt;</span>
+         <span class="nt">&lt;arguments&gt;</span>
+             <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">&quot;modifiers&quot;</span> <span class="na">xsi:type=</span><span class="s">&quot;array&quot;</span><span class="nt">&gt;</span>
+                 <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&quot;vendor_package_entity_data_modifier&quot;</span> <span class="na">xsi:type=</span><span class="s">&quot;array&quot;</span><span class="nt">&gt;</span>
+                     <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&quot;class&quot;</span> <span class="na">xsi:type=</span><span class="s">&quot;string&quot;</span><span class="nt">&gt;</span>Vendor\Package\Ui\DataModifier\Entity\DataModifier<span class="nt">&lt;/item&gt;</span>
+                     <span class="nt">&lt;item</span> <span class="na">name=</span><span class="s">&quot;sortOrder&quot;</span> <span class="na">xsi:type=</span><span class="s">&quot;number&quot;</span><span class="nt">&gt;</span>10<span class="nt">&lt;/item&gt;</span>
+                 <span class="nt">&lt;/item&gt;</span>
+             <span class="nt">&lt;/argument&gt;</span>
+         <span class="nt">&lt;/arguments&gt;</span>
+    <span class="nt">&lt;/virtualType&gt;</span>
+
+    <span class="nt">&lt;type</span> <span class="na">name=</span><span class="s">&quot;Vendor\Package\Ui\DataProvider\Listing\Entity\DataProvider&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;arguments&gt;</span>
+            <span class="nt">&lt;argument</span> <span class="na">name=</span><span class="s">&quot;modifierPool&quot;</span> <span class="na">xsi:type=</span><span class="s">&quot;object&quot;</span><span class="nt">&gt;</span>Vendor\Package\Ui\DataModifier\Entity\Pool<span class="nt">&lt;/argument&gt;</span>
+        <span class="nt">&lt;/arguments&gt;</span>
+    <span class="nt">&lt;/type&gt;</span>
+<span class="nt">&lt;/config&gt;</span>
+```
+</pre></div>
+</div>
+</div>
+<div class="section" id="source">
+<h1><a class="toc-backref" href="#id4">Source</a><a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="sd">/**</span>
+<span class="sd"> * ModifierPoolTrait.php</span>
+<span class="sd"> */</span>
+<span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="k">namespace</span> <span class="nx">Vendor\Package\Component\Ui\DataModifier</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Magento\Ui\</span><span class="p">{</span>
+    <span class="nx">DataProvider\Modifier\ModifierInterface</span><span class="p">,</span>
+    <span class="nx">DataProvider\Modifier\PoolInterface</span>
+<span class="p">};</span>
+
+<span class="k">trait</span> <span class="nx">ModifierPoolTrait</span>
+<span class="p">{</span>
+    <span class="sd">/** @property PoolInterface $modifierPool */</span>
+    <span class="k">private</span> <span class="nv">$modifierPool</span><span class="p">;</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * @return PoolInterface</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getModifierPool</span><span class="p">()</span><span class="o">:</span> <span class="nx">PoolInterface</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">modifierPool</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * @return ModifierInterface[]</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getModifiers</span><span class="p">()</span><span class="o">:</span> <span class="k">array</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getModifierPool</span><span class="p">()</span>
+            <span class="o">-&gt;</span><span class="na">getModifiersInstances</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Whiteboard</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;Copyright &copy; 2020 <a href="https://auroraextensions.com" target="_blank">Aurora Extensions</a>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/topic/ModifierPool.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>EventManagerTrait &#8212; Whiteboard 1.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/styles.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#eventmanagertrait" id="id1">EventManagerTrait</a></p></li>
+<li><p><a class="reference internal" href="#description" id="id2">Description</a></p></li>
+<li><p><a class="reference internal" href="#usage" id="id3">Usage</a></p></li>
+<li><p><a class="reference internal" href="#source" id="id4">Source</a></p></li>
+</ul>
+</div>
+<div class="section" id="eventmanagertrait">
+<h1><a class="toc-backref" href="#id1">EventManagerTrait</a><a class="headerlink" href="#eventmanagertrait" title="Permalink to this headline">¶</a></h1>
+<p><em>Published</em>: 2019-12-21</p>
+</div>
+<div class="section" id="description">
+<h1><a class="toc-backref" href="#id2">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h1>
+<p>Magento provides an event-driven subsystem that allows modules to dispatch and observe
+arbitrary types of events. This is useful for a variety of reasons, such as:</p>
+<ul class="simple">
+<li><p>Performing actions upon occurrence of specific events</p></li>
+<li><p>Receiving important data sent by an event dispatcher</p></li>
+<li><p>Logging state during time of event dispatch</p></li>
+</ul>
+<p>In the example below, we’ve created a trait called <code class="docutils literal notranslate"><span class="pre">EventManagerTrait</span></code>. By mixing in the
+<code class="docutils literal notranslate"><span class="pre">EventManagerTrait</span></code> trait, a class can easily dispatch events with data by invoking the
+<code class="docutils literal notranslate"><span class="pre">dispatchEvent</span></code> method.</p>
+</div>
+<div class="section" id="usage">
+<h1><a class="toc-backref" href="#id3">Usage</a><a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="sd">/**</span>
+<span class="sd"> * Entity.php</span>
+<span class="sd"> */</span>
+<span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="k">namespace</span> <span class="nx">Vendor\Package\Model</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Magento\Framework\Event\ManagerInterface</span> <span class="k">as</span> <span class="nx">EventManagerInterface</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">Vendor\Package\Component\Event\EventManagerTrait</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">Entity</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * @property EventManagerInterface $eventManager</span>
+<span class="sd">     * @method void dispatchEvent(string $event, array $data)</span>
+<span class="sd">     */</span>
+    <span class="k">use</span> <span class="nx">EventManagerTrait</span><span class="p">;</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * @param EventManagerInterface $eventManager</span>
+<span class="sd">     * @return void</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span>
+        <span class="nx">EventManagerInterface</span> <span class="nv">$eventManager</span>
+    <span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">eventManager</span> <span class="o">=</span> <span class="nv">$eventManager</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * @return void</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">save</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">dispatchEvent</span><span class="p">(</span>
+            <span class="s1">&#39;package_entity_save_before&#39;</span><span class="p">,</span>
+            <span class="p">[</span>
+                <span class="s1">&#39;entity&#39;</span> <span class="o">=&gt;</span> <span class="nv">$entity</span><span class="p">,</span>
+                <span class="s1">&#39;status&#39;</span> <span class="o">=&gt;</span> <span class="nv">$status</span><span class="p">,</span>
+            <span class="p">]</span>
+        <span class="p">);</span>
+
+        <span class="o">...</span>
+
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">dispatchEvent</span><span class="p">(</span>
+            <span class="s1">&#39;package_entity_save_after&#39;</span><span class="p">,</span>
+            <span class="p">[</span>
+                <span class="s1">&#39;entity&#39;</span> <span class="o">=&gt;</span> <span class="nv">$entity</span><span class="p">,</span>
+                <span class="s1">&#39;status&#39;</span> <span class="o">=&gt;</span> <span class="nv">$status</span><span class="p">,</span>
+            <span class="p">]</span>
+        <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="source">
+<h1><a class="toc-backref" href="#id4">Source</a><a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="sd">/**</span>
+<span class="sd"> * EventManagerTrait.php</span>
+<span class="sd"> */</span>
+<span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="k">namespace</span> <span class="nx">Vendor\Package\Component\Event</span><span class="p">;</span>
+
+<span class="k">trait</span> <span class="nx">EventManagerTrait</span>
+<span class="p">{</span>
+    <span class="sd">/** @property Magento\Framework\Event\ManagerInterface $eventManager */</span>
+    <span class="k">private</span> <span class="nv">$eventManager</span><span class="p">;</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * @param string $event</span>
+<span class="sd">     * @param array $data</span>
+<span class="sd">     * @return void</span>
+<span class="sd">     */</span>
+    <span class="k">private</span> <span class="k">function</span> <span class="nf">dispatchEvent</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$event</span><span class="p">,</span> <span class="k">array</span> <span class="nv">$data</span> <span class="o">=</span> <span class="p">[])</span><span class="o">:</span> <span class="nx">void</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">eventManager</span>
+            <span class="o">-&gt;</span><span class="na">dispatch</span><span class="p">(</span><span class="nv">$event</span><span class="p">,</span> <span class="nv">$data</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="../index.html">Whiteboard</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;Copyright &copy; 2020 <a href="https://auroraextensions.com" target="_blank">Aurora Extensions</a>.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/topic/EventManagerTrait.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
