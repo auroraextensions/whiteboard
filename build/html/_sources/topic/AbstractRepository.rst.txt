@@ -10,8 +10,8 @@ AbstractRepository
 Related
 =======
 
-* `AbstractRepositoryInterface <AbstractRepositoryInterface>`_
-* `AbstractRepositoryTrait <AbstractRepositoryTrait>`_
+* :doc:`AbstractRepositoryInterface`
+* :doc:`AbstractRepositoryTrait`
 
 Description
 ===========
