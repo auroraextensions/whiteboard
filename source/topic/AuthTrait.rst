@@ -1,18 +1,20 @@
-.. contents:: :local:
+.. contents:: Table of Contents
+    :depth: 2
 
 AuthTrait
 =========
 
-*Published*: 2019-08-27
+* *Published*: 2019-08-27
+* *Author*: Nickolas Burr
 
 Related
-=======
+-------
 
-* `CsrfAwareActionTrait <CsrfAwareActionTrait>`_
-* `RedirectTrait <RedirectTrait>`_
+* :doc:`CsrfAwareActionTrait`
+* :doc:`RedirectTrait`
 
 Description
-===========
+-----------
 
 Magento controllers often need to perform many of the same tasks, such as:
 
@@ -29,7 +31,7 @@ In the example below, we've created a trait called ``AuthTrait``, which can:
 * Authenticate user if not logged in
 
 Usage
-=====
+-----
 
 .. code-block:: php
 
@@ -128,7 +130,7 @@ Usage
     }
 
 Source
-======
+------
 
 .. code-block:: php
 
