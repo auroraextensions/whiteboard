@@ -37,12 +37,14 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">ExceptionFactory</a></li>
+<li><a class="reference internal" href="#">ExceptionFactory</a><ul>
 <li><a class="reference internal" href="#related">Related</a></li>
 <li><a class="reference internal" href="#description">Description</a></li>
 <li><a class="reference internal" href="#usage">Usage</a></li>
 <li><a class="reference internal" href="#source">Source</a></li>
 <li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
 </ul>
 
   <div role="note" aria-label="source link">
@@ -70,44 +72,50 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="contents local topic" id="contents">
+  <div class="contents topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#exceptionfactory" id="id2">ExceptionFactory</a></p></li>
+<li><p><a class="reference internal" href="#exceptionfactory" id="id2">ExceptionFactory</a></p>
+<ul>
 <li><p><a class="reference internal" href="#related" id="id3">Related</a></p></li>
 <li><p><a class="reference internal" href="#description" id="id4">Description</a></p></li>
 <li><p><a class="reference internal" href="#usage" id="id5">Usage</a></p></li>
 <li><p><a class="reference internal" href="#source" id="id6">Source</a></p></li>
 <li><p><a class="reference internal" href="#notes" id="id7">Notes</a></p></li>
 </ul>
+</li>
+</ul>
 </div>
 <div class="section" id="exceptionfactory">
 <h1><a class="toc-backref" href="#id2">ExceptionFactory</a><a class="headerlink" href="#exceptionfactory" title="Permalink to this headline">¶</a></h1>
-<p><em>Published</em>: 2019-06-14</p>
-</div>
-<div class="section" id="related">
-<h1><a class="toc-backref" href="#id3">Related</a><a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p><a class="reference external" href="DataObjectFactory">DataObjectFactory</a></p></li>
-<li><p><a class="reference external" href="DateTimeFactory">DateTimeFactory</a></p></li>
+<li><p><em>Published</em>: 2019-06-14</p></li>
+<li><p><em>Author</em>: Nickolas Burr</p></li>
+</ul>
+<div class="section" id="related">
+<h2><a class="toc-backref" href="#id3">Related</a><a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="DataObjectFactory.html"><span class="doc">DataObjectFactory</span></a></p></li>
+<li><p><a class="reference internal" href="DateTimeFactory.html"><span class="doc">DateTimeFactory</span></a></p></li>
 </ul>
 </div>
 <div class="section" id="description">
-<h1><a class="toc-backref" href="#id4">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id4">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>There are several benefits to using factories in Magento, namely flexible, stateless object
 creation. As such, factories have become widely adopted and utilized in Magento 2, and can
 be seen as one of the most significant architectural improvements over Magento 1. However,
 it’s noticeable that exception creation practices have yet to embrace factories.</p>
 <p>In the example below, we introduce the <code class="docutils literal notranslate"><span class="pre">ExceptionFactory</span></code> class, which can be used to create
-<code class="docutils literal notranslate"><span class="pre">Throwable</span></code> exception types. The reasons for defining this class statically include:</p>
+<code class="docutils literal notranslate"><span class="pre">Throwable</span></code> <a class="footnote-reference brackets" href="#ref1" id="id1">1</a> exception types. The reasons for defining this class statically include:</p>
 <ol class="arabic simple">
-<li><p>Enforce <code class="docutils literal notranslate"><span class="pre">$type</span></code> argument to implement <code class="docutils literal notranslate"><span class="pre">Throwable</span></code> <a class="footnote-reference brackets" href="#ref1" id="id1">1</a> interface</p></li>
+<li><p>Enforce <code class="docutils literal notranslate"><span class="pre">$type</span></code> argument to implement <code class="docutils literal notranslate"><span class="pre">Throwable</span></code> interface</p></li>
 <li><p>Allow any <code class="docutils literal notranslate"><span class="pre">Throwable</span></code> exception type, instead of single exception type</p></li>
 </ol>
 <p><em>Please note</em>: The <code class="docutils literal notranslate"><span class="pre">ExceptionFactory</span></code> class will only <em>create</em> an exception type. It is the
 responsibility of the invoking method to throw the created exception instance.</p>
 </div>
 <div class="section" id="usage">
-<h1><a class="toc-backref" href="#id5">Usage</a><a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id5">Usage</a><a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">...</span>
 
 <span class="x">$entity = $this-&gt;entityFactory-&gt;create();</span>
@@ -130,7 +138,7 @@ responsibility of the invoking method to throw the created exception instance.</
 </div>
 </div>
 <div class="section" id="source">
-<h1><a class="toc-backref" href="#id6">Source</a><a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id6">Source</a><a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
 <p>Below is an example <code class="docutils literal notranslate"><span class="pre">ExceptionFactory</span></code> that can be used in modules:</p>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 <span class="sd">/**</span>
@@ -211,12 +219,13 @@ responsibility of the invoking method to throw the created exception instance.</
 </div>
 </div>
 <div class="section" id="notes">
-<h1><a class="toc-backref" href="#id7">Notes</a><a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id7">Notes</a><a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
 <dl class="footnote brackets">
 <dt class="label" id="ref1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p>The <cite>Throwable</cite> interface is a PHP built-in interface and can only be implemented via extending <cite>Exception</cite>.</p>
 </dd>
 </dl>
+</div>
 </div>
 
 

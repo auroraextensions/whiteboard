@@ -1,12 +1,14 @@
-.. contents:: :local:
+.. contents:: Table of Contents
+    :depth: 2
 
 EventManagerTrait
 =================
 
-*Published*: 2019-12-21
+* *Published*: 2019-12-21
+* *Author*: Nickolas Burr
 
 Description
-===========
+-----------
 
 Magento provides an event-driven subsystem that allows modules to dispatch and observe
 arbitrary types of events. This is useful for a variety of reasons, such as:
@@ -20,7 +22,7 @@ In the example below, we've created a trait called ``EventManagerTrait``. By mix
 ``dispatchEvent`` method.
 
 Usage
-=====
+-----
 
 .. code-block:: php
 
@@ -79,7 +81,7 @@ Usage
     }
 
 Source
-======
+------
 
 .. code-block:: php
 
