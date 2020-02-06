@@ -1,20 +1,22 @@
-.. contents:: :local:
+.. contents:: Table of Contents
+    :depth: 2
 
 DateTimeFactory
 ===============
 
-*Published*: 2019-08-18
+* *Published*: 2019-08-18
+* *Author*: Nickolas Burr
 
 Related
-=======
+-------
 
-* `DataObjectFactory <DataObjectFactory>`_
-* `ExceptionFactory <ExceptionFactory>`_
+* :doc:`DataObjectFactory`
+* :doc:`ExceptionFactory`
 
 Description
-===========
+-----------
 
-The ``DateTime`` class is a built-in PHP class used extensively throughout Magento.
+The ``DateTime`` [#ref1]_ class is a built-in PHP class used extensively throughout Magento.
 In fact, Magento has several wrapper classes to assist with creating ``DateTime``
 objects, as well as formatting subsequent date/time values. Such classes include:
 
@@ -26,7 +28,7 @@ In the example below, we use ``DateTimeFactory`` to create ``DateTime`` objects,
 we'll use to modify the ``updated_at`` timestamp of an entry when a user makes an edit.
 
 Usage
-=====
+-----
 
 .. code-block:: php
 
@@ -128,3 +130,8 @@ Usage
             return $resultRedirect;
         }
     }
+
+Notes
+-----
+
+.. [#ref1] `DateTime <https://www.php.net/manual/en/class.datetime.php>`_
