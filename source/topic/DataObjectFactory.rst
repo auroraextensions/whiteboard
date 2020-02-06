@@ -1,17 +1,20 @@
-.. contents:: :local:
+.. contents:: Table of Contents
+    :depth: 2
 
 DataObjectFactory
 =================
 
-*Published*: 2019-07-12
+* *Published*: 2019-07-12
+* *Author*: Nickolas Burr
 
 Related
-=======
+-------
 
-* `DateTimeFactory <DateTimeFactory>`_
-* `ExceptionFactory <ExceptionFactory>`_
+* :doc:`DateTimeFactory`
+* :doc:`ExceptionFactory`
 
-## Description
+Description
+-----------
 
 The ``DataObject`` class plays an integral role in Magento as the data container for
 CRUD operations. Likewise, there are circumstances where you need to interact with
@@ -25,7 +28,7 @@ coupling, but you can control access to the data with the appropriate visibility
 settings for ``$container`` and ``getContainer``.
 
 Usage
-=====
+-----
 
 .. code-block:: php
 
