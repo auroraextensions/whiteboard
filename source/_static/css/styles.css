@@ -1,0 +1,46 @@
+/**
+ * styles.css
+ */
+body {
+  border-left: 1px solid #3123ae;
+  border-right: 1px solid #3123ae;
+}
+
+div.related ul {
+  background-color: #3123ae;
+}
+
+div.sphinxsidebar h3,
+div.sphinxsidebar h4 {
+  background-color: #3123ae;
+  border: 1px solid #3123ae;
+}
+
+div.sphinxsidebar input {
+  border: 1px solid #3123ae;
+}
+
+div.footer {
+  border-bottom: 1px solid #3123ae;
+  color: #3123ae;
+}
+
+div.footer a {
+  color: #3123ae;
+}
+
+a {
+  color: #3123ae;
+}
+
+a:hover {
+  color: #3123ae;
+}
+
+h1, h2, h3 {
+  color: #3123ae;
+}
+
+h2 {
+  border-bottom: 1px solid #3123ae;
+}
