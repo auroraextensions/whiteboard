@@ -13,3 +13,4 @@ exclude_patterns = []
 html_theme = 'bizstyle'
 html_static_path = ['_static']
 html_css_files = ['css/styles.css']
+html_favicon = '_static/img/favicon.png'
