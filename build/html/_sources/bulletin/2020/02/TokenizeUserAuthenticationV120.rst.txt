@@ -16,7 +16,7 @@ authentication, which we discuss at length in `MFA`_.
     If you have not already, please consider subscribing to our monthly newsletter,
     which is a low-volume, informational digest containing important details about
     upcoming releases, new product features, version compatibility, and related
-    topics. You can sign up on `here <https://auroraextensions.com/>`_.
+    topics. You can sign up `here <https://auroraextensions.com/>`_.
 
 Highlights
 ^^^^^^^^^^
