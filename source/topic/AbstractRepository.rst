@@ -8,13 +8,13 @@ AbstractRepository
 * *Author*: Nickolas Burr
 
 Related
-=======
+-------
 
 * :doc:`AbstractRepositoryInterface`
 * :doc:`AbstractRepositoryTrait`
 
 Description
-===========
+-----------
 
 Just as ``AbstractRepositoryInterface`` can be extended by entity-specific repository
 interfaces, ``AbstractRepository`` can be extended by entity-specific repository models.
@@ -24,7 +24,7 @@ duplication common to repository models, and the impact can be minimized by keep
 needed for *all* repository models.
 
 Usage
-=====
+-----
 
 .. code-block:: php
 
@@ -43,7 +43,7 @@ Usage
     }
 
 Source
-======
+------
 
 .. code-block:: php
 
