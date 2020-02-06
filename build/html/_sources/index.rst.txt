@@ -8,7 +8,7 @@ Bulletin
 ========
 
 * February 2020
-  * :doc:`bulletin/2020/02/TokenizeUserAuthIsNowMultiFactor`
+    * :doc:`bulletin/2020/02/TokenizeUserAuthIsNowMultiFactor`
 
 Resources
 =========
