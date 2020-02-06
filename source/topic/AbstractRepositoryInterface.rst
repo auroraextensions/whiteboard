@@ -1,18 +1,20 @@
-.. contents:: :local:
+.. contents:: Table of Contents
+    :depth: 2
 
 AbstractRepositoryInterface
 ===========================
 
-*Published*: 2019-07-02
+* *Published*: 2019-07-02
+* *Author*: Nickolas Burr
 
 Related
-=======
+-------
 
-* `AbstractRepository <AbstractRepository>`_
-* `AbstractRepositoryTrait <AbstractRepositoryTrait>`_
+* :doc:`AbstractRepository`
+* :doc:`AbstractRepositoryTrait`
 
 Description
-===========
+-----------
 
 All repository interfaces share common method signatures. For example, any repository interface
 will have a ``getList`` method that accepts an instance of ``SearchCriteriaInterface`` [#ref1]_
@@ -21,7 +23,7 @@ pattern. As such, it makes sense to reduce duplication by creating an abstract r
 that isn't implemented directly, but is extended through entity-specific repository interfaces.
 
 Usage
-=====
+-----
 
 .. code-block:: php
 
@@ -38,7 +40,7 @@ Usage
     }
 
 Source
-======
+------
 
 .. code-block:: php
 
@@ -82,7 +84,7 @@ Source
     }
 
 Notes
-=====
+-----
 
 .. [#ref1] `Magento\\Framework\\Api\\SearchCriteriaInterface <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Api/SearchCriteriaInterface.php>`_
 .. [#ref2] `Magento\\Framework\\Api\\SearchResultsInterface <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Api/SearchResultsInterface.php>`_

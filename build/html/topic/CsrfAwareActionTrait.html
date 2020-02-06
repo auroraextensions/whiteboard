@@ -37,12 +37,14 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">CsrfAwareActionTrait</a></li>
+<li><a class="reference internal" href="#">CsrfAwareActionTrait</a><ul>
 <li><a class="reference internal" href="#related">Related</a></li>
 <li><a class="reference internal" href="#description">Description</a></li>
 <li><a class="reference internal" href="#usage">Usage</a></li>
 <li><a class="reference internal" href="#source">Source</a></li>
 <li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
 </ul>
 
   <div role="note" aria-label="source link">
@@ -70,29 +72,35 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="contents local topic" id="contents">
+  <div class="contents topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#csrfawareactiontrait" id="id2">CsrfAwareActionTrait</a></p></li>
+<li><p><a class="reference internal" href="#csrfawareactiontrait" id="id2">CsrfAwareActionTrait</a></p>
+<ul>
 <li><p><a class="reference internal" href="#related" id="id3">Related</a></p></li>
 <li><p><a class="reference internal" href="#description" id="id4">Description</a></p></li>
 <li><p><a class="reference internal" href="#usage" id="id5">Usage</a></p></li>
 <li><p><a class="reference internal" href="#source" id="id6">Source</a></p></li>
 <li><p><a class="reference internal" href="#notes" id="id7">Notes</a></p></li>
 </ul>
+</li>
+</ul>
 </div>
 <div class="section" id="csrfawareactiontrait">
 <h1><a class="toc-backref" href="#id2">CsrfAwareActionTrait</a><a class="headerlink" href="#csrfawareactiontrait" title="Permalink to this headline">¶</a></h1>
-<p><em>Published</em>: 2019-08-27</p>
-</div>
-<div class="section" id="related">
-<h1><a class="toc-backref" href="#id3">Related</a><a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
-<li><p><a class="reference external" href="AuthTrait">AuthTrait</a></p></li>
-<li><p><a class="reference external" href="RedirectTrait">RedirectTrait</a></p></li>
+<li><p><em>Published</em>: 2019-08-27</p></li>
+<li><p><em>Author</em>: Nickolas Burr</p></li>
+</ul>
+<div class="section" id="related">
+<h2><a class="toc-backref" href="#id3">Related</a><a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="AuthTrait.html"><span class="doc">AuthTrait</span></a></p></li>
+<li><p><a class="reference internal" href="RedirectTrait.html"><span class="doc">RedirectTrait</span></a></p></li>
 </ul>
 </div>
 <div class="section" id="description">
-<h1><a class="toc-backref" href="#id4">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id4">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>Starting in v2.3.0, Magento provides the <code class="docutils literal notranslate"><span class="pre">CsrfAwareActionInterface</span></code> <a class="footnote-reference brackets" href="#ref1" id="id1">1</a>
 interface, which is used to validate requests against CSRF attacks. In most cases,
 default validation is adequate, so the implementation is identical across the vast
@@ -101,7 +109,7 @@ majority of controllers.</p>
 effectively implements <code class="docutils literal notranslate"><span class="pre">CsrfAwareActionInterface</span></code> with default validation.</p>
 </div>
 <div class="section" id="usage">
-<h1><a class="toc-backref" href="#id5">Usage</a><a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id5">Usage</a><a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 <span class="sd">/**</span>
 <span class="sd"> * LoginPost.php</span>
@@ -146,7 +154,7 @@ effectively implements <code class="docutils literal notranslate"><span class="p
 </div>
 </div>
 <div class="section" id="source">
-<h1><a class="toc-backref" href="#id6">Source</a><a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id6">Source</a><a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 <span class="sd">/**</span>
 <span class="sd"> * CsrfAwareActionTrait.php</span>
@@ -195,12 +203,13 @@ effectively implements <code class="docutils literal notranslate"><span class="p
 </div>
 </div>
 <div class="section" id="notes">
-<h1><a class="toc-backref" href="#id7">Notes</a><a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id7">Notes</a><a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
 <dl class="footnote brackets">
 <dt class="label" id="ref1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
 <dd><p><a class="reference external" href="https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/CsrfAwareActionInterface.php">Magento\Framework\App\CsrfAwareActionInterface</a></p>
 </dd>
 </dl>
+</div>
 </div>
 
 

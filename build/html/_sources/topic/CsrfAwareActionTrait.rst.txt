@@ -1,18 +1,20 @@
-.. contents:: :local:
+.. contents:: Table of Contents
+    :depth: 2
 
 CsrfAwareActionTrait
 ====================
 
-*Published*: 2019-08-27
+* *Published*: 2019-08-27
+* *Author*: Nickolas Burr
 
 Related
-=======
+-------
 
-* `AuthTrait <AuthTrait>`_
-* `RedirectTrait <RedirectTrait>`_
+* :doc:`AuthTrait`
+* :doc:`RedirectTrait`
 
 Description
-===========
+-----------
 
 Starting in v2.3.0, Magento provides the ``CsrfAwareActionInterface`` [#ref1]_
 interface, which is used to validate requests against CSRF attacks. In most cases,
@@ -23,7 +25,7 @@ In the example below, we've created a trait called ``CsrfAwareActionTrait``, whi
 effectively implements ``CsrfAwareActionInterface`` with default validation.
 
 Usage
-=====
+-----
 
 .. code-block:: php
 
@@ -69,7 +71,7 @@ Usage
     }
 
 Source
-======
+------
 
 .. code-block:: php
 
@@ -119,6 +121,6 @@ Source
     }
 
 Notes
-=====
+-----
 
 .. [#ref1] `Magento\\\Framework\\\App\\\CsrfAwareActionInterface <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/CsrfAwareActionInterface.php>`_
