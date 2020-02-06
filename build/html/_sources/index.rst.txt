@@ -7,7 +7,8 @@ Archive of whiteboard topics, mostly about Magento, PHP, OOP, design patterns, e
 Bulletin
 ========
 
-* :doc:`bulletin/2020/02/TokenizeUserAuthIsNowMultiFactor`
+* February 2020
+  * :doc:`bulletin/2020/02/TokenizeUserAuthIsNowMultiFactor`
 
 Resources
 =========
