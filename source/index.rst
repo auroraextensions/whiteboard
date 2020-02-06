@@ -1,14 +1,22 @@
 Archive of whiteboard topics, mostly about Magento, PHP, OOP, design patterns, etc.
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 4
     :titlesonly:
 
-Use Cases
+Bulletin
+========
+
+* :doc:`bulletin/2020/02/TokenizeUserAuthIsNowMultiFactor`
+
+Resources
 =========
 
+Use Cases
+---------
+
 Magento
--------
+^^^^^^^
 
 * Create ``select`` source model with data from ``di.xml``
 * Create categorized ``select`` source model with data from ``di.xml``
@@ -21,25 +29,25 @@ Magento
 * Modify metadata/data via data modifiers in an entity data provider
 
 Topics
-======
+------
 
 Magento
--------
+^^^^^^^
 
 Controllers
-^^^^^^^^^^^
+***********
 
 * :doc:`topic/AuthTrait`
 * :doc:`topic/CsrfAwareActionTrait`
 * :doc:`topic/RedirectTrait`
 
 Cryptography
-^^^^^^^^^^^^
+************
 
 * :doc:`topic/Token`
 
 Dependency Injection
-^^^^^^^^^^^^^^^^^^^^
+********************
 
 * :doc:`topic/DataObjectFactory`
 * :doc:`topic/DateTimeFactory`
@@ -47,37 +55,37 @@ Dependency Injection
 * :doc:`topic/VirtualSelect`
 
 Events
-^^^^^^
+******
 
 * :doc:`topic/EventManagerTrait`
 
 Factories
-^^^^^^^^^
+*********
 
 * :doc:`topic/DataObjectFactory`
 * :doc:`topic/DateTimeFactory`
 * :doc:`topic/ExceptionFactory`
 
 Redirects
-^^^^^^^^^
+*********
 
 * :doc:`topic/RedirectTrait`
 
 Repositories
-^^^^^^^^^^^^
+************
 
 * :doc:`topic/AbstractRepository`
 * :doc:`topic/AbstractRepositoryTrait`
 * :doc:`topic/AbstractRepositoryInterface`
 
 Security
-^^^^^^^^
+********
 
 * :doc:`topic/AuthTrait`
 * :doc:`topic/CsrfAwareActionTrait`
 * :doc:`topic/Token`
 
 UI Components
-^^^^^^^^^^^^^
+*************
 
 * :doc:`topic/ModifierPoolTrait`
