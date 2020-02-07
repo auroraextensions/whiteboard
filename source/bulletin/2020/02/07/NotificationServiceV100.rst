@@ -1,7 +1,7 @@
 Notification Service v1.0.0
 ===========================
 
-* *Published*: 2020-02-06
+* *Published*: 2020-02-07
 * *Author*: Nickolas Burr
 
 .. note::
