@@ -1,0 +1,2 @@
+User-Agent: *
+Sitemap: https://whiteboard.auroraextensions.com/sitemap.xml
