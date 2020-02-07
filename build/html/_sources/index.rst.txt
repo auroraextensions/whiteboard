@@ -9,6 +9,7 @@ Bulletin
 
 * February 2020
     * :doc:`bulletin/2020/02/TokenizeUserAuthenticationV120`
+    * :doc:`bulletin/2020/02/NotificationServiceV100`
 
 Resources
 =========
