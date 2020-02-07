@@ -5,11 +5,12 @@ author = 'Aurora Extensions'
 release = '1.0.0'
 
 # General configuration
-extensions = []
+extensions = ['sphinx_sitemap']
 templates_path = ['_templates']
 exclude_patterns = []
 
 # HTML configuration
+html_baseurl = 'https://whiteboard.auroraextensions.com/'
 html_theme = 'bizstyle'
 html_title = 'Whiteboard | Aurora Extensions'
 html_static_path = ['_static']
