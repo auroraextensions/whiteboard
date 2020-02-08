@@ -27,7 +27,7 @@ Magento
 Controllers
 ^^^^^^^^^^^
 
-* :doc:`topic/AuthTrait`
+* :doc:`source/topic/AuthTrait`
 * :doc:`topic/CsrfAwareActionTrait`
 * :doc:`topic/RedirectTrait`
 
