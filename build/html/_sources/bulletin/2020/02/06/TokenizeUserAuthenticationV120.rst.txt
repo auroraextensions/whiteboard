@@ -11,6 +11,9 @@ Tokenize User Authentication v1.2.0
     and we include details about upcoming releases, product updates, EOL announcements,
     and other related topics. You can sign up `here <https://auroraextensions.com/>`_.
 
+.. contents:: Table of Contents
+    :local:
+
 Summary
 -------
 
@@ -44,6 +47,12 @@ In v1.2.0, you have the option to enable/disable MFA for administrators and cust
 When enabled, administrators/customers will be required to create a numeric PIN when
 they register their accounts, and will need to provide their PIN each time they attempt
 to access their account.
+
+Links
+-----
+
+* `Documentation <https://docs.auroraextensions.com/magento/extensions/2.x/tokenizeuserauthentication/latest/>`_
+* `CHANGELOG.txt <https://docs.auroraextensions.com/magento/extensions/2.x/tokenizeuserauthentication/CHANGELOG.txt>`_
 
 Changelog
 ---------
