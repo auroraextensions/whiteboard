@@ -4,6 +4,9 @@ Tokenize User Authentication v1.2.0
 * Published: 2020-02-06
 * Author: Nickolas Burr
 
+.. contents:: Table of Contents
+    :local:
+
 .. note::
 
     If you would like to receive updates (like this one) in the form of an email, please
@@ -11,8 +14,11 @@ Tokenize User Authentication v1.2.0
     and we include details about upcoming releases, product updates, EOL announcements,
     and other related topics. You can sign up `here <https://auroraextensions.com/>`_.
 
-.. contents:: Table of Contents
-    :local:
+Links
+-----
+
+* `Documentation <https://docs.auroraextensions.com/magento/extensions/2.x/tokenizeuserauthentication/latest/>`_
+* `CHANGELOG.txt <https://docs.auroraextensions.com/magento/extensions/2.x/tokenizeuserauthentication/CHANGELOG.txt>`_
 
 Summary
 -------
@@ -48,14 +54,10 @@ When enabled, administrators/customers will be required to create a numeric PIN 
 they register their accounts, and will need to provide their PIN each time they attempt
 to access their account.
 
-Links
------
-
-* `Documentation <https://docs.auroraextensions.com/magento/extensions/2.x/tokenizeuserauthentication/latest/>`_
-* `CHANGELOG.txt <https://docs.auroraextensions.com/magento/extensions/2.x/tokenizeuserauthentication/CHANGELOG.txt>`_
-
 Changelog
 ---------
+
+For complete changelog, see `CHANGELOG.txt <https://docs.auroraextensions.com/magento/extensions/2.x/tokenizeuserauthentication/CHANGELOG.txt>`_.
 
 [1.2.0] ~ 2020-02-07
 ^^^^^^^^^^^^^^^^^^^^
