@@ -24,12 +24,23 @@ Topics
 Magento
 -------
 
-Controllers
-^^^^^^^^^^^
-
+.. _AbstractRepository: source/topic/AbstractRepository.rst
+.. _AbstractRepositoryTrait: source/topic/AbstractRepositoryTrait.rst
+.. _AbstractRepositoryInterface: source/topic/AbstractRepositoryInterface.rst
 .. _AuthTrait: source/topic/AuthTrait.rst
 .. _CsrfAwareActionTrait: source/topic/CsrfAwareActionTrait.rst
+.. _DataObjectFactory: source/topic/DataObjectFactory.rst
+.. _DateTimeFactory: source/topic/DateTimeFactory.rst
+.. _EventManagerTrait: source/topic/EventManagerTrait.rst
+.. _ExceptionFactory: source/topic/ExceptionFactory.rst
+.. _ModifierPoolTrait: source/topic/ModifierPoolTrait.rst
 .. _RedirectTrait: source/topic/RedirectTrait.rst
+.. _Token: source/topic/Token.rst
+.. _VirtualSelect: source/topic/VirtualSelect.rst
+.. _VirtualGroupedSelect: source/topic/VirtualGroupedSelect.rst
+
+Controllers
+^^^^^^^^^^^
 
 * `AuthTrait`_
 * `CsrfAwareActionTrait`_
@@ -38,48 +49,48 @@ Controllers
 Cryptography
 ^^^^^^^^^^^^
 
-* :doc:`topic/Token`
+* `Token`_
 
 Dependency Injection
 ^^^^^^^^^^^^^^^^^^^^
 
-* :doc:`topic/DataObjectFactory`
-* :doc:`topic/DateTimeFactory`
-* :doc:`topic/VirtualGroupedSelect`
-* :doc:`topic/VirtualSelect`
+* `DataObjectFactory`_
+* `DateTimeFactory`_
+* `VirtualSelect`_
+* `VirtualGroupedSelect`_
 
 Events
 ^^^^^^
 
-* :doc:`topic/EventManagerTrait`
+* `EventManagerTrait`_
 
 Factories
 ^^^^^^^^^
 
-* :doc:`topic/DataObjectFactory`
-* :doc:`topic/DateTimeFactory`
-* :doc:`topic/ExceptionFactory`
+* `DataObjectFactory`_
+* `DateTimeFactory`_
+* `ExceptionFactory`_
 
 Redirects
 ^^^^^^^^^
 
-* :doc:`topic/RedirectTrait`
+* `RedirectTrait`_
 
 Repositories
 ^^^^^^^^^^^^
 
-* :doc:`source/topic/AbstractRepository`
-* :doc:`topic/AbstractRepositoryTrait`
-* :doc:`topic/AbstractRepositoryInterface`
+* `AbstractRepository`_
+* `AbstractRepositoryTrait`_
+* `AbstractRepositoryInterface`_
 
 Security
 ^^^^^^^^
 
-* :doc:`topic/AuthTrait`
-* :doc:`topic/CsrfAwareActionTrait`
-* :doc:`topic/Token`
+* `AuthTrait`_
+* `CsrfAwareActionTrait`_
+* `Token`_
 
 UI Components
 ^^^^^^^^^^^^^
 
-* :doc:`topic/ModifierPoolTrait`
+* `ModifierPoolTrait`_
