@@ -1,0 +1,256 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>RedirectTrait &#8212; Whiteboard | Aurora Extensions</title>
+    <link rel="stylesheet" href="../../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/styles.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../_static/bizstyle.js"></script>
+    <link rel="canonical" href="https://whiteboard.auroraextensions.com/archives/magento/RedirectTrait.html" />
+    <link rel="shortcut icon" href="../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Whiteboard | Aurora Extensions</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">RedirectTrait</a></li>
+<li><a class="reference internal" href="#related">Related</a></li>
+<li><a class="reference internal" href="#description">Description</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#source">Source</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/archives/magento/RedirectTrait.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="contents local topic" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#redirecttrait" id="id3">RedirectTrait</a></p></li>
+<li><p><a class="reference internal" href="#related" id="id4">Related</a></p></li>
+<li><p><a class="reference internal" href="#description" id="id5">Description</a></p></li>
+<li><p><a class="reference internal" href="#usage" id="id6">Usage</a></p></li>
+<li><p><a class="reference internal" href="#source" id="id7">Source</a></p></li>
+<li><p><a class="reference internal" href="#notes" id="id8">Notes</a></p></li>
+</ul>
+</div>
+<div class="section" id="redirecttrait">
+<h1><a class="toc-backref" href="#id3">RedirectTrait</a><a class="headerlink" href="#redirecttrait" title="Permalink to this headline">¶</a></h1>
+<p><em>Published</em>: 2019-08-21</p>
+</div>
+<div class="section" id="related">
+<h1><a class="toc-backref" href="#id4">Related</a><a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="AuthTrait">AuthTrait</a></p></li>
+<li><p><a class="reference external" href="CsrfAwareActionTrait">CsrfAwareActionTrait</a></p></li>
+</ul>
+</div>
+<div class="section" id="description">
+<h1><a class="toc-backref" href="#id5">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h1>
+<p>In Magento, controllers inherit from <code class="docutils literal notranslate"><span class="pre">Magento\\\Framework\\\App\\\Action\\\Action</span></code> <a class="footnote-reference brackets" href="#ref1" id="id1">1</a>.
+This provides access to several methods (i.e. <code class="docutils literal notranslate"><span class="pre">getRequest</span></code>, <code class="docutils literal notranslate"><span class="pre">getResponse</span></code>) which are
+essential for tasks like processing request parameters and setting response status. As
+such, all controllers will inherit the <code class="docutils literal notranslate"><span class="pre">$resultRedirectFactory</span></code> <a class="footnote-reference brackets" href="#ref2" id="id2">2</a> property,
+which, unsurprisingly, is needed to create redirects.</p>
+<p>In the example below, we’ve created a trait called <code class="docutils literal notranslate"><span class="pre">RedirectTrait</span></code>, which we can import
+in our controllers. There are several advantages to this approach, such as:</p>
+<ol class="arabic simple">
+<li><p>Reduced duplication</p></li>
+<li><p>Improved durability</p></li>
+<li><p>Smaller <code class="docutils literal notranslate"><span class="pre">execute</span></code> methods</p></li>
+<li><p>Single source of truth</p></li>
+</ol>
+</div>
+<div class="section" id="usage">
+<h1><a class="toc-backref" href="#id6">Usage</a><a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="sd">/**</span>
+<span class="sd"> * CreatePost.php</span>
+<span class="sd"> */</span>
+<span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="k">namespace</span> <span class="nx">Vendor\Package\Controller\Entity</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Magento\Framework\</span><span class="p">{</span>
+    <span class="nx">App\Action\Action</span><span class="p">,</span>
+    <span class="nx">App\Action\Context</span><span class="p">,</span>
+    <span class="nx">App\Action\HttpPostActionInterface</span><span class="p">,</span>
+    <span class="nx">App\CsrfAwareActionInterface</span><span class="p">,</span>
+    <span class="nx">Data\Form\FormKey\Validator</span> <span class="k">as</span> <span class="nx">FormKeyValidator</span>
+<span class="p">};</span>
+<span class="k">use</span> <span class="nx">Vendor\Package\Component\RedirectTrait</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">CreatePost</span> <span class="k">extends</span> <span class="nx">Action</span> <span class="k">implements</span>
+    <span class="nx">CsrfAwareActionInterface</span><span class="p">,</span>
+    <span class="nx">HttpPostActionInterface</span>
+<span class="p">{</span>
+    <span class="k">use</span> <span class="nx">RedirectTrait</span><span class="p">;</span>
+
+    <span class="sd">/** @property FormKeyValidator $formKeyValidator */</span>
+    <span class="k">protected</span> <span class="nv">$formKeyValidator</span><span class="p">;</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * @param Context $context</span>
+<span class="sd">     * @param FormKeyValidator $formKeyValidator</span>
+<span class="sd">     * @return void</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="fm">__construct</span><span class="p">(</span>
+        <span class="nx">Context</span> <span class="nv">$context</span><span class="p">,</span>
+        <span class="nx">FormKeyValidator</span> <span class="nv">$formKeyValidator</span>
+    <span class="p">)</span> <span class="p">{</span>
+        <span class="k">parent</span><span class="o">::</span><span class="na">__construct</span><span class="p">(</span><span class="nv">$context</span><span class="p">);</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">formKeyValidator</span> <span class="o">=</span> <span class="nv">$formKeyValidator</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * @return Redirect</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">execute</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="sd">/** @var Magento\Framework\App\RequestInterface $request */</span>
+        <span class="nv">$request</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getRequest</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$request</span><span class="o">-&gt;</span><span class="na">isPost</span><span class="p">()</span> <span class="o">||</span> <span class="o">!</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">formKeyValidator</span><span class="o">-&gt;</span><span class="na">validate</span><span class="p">(</span><span class="nv">$request</span><span class="p">))</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getRedirectToPath</span><span class="p">(</span><span class="s1">&#39;*/*/create&#39;</span><span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="o">...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="source">
+<h1><a class="toc-backref" href="#id7">Source</a><a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+<span class="sd">/**</span>
+<span class="sd"> * RedirectTrait.php</span>
+<span class="sd"> */</span>
+<span class="k">declare</span><span class="p">(</span><span class="nx">strict_types</span><span class="o">=</span><span class="mi">1</span><span class="p">);</span>
+
+<span class="k">namespace</span> <span class="nx">Vendor\Package\Component</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">Magento\Framework\</span><span class="p">{</span>
+    <span class="nx">App\Action\AbstractAction</span><span class="p">,</span>
+    <span class="nx">Controller\Result\Redirect</span>
+<span class="p">};</span>
+
+<span class="k">trait</span> <span class="nx">RedirectTrait</span>
+<span class="p">{</span>
+    <span class="sd">/**</span>
+<span class="sd">     * @return Redirect</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getRedirect</span><span class="p">()</span><span class="o">:</span> <span class="nx">Redirect</span>
+    <span class="p">{</span>
+        <span class="k">return</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">resultRedirectFactory</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * @param string $path</span>
+<span class="sd">     * @return Redirect</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getRedirectToPath</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$path</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span><span class="p">)</span><span class="o">:</span> <span class="nx">Redirect</span>
+    <span class="p">{</span>
+        <span class="sd">/** @var Redirect $redirect */</span>
+        <span class="nv">$redirect</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getRedirect</span><span class="p">();</span>
+        <span class="nv">$redirect</span><span class="o">-&gt;</span><span class="na">setPath</span><span class="p">(</span><span class="nv">$path</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="nv">$redirect</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="sd">/**</span>
+<span class="sd">     * @param string $url</span>
+<span class="sd">     * @return Redirect</span>
+<span class="sd">     */</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">getRedirectToUrl</span><span class="p">(</span><span class="nx">string</span> <span class="nv">$url</span> <span class="o">=</span> <span class="s1">&#39;*&#39;</span><span class="p">)</span><span class="o">:</span> <span class="nx">Redirect</span>
+    <span class="p">{</span>
+        <span class="sd">/** @var Redirect $redirect */</span>
+        <span class="nv">$redirect</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">getRedirect</span><span class="p">();</span>
+        <span class="nv">$redirect</span><span class="o">-&gt;</span><span class="na">setUrl</span><span class="p">(</span><span class="nv">$url</span><span class="p">);</span>
+
+        <span class="k">return</span> <span class="nv">$redirect</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="notes">
+<h1><a class="toc-backref" href="#id8">Notes</a><a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h1>
+<dl class="footnote brackets">
+<dt class="label" id="ref1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/Action/Action.php">Magento\Framework\App\Action\Action</a></p>
+</dd>
+<dt class="label" id="ref2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p><a class="reference external" href="https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/Action/AbstractAction.php#L28">$resultRedirectFactory</a></p>
+</dd>
+</dl>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">Whiteboard | Aurora Extensions</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020 Aurora Extensions.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+    </div>
+  </body>
+</html>
