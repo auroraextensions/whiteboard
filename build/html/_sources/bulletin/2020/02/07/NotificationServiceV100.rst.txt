@@ -1,15 +1,25 @@
 Notification Service v1.0.0
 ===========================
 
-* *Published*: 2020-02-07
-* *Author*: Nickolas Burr
+* Published: 2020-02-07
+* Author: Nickolas Burr
+
+.. contents:: Table of Contents
+    :local:
 
 .. note::
 
-    If you would like to receive updates (like this one) in the form of an email, please
-    consider subscribing to our quarterly newsletter. It is, by definition, low volume,
-    and we include details about upcoming releases, product updates, EOL announcements,
-    and other related topics. You can sign up `here <https://auroraextensions.com/>`_.
+    If you would like to receive updates (like this one) by email, please consider
+    subscribing to our quarterly newsletter. It is low volume, and includes details
+    about upcoming releases, product updates, EOL announcements, and other related
+    topics. You can subscribe `here <https://auroraextensions.com/>`_.
+
+Links
+-----
+
+* `Repository <https://github.com/auroraextensions/notificationservice>`_
+* `Documentation <https://docs.auroraextensions.com/magento/extensions/2.x/notificationservice/latest/>`_
+* `CHANGELOG.txt <https://docs.auroraextensions.com/magento/extensions/2.x/notificationservice/CHANGELOG.txt>`_
 
 Summary
 -------
@@ -28,10 +38,12 @@ require setup upgrade to run in order for new notifications to publish.
 
 That was exactly what we wanted, so we built it. Now, instead of bloating our modules with one-off
 scripts and extraneous classes, we just add a ``notifications.xml`` file to our module, update it
-as needed, and we no longer have to stress about creating backend notifications.
+as needed, and we no longer have to stress about backend notifications.
 
 Notification Service v1.0.0 is now available on GitHub.
 
-* `GitHub <https://github.com/auroraextensions/notificationservice>`_
+Downloads
+---------
+
 * `auroraextensions_notificationservice-1.0.0.zip <https://github.com/auroraextensions/notificationservice/archive/1.0.0.zip>`_
 * `auroraextensions_notificationservice-1.0.0.tar.gz <https://github.com/auroraextensions/notificationservice/archive/1.0.0.tar.gz>`_
