@@ -148,25 +148,25 @@ Fixed
 Deprecated
 **********
 
-* Deprecate ``Shared\\\ModuleComponentInterface``
-* Deprecate ``Plugin\\\Backend\\\Authentication`` plugin
+* Deprecate ``Shared\ModuleComponentInterface``
+* Deprecate ``Plugin\Backend\Authentication`` plugin
 * Deprecate all helper classes:
-    * ``Helper\\\Action``
-    * ``Helper\\\Customer``
-    * ``Helper\\\Data``
-    * ``Helper\\\Dict``
-    * ``Helper\\\Email\\\AbstractTransport``
-    * ``Helper\\\Email\\\Transport\\\Customer``
-    * ``Helper\\\Email\\\Transport\\\User``
-    * ``Helper\\\Input\\\Sanitizer``
-    * ``Helper\\\Input\\\Validator``
-    * ``Helper\\\State\\\Manager``
-    * ``Helper\\\Token``
-    * ``Helper\\\User``
+    * ``Helper\Action``
+    * ``Helper\Customer``
+    * ``Helper\Data``
+    * ``Helper\Dict``
+    * ``Helper\Email\AbstractTransport``
+    * ``Helper\Email\Transport\Customer``
+    * ``Helper\Email\Transport\User``
+    * ``Helper\Input\Sanitizer``
+    * ``Helper\Input\Validator``
+    * ``Helper\State\Manager``
+    * ``Helper\Token``
+    * ``Helper\User``
 
 Removed
 *******
 
 * Remove "Forgot Password" link from admin login page
-* Remove ``Model\\\Token\\\ResourceModel\\\Token\\\CollectionInterface``
-* Remove ``Model\\\Token\\\ResourceModel\\\TokenInterface``
+* Remove ``Model\Token\ResourceModel\Token\CollectionInterface``
+* Remove ``Model\Token\ResourceModel\TokenInterface``
