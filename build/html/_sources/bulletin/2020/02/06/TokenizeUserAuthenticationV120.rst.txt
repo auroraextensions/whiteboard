@@ -9,10 +9,10 @@ Tokenize User Authentication v1.2.0
 
 .. note::
 
-    If you would like to receive updates (like this one) in the form of an email, please
-    consider subscribing to our quarterly newsletter. It is, by definition, low volume,
-    and we include details about upcoming releases, product updates, EOL announcements,
-    and other related topics. You can sign up `here <https://auroraextensions.com/>`_.
+    If you would like to receive updates (like this one) by email, please consider
+    subscribing to our quarterly newsletter. It is low volume, and includes details
+    about upcoming releases, product updates, EOL announcements, and other related
+    topics. You can subscribe `here <https://auroraextensions.com/>`_.
 
 Links
 -----
@@ -44,7 +44,7 @@ alone is simply not adequate anymore, yet so many merchants and agencies have no
 adopted measures to incorporate MFA into their user authentication workflows.
 
 Prior to v1.2.0, Tokenize User Authentication was not considered an MFA extension, as
-there was only a single (albeit external) point of authentication. After thoughtful
+there was only a single (albeit independent) point of authentication. After thoughtful
 consideration, we decided to add support for MFA, as we believe it is an important
 feature that substantially improves account security and provides real value to both
 merchants and agencies.
