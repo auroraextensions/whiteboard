@@ -65,27 +65,27 @@ For complete changelog, see `CHANGELOG.txt <https://docs.auroraextensions.com/ma
 Added
 *****
 
-* Add PinInterface
-* Add PinSearchResultsInterface
-* Add PinRepositoryInterface
+* Add ``PinInterface``
+* Add ``PinSearchResultsInterface``
+* Add ``PinRepositoryInterface``
 * Add db_schema.xml
-* Add AbstractRepositoryTrait component trait
-* Add AbstractCollectionInterface
-* Add PinCollectionInterface
-* Add PinResourceInterface
-* Add PinRepository model
-* Add AbstractResourceTrait component trait
-* Add AbstractCollectionTrait component trait
-* Add AbstractPinTrait component trait
-* Add Customer Pin model
-* Add Customer Pin resource model
-* Add Customer Pin collection model
-* Add TokenCollectionInterface component interface
-* Add TokenResourceInterface
-* Add DataContainerInterface component interface
-* Add DataContainerTrait component trait
-* Add ModuleConfigInterface component interface
-* Add ModuleConfig model
+* Add ``AbstractRepositoryTrait`` component trait
+* Add ``AbstractCollectionInterface``
+* Add ``PinCollectionInterface``
+* Add ``PinResourceInterface``
+* Add ``PinRepository`` model
+* Add ``AbstractResourceTrait`` component trait
+* Add ``AbstractCollectionTrait`` component trait
+* Add ``AbstractPinTrait`` component trait
+* Add Customer ``Pin`` entity model
+* Add Customer ``Pin`` resource model
+* Add Customer ``Pin`` collection model
+* Add ``TokenCollectionInterface`` component interface
+* Add ``TokenResourceInterface`` resource interface
+* Add ``DataContainerInterface`` component interface
+* Add ``DataContainerTrait`` component trait
+* Add ``ModuleConfigInterface`` component interface
+* Add ``ModuleConfig`` configuration model
 * Add adminhtml_pin_validate controller
 * Add adminhtml_pin_validate XML layout
 * Add adminhtml_pin_validate template
@@ -97,47 +97,47 @@ Added
 * Add adminhtml_pin_create XML layout
 * Add adminhtml_pin_create view model
 * Add adminhtml_pin_createPost controller
-* Add User PIN entity model
-* Add User PIN resource model
-* Add User PIN collection model
-* Add User resource model Pin::getEntityIdColumn() method
-* Add Customer resource model Pin::getEntityIdColumn() method
-* Add PinValidatorInterface component interface
-* Add TokenValidatorInterface component interface
-* Add InvalidPinException
-* Add User PIN validator model
-* Add User token validator model
-* Add ModuleConfig::getAdminExpirationPeriod() method
-* Add ModuleConfig::isCustomerPinRequired() method
-* Add area-specific <preference> for PIN, token validator interfaces
-* Add PIN classes to action whitelist in Customer Router class
+* Add User ``PIN`` entity model
+* Add User ``PIN`` resource model
+* Add User ``PIN`` collection model
+* Add User resource model ``Pin::getEntityIdColumn()`` method
+* Add Customer resource model ``Pin::getEntityIdColumn()`` method
+* Add ``PinValidatorInterface`` component interface
+* Add ``TokenValidatorInterface`` component interface
+* Add ``InvalidPinException`` exception class
+* Add User ``PinValidator`` model
+* Add User ``TokenValidator`` model
+* Add ``ModuleConfig::getAdminExpirationPeriod()`` method
+* Add ``ModuleConfig::isCustomerPinRequired()`` method
+* Add area-specific ``<preference>`` for PIN, token validator interfaces
+* Add PIN classes to action whitelist in Customer ``Router`` class
 * Add customer_pin_create controller
 * Add customer_pin_create XML layout
 * Add customer_pin_create template
 * Add customer_pin_create view model
-* Add RedirectTrait component trait
+* Add ``RedirectTrait`` component trait
 * Add PIN requirement check to customer_token_validate controller
 * Add customer_pin_createPost controller
-* Add ModuleConfig::getConfigValue() method
-* Add TokenValidatorInterface::validate() method signature
-* Add PinValidatorInterface::validate() method signature
-* Add Customer token validator model
-* Add Customer PIN validator model
-* Add ModuleConfig::getCustomerExpirationPeriod() method
+* Add ``ModuleConfig::getConfigValue()`` method
+* Add ``TokenValidatorInterface::validate()`` method signature
+* Add ``PinValidatorInterface::validate()`` method signature
+* Add Customer ``TokenValidator`` model
+* Add Customer ``PinValidator`` model
+* Add ``ModuleConfig::getCustomerExpirationPeriod()`` method
 * Add customer_pin_validate controller
 * Add customer_pin_validate XML layout
 * Add customer_pin_validate template
 * Add customer_pin_validate view model
 * Add customer_pin_validatePost controller
-* Add $params argument to RedirectTrait::getRedirectToPath() method
+* Add optional ``$params`` argument to ``RedirectTrait::getRedirectToPath()`` method
 
 Changed
 *******
 
-* Move TokenRepository into Repository/ model directory
-* Change TokenRepositoryInterface::save() return type
+* Move ``TokenRepository`` into Repository/ model directory
+* Change ``TokenRepositoryInterface::save()`` return type
 * Replace User config helper in adminhtml Token validation controller
-* Rename processUnauthenticatedLoginRequest() method(s)
+* Rename ``processUnauthenticatedLoginRequest()`` method(s)
 
 Fixed
 *****
@@ -148,25 +148,25 @@ Fixed
 Deprecated
 **********
 
-* Deprecate Shared\\\ModuleComponentInterface
-* Deprecate Plugin\\\Backend\\\Authentication plugin
+* Deprecate ``Shared\\\ModuleComponentInterface``
+* Deprecate ``Plugin\\\Backend\\\Authentication`` plugin
 * Deprecate all helper classes:
-    * Helper\\\Action
-    * Helper\\\Customer
-    * Helper\\\Data
-    * Helper\\\Dict
-    * Helper\\\Email\\\AbstractTransport
-    * Helper\\\Email\\\Transport\\\Customer
-    * Helper\\\Email\\\Transport\\\User
-    * Helper\\\Input\\\Sanitizer
-    * Helper\\\Input\\\Validator
-    * Helper\\\State\\\Manager
-    * Helper\\\Token
-    * Helper\\\User
+    * ``Helper\\\Action``
+    * ``Helper\\\Customer``
+    * ``Helper\\\Data``
+    * ``Helper\\\Dict``
+    * ``Helper\\\Email\\\AbstractTransport``
+    * ``Helper\\\Email\\\Transport\\\Customer``
+    * ``Helper\\\Email\\\Transport\\\User``
+    * ``Helper\\\Input\\\Sanitizer``
+    * ``Helper\\\Input\\\Validator``
+    * ``Helper\\\State\\\Manager``
+    * ``Helper\\\Token``
+    * ``Helper\\\User``
 
 Removed
 *******
 
 * Remove "Forgot Password" link from admin login page
-* Remove Model\\\Token\\\ResourceModel\\\Token\\\CollectionInterface
-* Remove Model\\\Token\\\ResourceModel\\\TokenInterface
+* Remove ``Model\\\Token\\\ResourceModel\\\Token\\\CollectionInterface``
+* Remove ``Model\\\Token\\\ResourceModel\\\TokenInterface``
