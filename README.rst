@@ -24,20 +24,20 @@ Topics
 Magento
 -------
 
-.. _AbstractRepository: source/topic/AbstractRepository.rst
-.. _AbstractRepositoryTrait: source/topic/AbstractRepositoryTrait.rst
-.. _AbstractRepositoryInterface: source/topic/AbstractRepositoryInterface.rst
-.. _AuthTrait: source/topic/AuthTrait.rst
-.. _CsrfAwareActionTrait: source/topic/CsrfAwareActionTrait.rst
-.. _DataObjectFactory: source/topic/DataObjectFactory.rst
-.. _DateTimeFactory: source/topic/DateTimeFactory.rst
-.. _EventManagerTrait: source/topic/EventManagerTrait.rst
-.. _ExceptionFactory: source/topic/ExceptionFactory.rst
-.. _ModifierPoolTrait: source/topic/ModifierPoolTrait.rst
-.. _RedirectTrait: source/topic/RedirectTrait.rst
-.. _Token: source/topic/Token.rst
-.. _VirtualSelect: source/topic/VirtualSelect.rst
-.. _VirtualGroupedSelect: source/topic/VirtualGroupedSelect.rst
+.. _AbstractRepository: source/archives/magento/AbstractRepository.rst
+.. _AbstractRepositoryTrait: source/archives/magento/AbstractRepositoryTrait.rst
+.. _AbstractRepositoryInterface: source/archives/magento/AbstractRepositoryInterface.rst
+.. _AuthTrait: source/archives/magento/AuthTrait.rst
+.. _CsrfAwareActionTrait: source/archives/magento/CsrfAwareActionTrait.rst
+.. _DataObjectFactory: source/archives/magento/DataObjectFactory.rst
+.. _DateTimeFactory: source/archives/magento/DateTimeFactory.rst
+.. _EventManagerTrait: source/archives/magento/EventManagerTrait.rst
+.. _ExceptionFactory: source/archives/magento/ExceptionFactory.rst
+.. _ModifierPoolTrait: source/archives/magento/ModifierPoolTrait.rst
+.. _RedirectTrait: source/archives/magento/RedirectTrait.rst
+.. _Token: source/archives/magento/Token.rst
+.. _VirtualSelect: source/archives/magento/VirtualSelect.rst
+.. _VirtualGroupedSelect: source/archives/magento/VirtualGroupedSelect.rst
 
 Controllers
 ^^^^^^^^^^^
