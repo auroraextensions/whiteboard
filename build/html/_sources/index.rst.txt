@@ -1,5 +1,3 @@
-Archive of whiteboard topics, mostly about Magento, PHP, OOP, design patterns, etc.
-
 .. toctree::
     :maxdepth: 4
     :titlesonly:
@@ -8,8 +6,8 @@ Bulletin
 ========
 
 * February 2020
-    * :doc:`bulletin/2020/02/07/NotificationServiceV100`
     * :doc:`bulletin/2020/02/06/TokenizeUserAuthenticationV120`
+    * :doc:`bulletin/2020/02/07/NotificationServiceV100`
 
 Resources
 =========
