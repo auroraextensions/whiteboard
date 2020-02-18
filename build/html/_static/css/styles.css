@@ -20,6 +20,12 @@ div.sphinxsidebar input {
   border: 1px solid #3123ae;
 }
 
+@media screen and (max-width: 1024px) {
+  div.bodywrapper {
+    margin: 0;
+  }
+}
+
 div.footer {
   border-bottom: 1px solid #3123ae;
   color: #3123ae;
