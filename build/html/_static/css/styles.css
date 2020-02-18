@@ -6,48 +6,29 @@ body {
   border-right: 1px solid #3123ae;
 }
 
-div.related ul {
+div.related ul,
+div.sphinxsidebar h3,
+div.sphinxsidebar h4 {
   background-color: #3123ae;
 }
 
 div.sphinxsidebar h3,
-div.sphinxsidebar h4 {
-  background-color: #3123ae;
-  border: 1px solid #3123ae;
-}
-
+div.sphinxsidebar h4,
 div.sphinxsidebar input {
   border: 1px solid #3123ae;
 }
 
-@media screen and (max-width: 1024px) {
-  div.bodywrapper {
-    margin: 0;
-  }
-}
-
-div.footer {
-  border-bottom: 1px solid #3123ae;
-  color: #3123ae;
-}
-
+h1, h2, h3, a,
+div.footer,
 div.footer a {
   color: #3123ae;
 }
 
-a {
-  color: #3123ae;
-}
-
 a:hover {
-  color: #3123ae;
+  color: #2a2080;
 }
 
-h1, h2, h3 {
-  color: #3123ae;
-}
-
-h2 {
+h2, div.footer {
   border-bottom: 1px solid #3123ae;
 }
 
@@ -59,6 +40,12 @@ h4 {
 
 div.bodywrapper {
   margin: 0 0 0 280px;
+}
+
+@media screen and (max-width: 1024px) {
+  div.bodywrapper {
+    margin: 0 !important;
+  }
 }
 
 div.sphinxsidebar {
