@@ -46,6 +46,10 @@ div.bodywrapper {
   div.bodywrapper {
     margin: 0 !important;
   }
+
+  div.body {
+    min-width: auto !important;
+  }
 }
 
 div.sphinxsidebar {
