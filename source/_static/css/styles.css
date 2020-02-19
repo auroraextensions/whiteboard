@@ -55,3 +55,9 @@ div.bodywrapper {
 div.sphinxsidebar {
   width: 250px;
 }
+
+@media screen and (max-width: 1024px) {
+  ul.simple {
+    padding-inline-start: 20px;
+  }
+}
