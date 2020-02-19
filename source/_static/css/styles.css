@@ -42,21 +42,19 @@ div.bodywrapper {
   margin: 0 0 0 280px;
 }
 
+div.sphinxsidebar {
+  width: 250px;
+}
+
 @media screen and (max-width: 1024px) {
-  div.bodywrapper {
+  dd, div.bodywrapper {
     margin: 0 !important;
   }
 
   div.body {
     min-width: auto !important;
   }
-}
 
-div.sphinxsidebar {
-  width: 250px;
-}
-
-@media screen and (max-width: 1024px) {
   ul.simple {
     padding-inline-start: 20px;
   }
