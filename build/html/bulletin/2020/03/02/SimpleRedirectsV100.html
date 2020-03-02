@@ -1,0 +1,161 @@
+
+
+<!doctype html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Simple Redirects v1.0.0 &#8212; Whiteboard | Aurora Extensions</title>
+    <link rel="stylesheet" href="../../../../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/styles.css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../../../_static/bizstyle.js"></script>
+    <link rel="canonical" href="https://whiteboard.auroraextensions.com/bulletin/2020/03/02/SimpleRedirectsV100.html" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.png"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Whiteboard | Aurora Extensions</a> &#187;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../../../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Simple Redirects v1.0.0</a><ul>
+<li><a class="reference internal" href="#links">Links</a></li>
+<li><a class="reference internal" href="#summary">Summary</a></li>
+<li><a class="reference internal" href="#downloads">Downloads</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/bulletin/2020/03/02/SimpleRedirectsV100.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="simple-redirects-v1-0-0">
+<h1>Simple Redirects v1.0.0<a class="headerlink" href="#simple-redirects-v1-0-0" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Published: 2020-03-02</p></li>
+<li><p>Author: Nickolas Burr</p></li>
+</ul>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#links" id="id1">Links</a></p></li>
+<li><p><a class="reference internal" href="#summary" id="id2">Summary</a></p></li>
+<li><p><a class="reference internal" href="#downloads" id="id3">Downloads</a></p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you would like to receive updates (like this one) by email, please consider
+subscribing to our quarterly newsletter. It is low volume, and includes details
+about upcoming releases, product updates, EOL announcements, and other related
+topics. You can subscribe <a class="reference external" href="https://auroraextensions.com/">here</a>.</p>
+</div>
+<div class="section" id="links">
+<h2><a class="toc-backref" href="#id1">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/auroraextensions/simpleredirects">Repository</a></p></li>
+<li><p><a class="reference external" href="https://docs.auroraextensions.com/magento/extensions/2.x/simpleredirects/latest/">Documentation</a></p></li>
+<li><p><a class="reference external" href="https://docs.auroraextensions.com/magento/extensions/2.x/simpleredirects/CHANGELOG.txt">CHANGELOG.txt</a></p></li>
+</ul>
+</div>
+<div class="section" id="summary">
+<h2><a class="toc-backref" href="#id2">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>Magento has fairly limited flexibility with respect to URL redirect management. The URL rewrite module
+<code class="docutils literal notranslate"><span class="pre">Magento_UrlRewrite</span></code>, as well as related modules <code class="docutils literal notranslate"><span class="pre">Magento_CatalogUrlRewrite</span></code> and <code class="docutils literal notranslate"><span class="pre">Magento_CmsUrlRewrite</span></code>,
+provide the ability to redirect and rewrite URLs for products, categories, and CMS pages, which is extremely useful
+for SEO purposes. However, there’s a lack of functionality for simple rule-based redirects, which can be especially
+helpful when transitioning to Magento from another platform like Shopify or BigCommerce.</p>
+<p>To bridge this gap, we’re releasing Simple Redirects, our rule-based URL redirect management module for Magento.
+We’re hopeful Simple Redirects will cover the vast majority of URL redirect scenarios and that it’ll be useful
+to the wider Magento community. Key features include:</p>
+<ol class="arabic simple">
+<li><p>Rule types:
+a. Path
+b. Query Parameter
+c. Host</p></li>
+<li><p>Match types:
+a. Exact match
+b. Not exact match
+c. Contains
+d. Does not contain
+e. Matches regex
+f. Does not match regex</p></li>
+<li><p>Redirect types:
+a. 301
+b. 302</p></li>
+<li><p>Priority levels 1-10</p></li>
+</ol>
+<p>Simple Redirects v1.0.0 is now available on GitHub.</p>
+</div>
+<div class="section" id="downloads">
+<h2><a class="toc-backref" href="#id3">Downloads</a><a class="headerlink" href="#downloads" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/auroraextensions/simpleredirects/archive/1.0.0.zip">auroraextensions_simpleredirects-1.0.0.zip</a></p></li>
+<li><p><a class="reference external" href="https://github.com/auroraextensions/simpleredirects/archive/1.0.0.tar.gz">auroraextensions_simpleredirects-1.0.0.tar.gz</a></p></li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Whiteboard | Aurora Extensions</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2020 Aurora Extensions.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+    </div>
+  </body>
+</html>
