@@ -5,6 +5,8 @@
 Releases
 ========
 
+* March 2020
+    * :doc:`bulletin/2020/03/02/SimpleRedirectsV100`
 * February 2020
     * :doc:`bulletin/2020/02/06/TokenizeUserAuthenticationV120`
     * :doc:`bulletin/2020/02/07/NotificationServiceV100`
