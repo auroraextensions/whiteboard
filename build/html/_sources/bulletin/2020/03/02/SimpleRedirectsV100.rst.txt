@@ -35,19 +35,19 @@ We're hopeful Simple Redirects will cover the vast majority of URL redirect scen
 to the wider Magento community. Key features include:
 
 1. Rule types:
-   a. Path
-   b. Query Parameter
-   c. Host
+    a. Path
+    b. Query Parameter
+    c. Host
 2. Match types:
-   a. Exact match
-   b. Not exact match
-   c. Contains
-   d. Does not contain
-   e. Matches regex
-   f. Does not match regex
+    a. Exact match
+    b. Not exact match
+    c. Contains
+    d. Does not contain
+    e. Matches regex
+    f. Does not match regex
 3. Redirect types:
-   a. 301
-   b. 302
+    a. 301
+    b. 302
 4. Priority levels 1-10
 
 Simple Redirects v1.0.0 is now available on GitHub.
