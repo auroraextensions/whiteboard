@@ -38,5 +38,5 @@ Magento Backports v100.2.3.4 is now available on GitHub.
 Downloads
 ---------
 
-* `auroraextensions_magentobackports-100.2.3.4.zip <https://github.com/auroraextensions/magentobackports/archive/1.0.0.zip>`_
-* `auroraextensions_magentobackports-100.2.3.4.tar.gz <https://github.com/auroraextensions/magentobackports/archive/1.0.0.tar.gz>`_
+* `auroraextensions_magentobackports-100.2.3.4.zip <https://github.com/auroraextensions/magentobackports/archive/100.2.3.4.zip>`_
+* `auroraextensions_magentobackports-100.2.3.4.tar.gz <https://github.com/auroraextensions/magentobackports/archive/100.2.3.4.tar.gz>`_
