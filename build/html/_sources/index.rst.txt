@@ -8,6 +8,7 @@ Releases
 * March 2020
     * :doc:`bulletin/2020/03/02/SimpleRedirectsV100`
     * :doc:`bulletin/2020/03/03/libxstringV100`
+    * :doc:`bulletin/2020/03/09/MagentoBackportsV100234`
 * February 2020
     * :doc:`bulletin/2020/02/06/TokenizeUserAuthenticationV120`
     * :doc:`bulletin/2020/02/07/NotificationServiceV100`
