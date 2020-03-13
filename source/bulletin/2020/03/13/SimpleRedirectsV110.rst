@@ -55,6 +55,8 @@ child => parent.
    :figclass: align-center
    :scale: 50%
 
+   Atomic rules linked together to form one composite rule.
+
 Changelog
 ---------
 
