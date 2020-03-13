@@ -25,12 +25,13 @@ Summary
 -------
 
 We've released Simple Redirects v1.1.0 and it contains several important updates and
-new features, including `Composite Rules`_ and admin UI enhancements.
+new features, including `Composite Rules`_ and admin UI improvements.
 
 Highlights
 ^^^^^^^^^^
 
 * Composite rules (rule chaining)
+* Admin UI improvements
 
 Composite Rules
 ^^^^^^^^^^^^^^^
