@@ -8,13 +8,13 @@ VirtualGroupedSelect
     :local:
 
 Related
-=======
+-------
 
 * `DataObjectFactory <DataObjectFactory>`_
 * `VirtualSelect <VirtualSelect>`_
 
 Description
-===========
+-----------
 
 The `VirtualSelect <VirtualSelect>`_ example illustrates how to create a ``select``,
 ``multiselect`` source model with data populated from ``di.xml``. That works well for
@@ -25,7 +25,7 @@ multidimensional array, we'll need to adjust the ``setOption`` method to recurse
 through the given subarrays and create the desired ``optgroup`` set.
 
 Usage
-=====
+-----
 
 .. code-block:: xml
 
@@ -61,7 +61,7 @@ Usage
     </config>
 
 Source
-======
+------
 
 .. code-block:: php
 
