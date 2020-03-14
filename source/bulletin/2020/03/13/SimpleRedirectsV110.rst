@@ -17,11 +17,23 @@ Simple Redirects v1.1.0
 Links
 -----
 
-* `Repository <https://github.com/auroraextensions/simpleredirects>`_
-* `Documentation <https://docs.auroraextensions.com/magento/extensions/2.x/simpleredirects/latest/>`_
-* `CHANGELOG.txt <https://docs.auroraextensions.com/magento/extensions/2.x/simpleredirects/CHANGELOG.txt>`_
-* `auroraextensions_simpleredirects-1.1.0.zip <https://github.com/auroraextensions/simpleredirects/archive/1.1.0.zip>`_
-* `auroraextensions_simpleredirects-1.1.0.tar.gz <https://github.com/auroraextensions/simpleredirects/archive/1.1.0.tar.gz>`_
+.. |changelog| replace:: CHANGELOG.txt
+.. |docs| replace:: Documentation
+.. |repo| replace:: Repository
+.. |tar| replace:: auroraextensions_simpleredirects-1.1.0.tar.gz
+.. |zip| replace:: auroraextensions_simpleredirects-1.1.0.zip
+
+.. _changelog: https://docs.auroraextensions.com/magento/extensions/2.x/simpleredirects/CHANGELOG.txt
+.. _docs: https://docs.auroraextensions.com/magento/extensions/2.x/simpleredirects/latest/
+.. _repo: https://github.com/auroraextensions/simpleredirects
+.. _tar: https://github.com/auroraextensions/simpleredirects/archive/1.1.0.tar.gz
+.. _zip: https://github.com/auroraextensions/simpleredirects/archive/1.1.0.zip
+
+* |repo|_
+* |docs|_
+* |changelog|_
+* |zip|_
+* |tar|_
 
 Summary
 -------
@@ -45,9 +57,10 @@ Composite rules are especially useful when migrating to Magento from other platf
 like Shopify or BigCommerce, where the structuring of URLs is substantially different.
 
 Below is an example of three (3) atomic (single-purpose) rules that are linked together
-to form one composite rule. Composite rules take the form of a directed tree and behave
-in cascading fashion, meaning rules are matched and applied parent => child, but not
-child => parent.
+to form a composite rule. Composite rules take the form of a directed tree and behave
+in an upward, bubbling fashion, meaning rules are validated child => parent, but not
+parent => child. The reason for this is because dependency metadata is stored on the
+child rule, not the parent rule.
 
 .. figure:: images/rules.png
    :width: 1920
@@ -57,14 +70,12 @@ child => parent.
    :figclass: align-center
    :scale: 50%
 
-   Atomic rules linked together to form one composite rule.
+   Atomic rules link together to form one composite rule.
 
 Changelog
 ---------
 
-.. _CHANGELOG.txt: https://docs.auroraextensions.com/magento/extensions/2.x/simpleredirects/CHANGELOG.txt
-
-For complete changelog, see `CHANGELOG.txt`_.
+For complete changelog, see |changelog|_.
 
 [1.1.0] ~ 2020-03-11
 ^^^^^^^^^^^^^^^^^^^^
