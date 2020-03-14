@@ -1,10 +1,11 @@
-.. contents:: :local:
-
 Token
 =====
 
-* Author: Nickolas Burr
 * Published: 2019-08-21
+* Author: Nickolas Burr
+
+.. contents:: Table of Contents
+    :local:
 
 Description
 ===========

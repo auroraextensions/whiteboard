@@ -1,11 +1,11 @@
-.. contents:: Table of Contents
-    :depth: 2
-
 AbstractRepository
 ==================
 
-* *Published*: 2019-07-09
-* *Author*: Nickolas Burr
+* Published: 2019-07-09
+* Author: Nickolas Burr
+
+.. contents:: Table of Contents
+    :local:
 
 Related
 -------
@@ -34,7 +34,7 @@ Usage
      */
     declare(strict_types=1);
 
-    namespace Vendor\Package\Model\RepositoryModel;
+    namespace Vendor\Package\Model\Repository;
 
     use Vendor\Package\Api\EntityRepositoryInterface;
 
@@ -53,7 +53,7 @@ Source
      */
     declare(strict_types=1);
 
-    namespace Vendor\Package\Model\RepositoryModel;
+    namespace Vendor\Package\Model\Repository;
 
     use Magento\Framework\{
         Api\SearchCriteriaInterface,
