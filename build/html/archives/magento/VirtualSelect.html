@@ -38,11 +38,13 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">VirtualSelect</a></li>
+<li><a class="reference internal" href="#">VirtualSelect</a><ul>
 <li><a class="reference internal" href="#related">Related</a></li>
 <li><a class="reference internal" href="#description">Description</a></li>
 <li><a class="reference internal" href="#usage">Usage</a></li>
 <li><a class="reference internal" href="#source">Source</a></li>
+</ul>
+</li>
 </ul>
 
   <div role="note" aria-label="source link">
@@ -76,15 +78,23 @@
 <li><p>Published: 2019-07-25</p></li>
 <li><p>Author: Nickolas Burr</p></li>
 </ul>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#related" id="id1">Related</a></p></li>
+<li><p><a class="reference internal" href="#description" id="id2">Description</a></p></li>
+<li><p><a class="reference internal" href="#usage" id="id3">Usage</a></p></li>
+<li><p><a class="reference internal" href="#source" id="id4">Source</a></p></li>
+</ul>
 </div>
 <div class="section" id="related">
-<h1>Related<a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id1">Related</a><a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="DataObjectFactory">DataObjectFactory</a></p></li>
 </ul>
 </div>
 <div class="section" id="description">
-<h1>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id2">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>The use of dependency injection in Magento makes it especially easy to
 work with data from <code class="docutils literal notranslate"><span class="pre">di.xml</span></code>. However, it is still so commonplace to
 see hardcoded data in backend <code class="docutils literal notranslate"><span class="pre">source_model</span></code> classes, which amounts to
@@ -96,7 +106,7 @@ data is to create a generic class that implements <code class="docutils literal 
 the power of the <code class="docutils literal notranslate"><span class="pre">&lt;virtualType&gt;</span></code> to set the options dynamically.</p>
 </div>
 <div class="section" id="usage">
-<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id3">Usage</a><a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
 <span class="c">&lt;!--</span>
 <span class="c">/**</span>
@@ -131,7 +141,7 @@ the power of the <code class="docutils literal notranslate"><span class="pre">&l
 </div>
 </div>
 <div class="section" id="source">
-<h1>Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id4">Source</a><a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 <span class="sd">/**</span>
 <span class="sd"> * Generic.php</span>
@@ -209,6 +219,7 @@ the power of the <code class="docutils literal notranslate"><span class="pre">&l
     <span class="nt">&lt;/virtualType&gt;</span>
 <span class="nt">&lt;/config&gt;</span>
 </pre></div>
+</div>
 </div>
 </div>
 

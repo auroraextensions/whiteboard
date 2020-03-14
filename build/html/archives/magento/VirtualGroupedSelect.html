@@ -38,11 +38,13 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="../../index.html">Table of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">VirtualGroupedSelect</a></li>
+<li><a class="reference internal" href="#">VirtualGroupedSelect</a><ul>
 <li><a class="reference internal" href="#related">Related</a></li>
 <li><a class="reference internal" href="#description">Description</a></li>
 <li><a class="reference internal" href="#usage">Usage</a></li>
 <li><a class="reference internal" href="#source">Source</a></li>
+</ul>
+</li>
 </ul>
 
   <div role="note" aria-label="source link">
@@ -76,16 +78,24 @@
 <li><p>Published: 2019-07-25</p></li>
 <li><p>Author: Nickolas Burr</p></li>
 </ul>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title first">Table of Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#related" id="id2">Related</a></p></li>
+<li><p><a class="reference internal" href="#description" id="id3">Description</a></p></li>
+<li><p><a class="reference internal" href="#usage" id="id4">Usage</a></p></li>
+<li><p><a class="reference internal" href="#source" id="id5">Source</a></p></li>
+</ul>
 </div>
 <div class="section" id="related">
-<h1>Related<a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id2">Related</a><a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="DataObjectFactory">DataObjectFactory</a></p></li>
 <li><p><a class="reference external" href="VirtualSelect">VirtualSelect</a></p></li>
 </ul>
 </div>
 <div class="section" id="description">
-<h1>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id3">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference external" href="VirtualSelect">VirtualSelect</a> example illustrates how to create a <code class="docutils literal notranslate"><span class="pre">select</span></code>,
 <code class="docutils literal notranslate"><span class="pre">multiselect</span></code> source model with data populated from <code class="docutils literal notranslate"><span class="pre">di.xml</span></code>. That works well for
 flat arrays, but doesn’t work for multidimensional arrays.</p>
@@ -94,7 +104,7 @@ multidimensional array, we’ll need to adjust the <code class="docutils literal
 through the given subarrays and create the desired <code class="docutils literal notranslate"><span class="pre">optgroup</span></code> set.</p>
 </div>
 <div class="section" id="usage">
-<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id4">Usage</a><a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?xml version=&quot;1.0&quot;?&gt;</span>
 <span class="c">&lt;!--</span>
 <span class="c">/**</span>
@@ -129,7 +139,7 @@ through the given subarrays and create the desired <code class="docutils literal
 </div>
 </div>
 <div class="section" id="source">
-<h1>Source<a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h1>
+<h2><a class="toc-backref" href="#id5">Source</a><a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 <span class="sd">/**</span>
 <span class="sd"> * Generic.php</span>
@@ -240,6 +250,7 @@ through the given subarrays and create the desired <code class="docutils literal
     <span class="nt">&lt;/virtualType&gt;</span>
 <span class="nt">&lt;/config&gt;</span>
 </pre></div>
+</div>
 </div>
 </div>
 

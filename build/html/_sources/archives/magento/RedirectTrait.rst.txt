@@ -149,8 +149,8 @@ Notes
 -----
 
 .. |link1| replace:: ``Magento\Framework\App\Action\Action``
-.. _link1: https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/Action/Action.php
 .. |link2| replace:: ``$resultRedirectFactory``
+.. _link1: https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/Action/Action.php
 .. _link2: https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/Action/AbstractAction.php#L28
 
 .. [#ref1] |link1|_
