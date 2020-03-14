@@ -1,11 +1,11 @@
-.. contents:: Table of Contents
-    :depth: 2
-
 DataObjectFactory
 =================
 
-* *Published*: 2019-07-12
-* *Author*: Nickolas Burr
+* Published: 2019-07-12
+* Author: Nickolas Burr
+
+.. contents:: Table of Contents
+    :local:
 
 Related
 -------

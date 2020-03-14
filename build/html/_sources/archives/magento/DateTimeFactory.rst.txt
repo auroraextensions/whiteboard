@@ -1,11 +1,11 @@
-.. contents:: Table of Contents
-    :depth: 2
-
 DateTimeFactory
 ===============
 
-* *Published*: 2019-08-18
-* *Author*: Nickolas Burr
+* Published: 2019-08-18
+* Author: Nickolas Burr
+
+.. contents:: Table of Contents
+    :local:
 
 Related
 -------
@@ -100,7 +100,6 @@ Usage
 
             if (!$request->isPost() || !$this->formKeyValidator->validate($request)) {
                 $resultRedirect->setPath('*/*/edit');
-
                 return $resultRedirect;
             }
 
@@ -126,7 +125,6 @@ Usage
             }
 
             $resultRedirect->setPath('*/*/index');
-
             return $resultRedirect;
         }
     }
@@ -134,4 +132,7 @@ Usage
 Notes
 -----
 
-.. [#ref1] `DateTime <https://www.php.net/manual/en/class.datetime.php>`_
+.. |link1| replace:: ``DateTime``
+.. _link1: https://www.php.net/manual/en/class.datetime.php
+
+.. [#ref1] |link1|_

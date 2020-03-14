@@ -1,9 +1,11 @@
-.. contents:: :local:
-
 VirtualSelect
 =============
 
-*Published*: 2019-07-25
+* Published: 2019-07-25
+* Author: Nickolas Burr
+
+.. contents:: Table of Contents
+    :local:
 
 Related
 =======

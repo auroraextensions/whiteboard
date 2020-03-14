@@ -1,11 +1,11 @@
-.. contents:: Table of Contents
-    :depth: 2
-
 CsrfAwareActionTrait
 ====================
 
-* *Published*: 2019-08-27
-* *Author*: Nickolas Burr
+* Published: 2019-08-27
+* Author: Nickolas Burr
+
+.. contents:: Table of Contents
+    :local:
 
 Related
 -------
@@ -123,4 +123,7 @@ Source
 Notes
 -----
 
-.. [#ref1] `Magento\\\Framework\\\App\\\CsrfAwareActionInterface <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/CsrfAwareActionInterface.php>`_
+.. |link1| replace:: ``Magento\Framework\App\CsrfAwareActionInterface``
+.. _link1: https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/CsrfAwareActionInterface.php
+
+.. [#ref1] |link1|_

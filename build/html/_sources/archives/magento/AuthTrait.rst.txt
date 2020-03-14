@@ -1,11 +1,11 @@
-.. contents:: Table of Contents
-    :depth: 2
-
 AuthTrait
 =========
 
-* *Published*: 2019-08-27
-* *Author*: Nickolas Burr
+* Published: 2019-08-27
+* Author: Nickolas Burr
+
+.. contents:: Table of Contents
+    :local:
 
 Related
 -------
