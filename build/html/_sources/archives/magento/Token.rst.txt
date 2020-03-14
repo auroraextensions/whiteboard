@@ -3,6 +3,7 @@
 Token
 =====
 
+*Author*: Nickolas Burr
 *Published*: 2019-08-21
 
 Description
@@ -19,7 +20,7 @@ In the example below, the ``Token`` class provides two ``static`` methods:
 + ``generate``
 + ``isHex``
 
-The ``generate`` method utilizes `random_bytes` [#ref2]_ for random sequence
+The ``generate`` method utilizes ``random_bytes`` [#ref2]_ for random sequence
 generation, and the ``isHex`` method verifies the given sequence contains only
 hexidecimal characters.
 
@@ -28,6 +29,7 @@ Usage
 
 .. code-block:: php
 
+    <?php
     ...
     /** @var string $token */
     $token = Token::generate();
@@ -73,5 +75,11 @@ Source
 Notes
 =====
 
-.. [#ref1] `Magento\Framework\Math\Random <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Math/Random.php>`_
-.. [#ref2] `random_bytes <https://www.php.net/manual/en/function.random-bytes.php>`_
+.. |generator| replace:: ``Magento\Framework\Math\Random``
+.. _generator: https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Math/Random.php
+
+.. |random_bytes| replace:: ``random_bytes``
+.. _random_bytes: https://www.php.net/manual/en/function.random-bytes.php
+
+.. [#ref1] |generator|_
+.. [#ref2] |random_bytes|_
