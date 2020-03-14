@@ -8,7 +8,7 @@ Token
     :local:
 
 Description
-===========
+-----------
 
 Magento provides the ``Magento\Framework\Math\Random`` [#ref1]_ class for
 generating random data. This class is particularly useful when you need things
@@ -26,7 +26,7 @@ generation, and the ``isHex`` method verifies the given sequence contains only
 hexidecimal characters.
 
 Usage
-=====
+-----
 
 .. code-block:: php
 
@@ -37,7 +37,7 @@ Usage
     ...
 
 Source
-======
+------
 
 .. code-block:: php
 
@@ -74,13 +74,12 @@ Source
     }
 
 Notes
-=====
+-----
 
-.. |generator| replace:: ``Magento\Framework\Math\Random``
-.. _generator: https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Math/Random.php
+.. |link1| replace:: ``Magento\Framework\Math\Random``
+.. |link2| replace:: ``random_bytes``
+.. _link1: https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Math/Random.php
+.. _link2: https://www.php.net/manual/en/function.random-bytes.php
 
-.. |random_bytes| replace:: ``random_bytes``
-.. _random_bytes: https://www.php.net/manual/en/function.random-bytes.php
-
-.. [#ref1] |generator|_
-.. [#ref2] |random_bytes|_
+.. [#ref1] |link1|_
+.. [#ref2] |link2|_

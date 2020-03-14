@@ -8,12 +8,12 @@ VirtualSelect
     :local:
 
 Related
-=======
+-------
 
 * `DataObjectFactory <DataObjectFactory>`_
 
 Description
-===========
+-----------
 
 The use of dependency injection in Magento makes it especially easy to
 work with data from ``di.xml``. However, it is still so commonplace to
@@ -27,7 +27,7 @@ data is to create a generic class that implements ``ArrayInterface``, and use
 the power of the ``<virtualType>`` to set the options dynamically.
 
 Usage
-=====
+-----
 
 .. code-block:: xml
 
@@ -63,7 +63,7 @@ Usage
     </config>
 
 Source
-======
+------
 
 .. code-block:: php
 
