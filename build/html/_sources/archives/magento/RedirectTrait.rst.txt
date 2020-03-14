@@ -1,20 +1,22 @@
-.. contents:: :local:
-
 RedirectTrait
 =============
 
-*Published*: 2019-08-21
+* Published: 2019-08-21
+* Author: Nickolas Burr
+
+.. contents:: Table of Contents
+    :local:
 
 Related
-=======
+-------
 
 * `AuthTrait <AuthTrait>`_
 * `CsrfAwareActionTrait <CsrfAwareActionTrait>`_
 
 Description
-===========
+-----------
 
-In Magento, controllers inherit from ``Magento\\\Framework\\\App\\\Action\\\Action`` [#ref1]_.
+In Magento, controllers inherit from ``Magento\Framework\App\Action\Action`` [#ref1]_.
 This provides access to several methods (i.e. ``getRequest``, ``getResponse``) which are
 essential for tasks like processing request parameters and setting response status. As
 such, all controllers will inherit the ``$resultRedirectFactory`` [#ref2]_ property,
@@ -29,7 +31,7 @@ in our controllers. There are several advantages to this approach, such as:
 4. Single source of truth
 
 Usage
-=====
+-----
 
 .. code-block:: php
 
@@ -89,7 +91,7 @@ Usage
     }
 
 Source
-======
+------
 
 .. code-block:: php
 
@@ -144,7 +146,12 @@ Source
     }
 
 Notes
-=====
+-----
 
-.. [#ref1] `Magento\\\Framework\\\App\\\Action\\\Action <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/Action/Action.php>`_
-.. [#ref2] `$resultRedirectFactory <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/Action/AbstractAction.php#L28>`_
+.. |link1| replace:: ``Magento\Framework\App\Action\Action``
+.. _link1: https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/Action/Action.php
+.. |link2| replace:: ``$resultRedirectFactory``
+.. _link2: https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/Action/AbstractAction.php#L28
+
+.. [#ref1] |link1|_
+.. [#ref2] |link2|_

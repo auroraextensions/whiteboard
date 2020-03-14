@@ -1,11 +1,11 @@
-.. contents:: Table of Contents
-    :depth: 2
-
 AbstractRepositoryInterface
 ===========================
 
-* *Published*: 2019-07-02
-* *Author*: Nickolas Burr
+* Published: 2019-07-02
+* Author: Nickolas Burr
+
+.. contents:: Table of Contents
+    :local:
 
 Related
 -------
@@ -86,5 +86,10 @@ Source
 Notes
 -----
 
-.. [#ref1] `Magento\\Framework\\Api\\SearchCriteriaInterface <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Api/SearchCriteriaInterface.php>`_
-.. [#ref2] `Magento\\Framework\\Api\\SearchResultsInterface <https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Api/SearchResultsInterface.php>`_
+.. |link1| replace:: ``Magento\Framework\Api\SearchCriteriaInterface``
+.. |link2| replace:: ``Magento\Framework\Api\SearchResultsInterface``
+.. _link1: https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Api/SearchCriteriaInterface.php
+.. _link2: https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/Api/SearchResultsInterface.php
+
+.. [#ref1] |link1|_
+.. [#ref2] |link2|_

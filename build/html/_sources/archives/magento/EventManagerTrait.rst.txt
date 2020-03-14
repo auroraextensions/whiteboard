@@ -1,11 +1,11 @@
-.. contents:: Table of Contents
-    :depth: 2
-
 EventManagerTrait
 =================
 
-* *Published*: 2019-12-21
-* *Author*: Nickolas Burr
+* Published: 2019-12-21
+* Author: Nickolas Burr
+
+.. contents:: Table of Contents
+    :local:
 
 Description
 -----------

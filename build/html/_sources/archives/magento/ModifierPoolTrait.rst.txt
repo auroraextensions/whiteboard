@@ -1,12 +1,14 @@
-.. contents:: :local:
-
 ModifierPoolTrait
 =================
 
-*Published*: 2019-12-22
+* Published: 2019-12-22
+* Author: Nickolas Burr
+
+.. contents:: Table of Contents
+    :local:
 
 Description
-===========
+-----------
 
 Several Magento UI components depend on data from data providers. Often times, we need to
 conditionally modify data provided by a data provider, so data modifiers were introduced
@@ -19,7 +21,7 @@ In the example below, we've created a trait called ``ModifierPoolTrait``, which 
 by a data provider class to access the respective data modifier pool.
 
 Usage
-=====
+-----
 
 .. code-block:: php
 
@@ -196,7 +198,7 @@ Usage
     ```
 
 Source
-======
+------
 
 .. code-block:: php
 
