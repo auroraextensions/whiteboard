@@ -29,8 +29,8 @@ Links
 .. _tar: https://github.com/auroraextensions/simpleredirects/archive/1.1.0.tar.gz
 .. _zip: https://github.com/auroraextensions/simpleredirects/archive/1.1.0.zip
 
-* |repository|_
-* |documentation|_
+* |repo|_
+* |docs|_
 * |changelog|_
 * |zip|_
 * |tar|_
