@@ -3,8 +3,8 @@
 Token
 =====
 
-*Author*: Nickolas Burr
-*Published*: 2019-08-21
+* Author: Nickolas Burr
+* Published: 2019-08-21
 
 Description
 ===========
