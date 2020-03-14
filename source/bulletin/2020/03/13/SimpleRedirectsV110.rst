@@ -20,6 +20,8 @@ Links
 * `Repository <https://github.com/auroraextensions/simpleredirects>`_
 * `Documentation <https://docs.auroraextensions.com/magento/extensions/2.x/simpleredirects/latest/>`_
 * `CHANGELOG.txt <https://docs.auroraextensions.com/magento/extensions/2.x/simpleredirects/CHANGELOG.txt>`_
+* `auroraextensions_simpleredirects-1.1.0.zip <https://github.com/auroraextensions/simpleredirects/archive/1.1.0.zip>`_
+* `auroraextensions_simpleredirects-1.1.0.tar.gz <https://github.com/auroraextensions/simpleredirects/archive/1.1.0.tar.gz>`_
 
 Summary
 -------
@@ -44,7 +46,7 @@ like Shopify or BigCommerce, where the structuring of URLs is substantially diff
 
 Below is an example of three (3) atomic (single-purpose) rules that are linked together
 to form one composite rule. Composite rules take the form of a directed tree and behave
-in cascading fashion, meaning rules are matched and applied parent => child and never
+in cascading fashion, meaning rules are matched and applied parent => child, but not
 child => parent.
 
 .. figure:: images/rules.png
