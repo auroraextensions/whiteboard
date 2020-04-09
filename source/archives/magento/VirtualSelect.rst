@@ -11,6 +11,7 @@ Related
 -------
 
 * `DataObjectFactory <DataObjectFactory>`_
+* `VirtualGroupedSelect <VirtualGroupedSelect>`_
 
 Description
 -----------
