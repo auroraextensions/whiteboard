@@ -2,20 +2,23 @@
 
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
     <title>CsrfAwareActionTrait &#8212; Whiteboard | Aurora Extensions</title>
-    <link rel="stylesheet" href="../../_static/bizstyle.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/bizstyle.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/styles.css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../_static/bizstyle.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/sphinx_highlight.js"></script>
+    <script src="../../_static/bizstyle.js"></script>
     <link rel="canonical" href="https://whiteboard.auroraextensions.com/archives/magento/CsrfAwareActionTrait.html" />
     <link rel="shortcut icon" href="../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -39,56 +42,24 @@
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Whiteboard | Aurora Extensions</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Whiteboard | Aurora Extensions</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">CsrfAwareActionTrait</a></li> 
       </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">CsrfAwareActionTrait</a><ul>
-<li><a class="reference internal" href="#related">Related</a></li>
-<li><a class="reference internal" href="#description">Description</a></li>
-<li><a class="reference internal" href="#usage">Usage</a></li>
-<li><a class="reference internal" href="#source">Source</a></li>
-<li><a class="reference internal" href="#notes">Notes</a></li>
-</ul>
-</li>
-</ul>
-
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../../_sources/archives/magento/CsrfAwareActionTrait.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="csrfawareactiontrait">
-<h1>CsrfAwareActionTrait<a class="headerlink" href="#csrfawareactiontrait" title="Permalink to this headline">¶</a></h1>
+  <section id="csrfawareactiontrait">
+<h1>CsrfAwareActionTrait<a class="headerlink" href="#csrfawareactiontrait" title="Permalink to this heading">¶</a></h1>
 <ul class="simple">
 <li><p>Published: 2019-08-27</p></li>
 <li><p>Author: Nickolas Burr</p></li>
 </ul>
-<div class="contents local topic" id="table-of-contents">
-<p class="topic-title first">Table of Contents</p>
+<nav class="contents local" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#related" id="id2">Related</a></p></li>
 <li><p><a class="reference internal" href="#description" id="id3">Description</a></p></li>
@@ -96,25 +67,25 @@
 <li><p><a class="reference internal" href="#source" id="id5">Source</a></p></li>
 <li><p><a class="reference internal" href="#notes" id="id6">Notes</a></p></li>
 </ul>
-</div>
-<div class="section" id="related">
-<h2><a class="toc-backref" href="#id2">Related</a><a class="headerlink" href="#related" title="Permalink to this headline">¶</a></h2>
+</nav>
+<section id="related">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Related</a><a class="headerlink" href="#related" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="AuthTrait.html"><span class="doc">AuthTrait</span></a></p></li>
 <li><p><a class="reference internal" href="RedirectTrait.html"><span class="doc">RedirectTrait</span></a></p></li>
 </ul>
-</div>
-<div class="section" id="description">
-<h2><a class="toc-backref" href="#id3">Description</a><a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
-<p>Starting in v2.3.0, Magento provides the <code class="docutils literal notranslate"><span class="pre">CsrfAwareActionInterface</span></code> <a class="footnote-reference brackets" href="#ref1" id="id1">1</a>
+</section>
+<section id="description">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Description</a><a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
+<p>Starting in v2.3.0, Magento provides the <code class="docutils literal notranslate"><span class="pre">CsrfAwareActionInterface</span></code> <a class="footnote-reference brackets" href="#ref1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a>
 interface, which is used to validate requests against CSRF attacks. In most cases,
 default validation is adequate, so the implementation is identical across the vast
 majority of controllers.</p>
 <p>In the example below, we’ve created a trait called <code class="docutils literal notranslate"><span class="pre">CsrfAwareActionTrait</span></code>, which
 effectively implements <code class="docutils literal notranslate"><span class="pre">CsrfAwareActionInterface</span></code> with default validation.</p>
-</div>
-<div class="section" id="usage">
-<h2><a class="toc-backref" href="#id4">Usage</a><a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="usage">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Usage</a><a class="headerlink" href="#usage" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 <span class="sd">/**</span>
 <span class="sd"> * LoginPost.php</span>
@@ -157,9 +128,9 @@ effectively implements <code class="docutils literal notranslate"><span class="p
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="source">
-<h2><a class="toc-backref" href="#id5">Source</a><a class="headerlink" href="#source" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="source">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Source</a><a class="headerlink" href="#source" title="Permalink to this heading">¶</a></h2>
 <div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
 <span class="sd">/**</span>
 <span class="sd"> * CsrfAwareActionTrait.php</span>
@@ -206,19 +177,56 @@ effectively implements <code class="docutils literal notranslate"><span class="p
 <span class="p">}</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="notes">
-<h2><a class="toc-backref" href="#id6">Notes</a><a class="headerlink" href="#notes" title="Permalink to this headline">¶</a></h2>
-<dl class="footnote brackets">
-<dt class="label" id="ref1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p><a class="reference external" href="https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/CsrfAwareActionInterface.php"><code class="docutils literal notranslate"><span class="pre">Magento\Framework\App\CsrfAwareActionInterface</span></code></a></p>
-</dd>
-</dl>
-</div>
-</div>
+</section>
+<section id="notes">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Notes</a><a class="headerlink" href="#notes" title="Permalink to this heading">¶</a></h2>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="ref1" role="note">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p><a class="reference external" href="https://github.com/magento/magento2/blob/2.3/lib/internal/Magento/Framework/App/CsrfAwareActionInterface.php"><code class="docutils literal notranslate"><span class="pre">Magento\Framework\App\CsrfAwareActionInterface</span></code></a></p>
+</aside>
+</aside>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">CsrfAwareActionTrait</a><ul>
+<li><a class="reference internal" href="#related">Related</a></li>
+<li><a class="reference internal" href="#description">Description</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#source">Source</a></li>
+<li><a class="reference internal" href="#notes">Notes</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/archives/magento/CsrfAwareActionTrait.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -229,12 +237,13 @@ effectively implements <code class="docutils literal notranslate"><span class="p
         <li class="right" style="margin-right: 10px">
           <a href="../../genindex.html" title="General Index"
              >index</a></li>
-        <li class="nav-item nav-item-0"><a href="../../index.html">Whiteboard | Aurora Extensions</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">Whiteboard | Aurora Extensions</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">CsrfAwareActionTrait</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020 Aurora Extensions.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>

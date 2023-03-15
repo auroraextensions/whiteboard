@@ -1,9 +1,12 @@
 /**
  * styles.css
  */
+
 body {
   border-left: 1px solid #3123ae;
   border-right: 1px solid #3123ae;
+  font-family: Verdana, monospace, sans-serif;
+  letter-spacing: -0.05em;
 }
 
 div.related ul,
@@ -44,6 +47,31 @@ div.bodywrapper {
 
 div.sphinxsidebar {
   width: 250px;
+}
+
+dl.simple {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+dl.simple dd > ul {
+  padding-left: 0;
+}
+
+div.admonition,
+div.highlight,
+div.highlight pre,
+code.literal {
+  border-radius: 2px;
+  margin: 0;
+}
+
+div.admonition p {
+  margin: 0.25em 0.5em;
+}
+
+code.literal > span.pre {
+  padding: 5px;
 }
 
 @media screen and (max-width: 1024px) {
