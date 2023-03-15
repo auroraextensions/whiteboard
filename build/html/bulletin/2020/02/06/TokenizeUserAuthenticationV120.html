@@ -2,20 +2,23 @@
 
 <!doctype html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
     <title>Tokenize User Authentication v1.2.0 &#8212; Whiteboard | Aurora Extensions</title>
-    <link rel="stylesheet" href="../../../../_static/bizstyle.css" type="text/css" />
-    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/bizstyle.css" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/styles.css" />
     
-    <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
-    <script type="text/javascript" src="../../../../_static/jquery.js"></script>
-    <script type="text/javascript" src="../../../../_static/underscore.js"></script>
-    <script type="text/javascript" src="../../../../_static/doctools.js"></script>
-    <script type="text/javascript" src="../../../../_static/language_data.js"></script>
-    <script type="text/javascript" src="../../../../_static/bizstyle.js"></script>
+    <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/sphinx_highlight.js"></script>
+    <script src="../../../../_static/bizstyle.js"></script>
     <link rel="canonical" href="https://whiteboard.auroraextensions.com/bulletin/2020/02/06/TokenizeUserAuthenticationV120.html" />
     <link rel="shortcut icon" href="../../../../_static/favicon.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
@@ -39,68 +42,24 @@
         <li class="right" style="margin-right: 10px">
           <a href="../../../../genindex.html" title="General Index"
              accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="../../../../index.html">Whiteboard | Aurora Extensions</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Whiteboard | Aurora Extensions</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Tokenize User Authentication v1.2.0</a></li> 
       </ul>
-    </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-  <h3><a href="../../../../index.html">Table of Contents</a></h3>
-  <ul>
-<li><a class="reference internal" href="#">Tokenize User Authentication v1.2.0</a><ul>
-<li><a class="reference internal" href="#links">Links</a></li>
-<li><a class="reference internal" href="#summary">Summary</a><ul>
-<li><a class="reference internal" href="#highlights">Highlights</a></li>
-<li><a class="reference internal" href="#mfa">MFA</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#changelog">Changelog</a><ul>
-<li><a class="reference internal" href="#id2">[1.2.0] ~ 2020-02-07</a><ul>
-<li><a class="reference internal" href="#added">Added</a></li>
-<li><a class="reference internal" href="#changed">Changed</a></li>
-<li><a class="reference internal" href="#fixed">Fixed</a></li>
-<li><a class="reference internal" href="#deprecated">Deprecated</a></li>
-<li><a class="reference internal" href="#removed">Removed</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-  <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="../../../../_sources/bulletin/2020/02/06/TokenizeUserAuthenticationV120.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="../../../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script type="text/javascript">$('#searchbox').show(0);</script>
-        </div>
-      </div>
+    </div>  
 
     <div class="document">
       <div class="documentwrapper">
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="tokenize-user-authentication-v1-2-0">
-<h1>Tokenize User Authentication v1.2.0<a class="headerlink" href="#tokenize-user-authentication-v1-2-0" title="Permalink to this headline">¶</a></h1>
+  <section id="tokenize-user-authentication-v1-2-0">
+<h1>Tokenize User Authentication v1.2.0<a class="headerlink" href="#tokenize-user-authentication-v1-2-0" title="Permalink to this heading">¶</a></h1>
 <ul class="simple">
 <li><p>Published: 2020-02-06</p></li>
 <li><p>Author: Nickolas Burr</p></li>
 </ul>
-<div class="contents local topic" id="table-of-contents">
-<p class="topic-title first">Table of Contents</p>
+<nav class="contents local" id="table-of-contents">
+<p class="topic-title">Table of Contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#links" id="id3">Links</a></p></li>
 <li><p><a class="reference internal" href="#summary" id="id4">Summary</a></p>
@@ -123,7 +82,7 @@
 </ul>
 </li>
 </ul>
-</div>
+</nav>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you would like to receive updates (like this one) by email, please consider
@@ -131,29 +90,29 @@ subscribing to our quarterly newsletter. It is low volume, and includes details
 about upcoming releases, product updates, EOL announcements, and other related
 topics. You can subscribe <a class="reference external" href="https://auroraextensions.com/">here</a>.</p>
 </div>
-<div class="section" id="links">
-<h2><a class="toc-backref" href="#id3">Links</a><a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<section id="links">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Links</a><a class="headerlink" href="#links" title="Permalink to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://docs.auroraextensions.com/magento/extensions/2.x/tokenizeuserauthentication/latest/">Documentation</a></p></li>
 <li><p><a class="reference external" href="https://docs.auroraextensions.com/magento/extensions/2.x/tokenizeuserauthentication/CHANGELOG.txt">CHANGELOG.txt</a></p></li>
 </ul>
-</div>
-<div class="section" id="summary">
-<h2><a class="toc-backref" href="#id4">Summary</a><a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="summary">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Summary</a><a class="headerlink" href="#summary" title="Permalink to this heading">¶</a></h2>
 <p>Tokenize User Authentication v1.2.0 is set to release early next week, and it’s
 packed full of improvements and new features, including support for multi-factor
 authentication, which we discuss below in <a class="reference internal" href="#mfa">MFA</a>.</p>
-<div class="section" id="highlights">
-<h3><a class="toc-backref" href="#id5">Highlights</a><a class="headerlink" href="#highlights" title="Permalink to this headline">¶</a></h3>
+<section id="highlights">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Highlights</a><a class="headerlink" href="#highlights" title="Permalink to this heading">¶</a></h3>
 <ul class="simple">
 <li><p>Magento 2.3.4 support</p></li>
 <li><p>Deprecated all Helper classes</p></li>
 <li><p>Improved token validation framework</p></li>
 <li><p>Multi-factor authentication support</p></li>
 </ul>
-</div>
-<div class="section" id="mfa">
-<h3><a class="toc-backref" href="#id6">MFA</a><a class="headerlink" href="#mfa" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="mfa">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">MFA</a><a class="headerlink" href="#mfa" title="Permalink to this heading">¶</a></h3>
 <p>Over the past several years, multi-factor authentication has become the gold standard
 for reducing unauthorized user account access. Relying on password-based authentication
 alone is simply not adequate anymore, yet so many merchants and agencies have not yet
@@ -167,15 +126,15 @@ merchants and agencies.</p>
 When enabled, administrators/customers will be required to create a numeric PIN when
 they register their accounts, and will need to provide their PIN each time they attempt
 to access their account.</p>
-</div>
-</div>
-<div class="section" id="changelog">
-<h2><a class="toc-backref" href="#id7">Changelog</a><a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="changelog">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Changelog</a><a class="headerlink" href="#changelog" title="Permalink to this heading">¶</a></h2>
 <p>For complete changelog, see <a class="reference external" href="https://docs.auroraextensions.com/magento/extensions/2.x/tokenizeuserauthentication/CHANGELOG.txt">CHANGELOG.txt</a>.</p>
-<div class="section" id="id2">
-<h3><a class="toc-backref" href="#id8">[1.2.0] ~ 2020-02-07</a><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="added">
-<h4><a class="toc-backref" href="#id9">Added</a><a class="headerlink" href="#added" title="Permalink to this headline">¶</a></h4>
+<section id="id2">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">[1.2.0] ~ 2020-02-07</a><a class="headerlink" href="#id2" title="Permalink to this heading">¶</a></h3>
+<section id="added">
+<h4><a class="toc-backref" href="#id9" role="doc-backlink">Added</a><a class="headerlink" href="#added" title="Permalink to this heading">¶</a></h4>
 <ul class="simple">
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">PinInterface</span></code></p></li>
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">PinSearchResultsInterface</span></code></p></li>
@@ -243,25 +202,25 @@ to access their account.</p>
 <li><p>Add customer_pin_validatePost controller</p></li>
 <li><p>Add optional <code class="docutils literal notranslate"><span class="pre">$params</span></code> argument to <code class="docutils literal notranslate"><span class="pre">RedirectTrait::getRedirectToPath()</span></code> method</p></li>
 </ul>
-</div>
-<div class="section" id="changed">
-<h4><a class="toc-backref" href="#id10">Changed</a><a class="headerlink" href="#changed" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="changed">
+<h4><a class="toc-backref" href="#id10" role="doc-backlink">Changed</a><a class="headerlink" href="#changed" title="Permalink to this heading">¶</a></h4>
 <ul class="simple">
 <li><p>Move <code class="docutils literal notranslate"><span class="pre">TokenRepository</span></code> into Repository/ model directory</p></li>
 <li><p>Change <code class="docutils literal notranslate"><span class="pre">TokenRepositoryInterface::save()</span></code> return type</p></li>
 <li><p>Replace User config helper in adminhtml Token validation controller</p></li>
 <li><p>Rename <code class="docutils literal notranslate"><span class="pre">processUnauthenticatedLoginRequest()</span></code> method(s)</p></li>
 </ul>
-</div>
-<div class="section" id="fixed">
-<h4><a class="toc-backref" href="#id11">Fixed</a><a class="headerlink" href="#fixed" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="fixed">
+<h4><a class="toc-backref" href="#id11" role="doc-backlink">Fixed</a><a class="headerlink" href="#fixed" title="Permalink to this heading">¶</a></h4>
 <ul class="simple">
 <li><p>Fix missing redirect URL params in customer_token_validate controller</p></li>
 <li><p>Improve exception handling in backend authentication plugin</p></li>
 </ul>
-</div>
-<div class="section" id="deprecated">
-<h4><a class="toc-backref" href="#id12">Deprecated</a><a class="headerlink" href="#deprecated" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="deprecated">
+<h4><a class="toc-backref" href="#id12" role="doc-backlink">Deprecated</a><a class="headerlink" href="#deprecated" title="Permalink to this heading">¶</a></h4>
 <ul class="simple">
 <li><p>Deprecate <code class="docutils literal notranslate"><span class="pre">Shared\ModuleComponentInterface</span></code></p></li>
 <li><p>Deprecate <code class="docutils literal notranslate"><span class="pre">Plugin\Backend\Authentication</span></code> plugin</p></li>
@@ -284,21 +243,69 @@ to access their account.</p>
 </dl>
 </li>
 </ul>
-</div>
-<div class="section" id="removed">
-<h4><a class="toc-backref" href="#id13">Removed</a><a class="headerlink" href="#removed" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="removed">
+<h4><a class="toc-backref" href="#id13" role="doc-backlink">Removed</a><a class="headerlink" href="#removed" title="Permalink to this heading">¶</a></h4>
 <ul class="simple">
 <li><p>Remove “Forgot Password” link from admin login page</p></li>
 <li><p>Remove <code class="docutils literal notranslate"><span class="pre">Model\Token\ResourceModel\Token\CollectionInterface</span></code></p></li>
 <li><p>Remove <code class="docutils literal notranslate"><span class="pre">Model\Token\ResourceModel\TokenInterface</span></code></p></li>
 </ul>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
 
 
+            <div class="clearer"></div>
           </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Tokenize User Authentication v1.2.0</a><ul>
+<li><a class="reference internal" href="#links">Links</a></li>
+<li><a class="reference internal" href="#summary">Summary</a><ul>
+<li><a class="reference internal" href="#highlights">Highlights</a></li>
+<li><a class="reference internal" href="#mfa">MFA</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#changelog">Changelog</a><ul>
+<li><a class="reference internal" href="#id2">[1.2.0] ~ 2020-02-07</a><ul>
+<li><a class="reference internal" href="#added">Added</a></li>
+<li><a class="reference internal" href="#changed">Changed</a></li>
+<li><a class="reference internal" href="#fixed">Fixed</a></li>
+<li><a class="reference internal" href="#deprecated">Deprecated</a></li>
+<li><a class="reference internal" href="#removed">Removed</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../../_sources/bulletin/2020/02/06/TokenizeUserAuthenticationV120.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -309,12 +316,13 @@ to access their account.</p>
         <li class="right" style="margin-right: 10px">
           <a href="../../../../genindex.html" title="General Index"
              >index</a></li>
-        <li class="nav-item nav-item-0"><a href="../../../../index.html">Whiteboard | Aurora Extensions</a> &#187;</li> 
+        <li class="nav-item nav-item-0"><a href="../../../../index.html">Whiteboard | Aurora Extensions</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Tokenize User Authentication v1.2.0</a></li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &#169; Copyright 2020 Aurora Extensions.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.3.1.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.3.0.
     </div>
   </body>
 </html>
