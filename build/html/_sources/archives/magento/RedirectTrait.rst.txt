@@ -10,8 +10,8 @@ RedirectTrait
 Related
 -------
 
-* `AuthTrait <AuthTrait>`_
-* `CsrfAwareActionTrait <CsrfAwareActionTrait>`_
+* :doc:`AuthTrait`
+* :doc:`CsrfAwareActionTrait`
 
 Description
 -----------

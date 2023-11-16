@@ -10,8 +10,8 @@ VirtualGroupedSelect
 Related
 -------
 
-* `DataObjectFactory <DataObjectFactory>`_
-* `VirtualSelect <VirtualSelect>`_
+* :doc:`DataObjectFactory`
+* :doc:`VirtualSelect`
 
 Description
 -----------
