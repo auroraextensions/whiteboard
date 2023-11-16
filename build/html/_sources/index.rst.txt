@@ -28,6 +28,8 @@ Archives
 * :doc:`archives/magento/ExceptionFactory`
 * :doc:`archives/magento/ModifierPoolTrait`
 * :doc:`archives/magento/RedirectTrait`
+* :doc:`archives/magento/SelectQueryFetchStrategy`
+* :doc:`archives/magento/SelectQueryFetchStrategyInterface`
 * :doc:`archives/magento/Token`
 * :doc:`archives/magento/VirtualGroupedSelect`
 * :doc:`archives/magento/VirtualSelect`
