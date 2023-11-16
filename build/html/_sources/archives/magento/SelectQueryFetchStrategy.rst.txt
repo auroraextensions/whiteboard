@@ -10,7 +10,7 @@ SelectQueryFetchStrategy
 Related
 -------
 
-* `SelectQueryFetchStrategyInterface <SelectQueryFetchStrategyInterface>`_
+* :doc:`SelectQueryFetchStrategyInterface`
 
 Description
 -----------
@@ -40,8 +40,6 @@ Usage
 
     class Collection extends AbstractCollection
     {
-        private const JSON_MAX_DEPTH = 4;
-
         /**
          * @param EntityFactoryInterface $entityFactory
          * @param LoggerInterface $logger
@@ -111,6 +109,8 @@ Source
 
     class SelectQueryFetchStrategy implements SelectQueryFetchStrategyInterface
     {
+        private const JSON_MAX_DEPTH = 4;
+
         /**
          * @param LoggerInterface $logger
          * @param SerializerInterface $serializer
@@ -405,11 +405,6 @@ Source
 .. code-block:: xml
 
     <?xml version="1.0"?>
-    <!--
-    /**
-     * di.xml
-     */
-    -->
     <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
         <preference for="Vendor\Package\Api\SelectQueryFetchStrategyInterface" type="Vendor\Package\Model\Query\SelectQueryFetchStrategy"/>
