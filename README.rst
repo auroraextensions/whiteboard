@@ -16,7 +16,8 @@ Magento
 * Deduplicate redirect logic between inheritance-based controllers
 * Implement CSRF-aware request validation in controllers
 * Dispatch ``before``, ``after`` events while saving an entity
-* Modify metadata/data via data modifiers in an entity data provider
+* Modify metadata/data via data modifiers in an entity ``DataProvider`` class
+* Improve frontend load time via cache-driven SQL queries
 
 Topics
 ======
@@ -35,9 +36,17 @@ Magento
 .. _ExceptionFactory: source/archives/magento/ExceptionFactory.rst
 .. _ModifierPoolTrait: source/archives/magento/ModifierPoolTrait.rst
 .. _RedirectTrait: source/archives/magento/RedirectTrait.rst
+.. _SelectQueryFetchStrategy: source/archives/magento/SelectQueryFetchStrategy.rst
+.. _SelectQueryFetchStrategyInterface: source/archives/magento/SelectQueryFetchStrategyInterface.rst
 .. _Token: source/archives/magento/Token.rst
 .. _VirtualSelect: source/archives/magento/VirtualSelect.rst
 .. _VirtualGroupedSelect: source/archives/magento/VirtualGroupedSelect.rst
+
+Collections
+^^^^^^^^^^^
+
+* `SelectQueryFetchStrategy`_
+* `SelectQueryFetchStrategyInterface`_
 
 Controllers
 ^^^^^^^^^^^
@@ -89,6 +98,12 @@ Security
 * `AuthTrait`_
 * `CsrfAwareActionTrait`_
 * `Token`_
+
+SQL
+^^^
+
+* `SelectQueryFetchStrategy`_
+* `SelectQueryFetchStrategyInterface`_
 
 UI Components
 ^^^^^^^^^^^^^
